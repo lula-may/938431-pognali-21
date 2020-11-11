@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия Елагина](https://up.htmlacademy.ru/adaptive/21/user/938431).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Вадясова](https://up.htmlacademy.ru/adaptive/21/user/46068).
 
 ---
 
