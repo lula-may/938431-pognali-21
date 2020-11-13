@@ -34,10 +34,10 @@
 
       <ul class="main-header__list contacts-list">
         <li class="contacts-list__item">
-          <a class="contacts-list__item contacts-list__item--phone" href="tel:+78005558628">8 800 555-86-28</a>
+          <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
         </li>
         <li class="contacts-list__item">
-          <a class="contacts-list__item contacts-list__item--email" href="mailto:mail@htmlacademy.ru">8 800 555-86-28</a>
+          <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">8 800 555-86-28</a>
         </li>
       </ul>
 
@@ -55,12 +55,66 @@
 
     </header>
     <main class="page__main">
+      <h1 class="visually-hidden">Главная страница сайта "Погнали"</h1>
+
+      <div class="page__wrapper">
+        <section class="promo">
+          <h2 class="visually-hidden">Введение</h2>
+        </section>
+        <section class="about">
+          <h2 class="about__heading section-heading">О сервисе</h2>
+        </section>
+      </div>
+
+      <section class="countries">
+        <h2 class="countries__heading section-heading">Направления</h2>
+      </section>
+
+      <section class="companions">
+        <h2 class="companions__heading section-heading">Попутчики</h2>
+      </section>
+
+      <section class="tariffs">
+        <h2 class="tariffs__heading section-heading">Добавьте свой профиль</h2>
+      </section>
+
+      <section class="feedback">
+        <h2 class="feedback-heading section-heading">Заинтересовались?</h2>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <img class="map__image" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+        <div class="map__contacts contacts"></div>
+      </section>
 
     </main>
-    <footer class="page__footer">
-      <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+
+    <footer class="page__footer main-footer">
+
+      <a class="main-footer__logo logo">
+        <img class="logo__image" src="https://via.placeholder.com/100x15" alt="Логотип Погнали">
+      </a>
+
+      <ul class="main-footer__list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--footer" href="#">Мы в фейсбук</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--footer" href="#">Мы в ВКонтакте</a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--footer" href="#">Мы в Инстаграм</a>
+        </li>
+      </ul>
+
+      <p class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__logo" href="https://htmlacademy.ru/adaptive/21">
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTMLAcademy">
+        </a>
+      </p>
+
     </footer>
-
-
   </body>
 </html>
