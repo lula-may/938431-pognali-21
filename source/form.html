@@ -55,6 +55,101 @@
 
     </header>
     <main>
+      <h1 class="page__heading">Направления</h1>
+
+      <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+        <section class="direction-form__user-profile user-profile">
+          <h2 class="visually-hidden">Обо мне</h2>
+          <div class="user-profile__level level level--form">
+            <b class="level__count">80</b>
+            <span class="level__text">level</span>
+          </div>
+
+          <img class="user-profile__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Ваше фото">
+
+          <button class="user-profile__change-photo" type="button">Сменить фото</button>
+
+          <p class="user-profile__form-field">
+            <label class="user-profile__label" for="hashtags-field">Тэги</label>
+            <textarea class="user-profile__hashtags" id="hashtags-field" name="user-hashtags">#бургер #бар #футбол #концерт #крафт</textarea>
+          </p>
+
+          <fieldset class="user-profile__form-field">
+            <legend class="user-profile__label">Транспорт</legend>
+            <ul class="user-profile__transport transport">
+              <li>
+                <label class="transport__item transport__item--plane" for="plane">Самолет</label>
+                <input type="checkbox" id="plane" name="transport" value="plane" checked>
+              </li>
+              <li>
+                <label class="transport__item transport__item--auto" for="auto">Авто</label>
+                <input type="checkbox" id="auto" name="transport" value="auto" checked>
+              </li>
+              <li>
+                <label class="transport__item transport__item--bike" for="bike">Велосипед</label>
+                <input type="checkbox" id="bike" name="transport" value="bike">
+              </li>
+              <li>
+                <label class="transport__item transport__item--walk" for="walk">Пешком</label>
+                <input type="checkbox" id="walk" name="transport" value="walk" checked>
+              </li>
+            </ul>
+          </fieldset>
+        </section>
+
+        <section class="trip-plans">
+          <h2 class="trip-plans__heading form-heading">Мои планы</h2>
+
+          <ul class="trip-plans__list">
+
+            <li class="trip-plans__item">
+              <h3 class="trip-plans__name">Франция, Италия</h3>
+              <p class="trip-plans__info"><span class="trip-plans__companions">3</span> попутчика</p>
+              <p class="trip-plans__info">
+                <time class="trip-plans__first-date" datetime="2019-03-26">26 мар </time>-
+                <time class="trip-plans__last-date" datetime="2019-03-29"> 29 мар</time>
+              </p>
+              <a class="trip-plans__change" href="#">Изменить</a>
+            </li>
+
+            <li class="trip-plans__item">
+              <h3 class="trip-plans__name">Таиланд, Индонезия</h3>
+              <p class="trip-plans__info"><span class="trip-plans__companions">1</span> попутчик</p>
+              <p class="trip-plans__info">
+                <time class="trip-plans__first-date" datetime="2019-07-01">1 июл </time>-
+                <time class="trip-plans__last-date" datetime="2019-07-15"> 15 июл</time>
+              </p>
+              <a class="trip-plans__change" href="#">Изменить</a>
+            </li>
+
+          </ul>
+        </section>
+
+        <section class="add-trip">
+          <h2 class="add-trip__heading form-heading">Добавить план</h2>
+
+          <section class="step">
+            <h3 class="step__heading">
+              <span>Шаг 1.</span>
+              <span>Даты пребывания</span>
+            </h3>
+          </section>
+
+          <section class="step">
+            <h3 class="step__heading">
+              <span>Шаг 2.</span>
+              <span>Маршрут</span>
+            </h3>
+          </section>
+
+          <section class="step">
+            <h3 class="step__heading">
+              <span>Шаг 3.</span>
+              <span>Развлечения</span>
+            </h3>
+          </section>
+        </section>
+      </form>
     </main>
 
     <footer class="main-footer">
