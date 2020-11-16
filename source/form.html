@@ -416,39 +416,183 @@
             <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
             <ul class="step__fields-list fields-list">
               <li class="fields-list__item country-field">
-                <button class="country-field__button country-field__button--selected" type="button">
-                  <span class="country-field__text">Босния и Герцеговина</span>
-                </button>
-                <div class="country-field__indicator">
-                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                <div class="country-field__container">
+                  <button class="country-field__button country-field__button--selected" type="button">
+                    <span class="country-field__text">Босния и Герцеговина</span>
+                  </button>
+                  <div class="country-field__indicator">
+                    <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                  </div>
+                  <button class="country-field__close">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
                 </div>
-                <button class="country-field__close">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
               </li>
               <li class="fields-list__item country-field">
-                <button class="country-field__button country-field__button--selected" type="button">
-                  <span class="country-field__text">Чехия</span>
-                </button>
-                <div class="country-field__indicator">
-                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                <div class="country-field__container">
+                  <button class="country-field__button country-field__button--selected" type="button">
+                    <span class="country-field__text">Чехия</span>
+                  </button>
+                  <div class="country-field__indicator">
+                    <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                  </div>
+                  <button class="country-field__close">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
                 </div>
-                <button class="country-field__close">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
               </li>
               <li class="fields-list__item country-field">
-                <button class="country-field__button country-field__button--choose" type="button">
-                  <span class="country-field__text">Выберите страну</span>
-                </button>
-                <button class="country-field__close">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
+                <div class="country-field__container">
+                  <button class="country-field__button country-field__button--choose" type="button">
+                    <span class="country-field__text">Выберите страну</span>
+                  </button>
+                  <button class="country-field__close">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </div>
+                <div class="country-field__dropdown dropdown">
+                  <ul class="dropdown__alphabet">
+                    <li class="dropdown__letter">
+                      <button class="dropdown__letter dropdown__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-2" aria-pressed="false">б</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-3" aria-pressed="false">в</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-4" aria-pressed="false">г</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-5" aria-pressed="false">д</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-6" aria-pressed="false">е</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-7" aria-pressed="false">з</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-8" aria-pressed="false">и</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-9" aria-pressed="false">к</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-10" aria-pressed="false">л</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-11" aria-pressed="false">м</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-12" aria-pressed="false">н</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-13" aria-pressed="false">о</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-14" aria-pressed="false">п</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-15" aria-pressed="false">р</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-16" aria-pressed="false">с</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-17" aria-pressed="false">т</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-18" aria-pressed="false">у</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-19" aria-pressed="false">ф</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-20" aria-pressed="false">х</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-24" aria-pressed="false">э</button>
+                    </li>
+                    <li class="dropdown__letter">
+                      <button class="dropdown__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+                    </li>
+                  </ul>
+                  <ul class="dropdown__countries-list">
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Австралия
+                        <input type="radio" class="visually-hidden" name="country" value="Australia">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Австрия
+                        <input type="radio" class="visually-hidden" name="country" value="Austria">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Азербайджан
+                        <input type="radio" class="visually-hidden" name="country" value="Azerbaijan">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Албания
+                        <input type="radio" class="visually-hidden" name="country" value="Albania">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Алжир
+                        <input type="radio" class="visually-hidden" name="country" value="Algeria">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Ангола
+                        <input type="radio" class="visually-hidden" name="country" value="Angola">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Андорра
+                        <input type="radio" class="visually-hidden" name="country" value="Andorra">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Антигуа и Барбуда
+                        <input type="radio" class="visually-hidden" name="country" value="Antigua and Barbuda">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Аргентина
+                        <input type="radio" class="visually-hidden" name="country" value="Argentina">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Армения
+                        <input type="radio" class="visually-hidden" name="country" value="Armenia">
+                      </label>
+                    </li>
+                    <li class="dropdown__list-item">
+                      <label class="dropdown__country">Афганистан
+                        <input type="radio" class="visually-hidden" name="country" value="Afghanistan">
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="fields-list__item country-field">
-                <button class="country-field__button country-field__button--add" type="button">
-                  <span class="country-field__text">Добавить страну</span>
-                </button>
+                <div class="country-field__container">
+                  <button class="country-field__button country-field__button--add" type="button">
+                    <span class="country-field__text">Добавить страну</span>
+                  </button>
+                </div>
               </li>
             </ul>
 
@@ -462,7 +606,25 @@
               <span>Шаг 3.</span>
               <span>Развлечения</span>
             </h3>
+            <p class="step__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
+            <ul class="step__activity-list">
+              <li class="step__country-plan activity-plan">
+                <header class="activity-plan__header">
+                  <h4 class="activity-plan__country">Босния и Герцеговина</h4>
+                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                </header>
+                <textarea class="activity-plan__text" name="activity-plan-1" id="activity-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
+              </li>
+              <li class="step__country-plan activity-plan">
+                <header class="activity-plan__header">
+                  <h4 class="activity-plan__country">Чехия</h4>
+                  <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                </header>
+                <textarea class="activity-plan__text" name="activity-plan-2" id="activity-plan-2" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                </textarea>
+              </li>
+            </ul>
             <button class="step__submit button" type="submit">Отправить</button>
             <a class="step__back" href="#step-2">На шаг назад</a>
 
