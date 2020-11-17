@@ -417,9 +417,9 @@
             <ul class="step__fields-list fields-list">
               <li class="fields-list__item country-field">
                 <div class="country-field__container">
-                  <button class="country-field__button country-field__button--selected" type="button">
-                    <span class="country-field__text">Босния и Герцеговина</span>
-                  </button>
+                  <label class="visually-hidden" for="selected-country-1">Страна: </label>
+                  <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
+                  <button class="country-field__open-select" type="button">Выбрать страну</button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                   </div>
@@ -430,9 +430,9 @@
               </li>
               <li class="fields-list__item country-field">
                 <div class="country-field__container">
-                  <button class="country-field__button country-field__button--selected" type="button">
-                    <span class="country-field__text">Чехия</span>
-                  </button>
+                  <label class="visually-hidden" for="selected-country-2">Страна: </label>
+                  <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
+                  <button class="country-field__open-select" type="button">Выбрать страну</button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                   </div>
@@ -443,17 +443,26 @@
               </li>
               <li class="fields-list__item country-field">
                 <div class="country-field__container">
-                  <button class="country-field__button country-field__button--choose" type="button">
-                    <span class="country-field__text">Выберите страну</span>
-                  </button>
+                  <label class="visually-hidden" for="selected-country-3">Страна: </label>
+                  <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
+                  <button class="country-field__open-select" type="button">Выбрать страну</button>
+
                   <button class="country-field__close">
                     <span class="visually-hidden">Закрыть</span>
                   </button>
                 </div>
                 <div class="country-field__dropdown dropdown">
+                  <header class="dropdown__header">
+                    <h4 class="dropdown__title">Выберите страну</h4>
+                    <button class="dropdown__close" type="button">Закрыть</button>
+                  </header>
                   <ul class="dropdown__alphabet">
                     <li class="dropdown__letter">
                       <button class="dropdown__letter dropdown__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
+                      <!-- Здесь я долго размышляла, какой элемент использовать: radio-button или просто button,
+                        но выбрала кнопку, потому что в данные формы должна попадать не буква, на которую начинается название страны,
+                        а само название страны, хотя JS-ом все можно отменить... В общем здесь мне хотелось бы твое мнение узнать,
+                         и возможно, это даже тема для беседы)) -->
                     </li>
                     <li class="dropdown__letter">
                       <button class="dropdown__button" type="button" id="letter-2" aria-pressed="false">б</button>
@@ -530,38 +539,44 @@
                   </ul>
                   <ul class="dropdown__countries-list">
                     <li class="dropdown__list-item">
+                      <!-- Здесь тоже долго колебалась между ссылками и радио-кнопками, остановилась на радио-кнопках.
+                        Подозреваю, что в этом случае, не принципиально, все равно без JS ничего работать не будет.
+                        Я думаю, так: чекнутая страна попадает в атрибут value соотвествующего тэга input[name="selected-countries"]
+                        и дальше уже может отправляться в массиве выбранных стран на сервер
+                        Может я усложняю все, и не надо так далеко вперед заглядывать...  -->
+
                       <label class="dropdown__country">Австралия
-                        <input type="radio" class="visually-hidden" name="country" value="Australia">
+                        <input type="radio" class="visually-hidden" name="country" value="Австралия">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Австрия
-                        <input type="radio" class="visually-hidden" name="country" value="Austria">
+                        <input type="radio" class="visually-hidden" name="country" value="Австрия">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Азербайджан
-                        <input type="radio" class="visually-hidden" name="country" value="Azerbaijan">
+                        <input type="radio" class="visually-hidden" name="country" value="Азербайджан">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Албания
-                        <input type="radio" class="visually-hidden" name="country" value="Albania">
+                        <input type="radio" class="visually-hidden" name="country" value="Албания">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Алжир
-                        <input type="radio" class="visually-hidden" name="country" value="Algeria">
+                        <input type="radio" class="visually-hidden" name="country" value="Алжир">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Ангола
-                        <input type="radio" class="visually-hidden" name="country" value="Angola">
+                        <input type="radio" class="visually-hidden" name="country" value="Ангола">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Андорра
-                        <input type="radio" class="visually-hidden" name="country" value="Andorra">
+                        <input type="radio" class="visually-hidden" name="country" value="Андорра">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
@@ -571,17 +586,17 @@
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Аргентина
-                        <input type="radio" class="visually-hidden" name="country" value="Argentina">
+                        <input type="radio" class="visually-hidden" name="country" value="Антигуа и Барбуда">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Армения
-                        <input type="radio" class="visually-hidden" name="country" value="Armenia">
+                        <input type="radio" class="visually-hidden" name="country" value="Армения">
                       </label>
                     </li>
                     <li class="dropdown__list-item">
                       <label class="dropdown__country">Афганистан
-                        <input type="radio" class="visually-hidden" name="country" value="Afghanistan">
+                        <input type="radio" class="visually-hidden" name="country" value="Афганистан">
                       </label>
                     </li>
                   </ul>
@@ -589,8 +604,8 @@
               </li>
               <li class="fields-list__item country-field">
                 <div class="country-field__container">
-                  <button class="country-field__button country-field__button--add" type="button">
-                    <span class="country-field__text">Добавить страну</span>
+                  <button class="country-field__country country-field__country--add" type="button">
+                    Добавить страну
                   </button>
                 </div>
               </li>
