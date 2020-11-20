@@ -1,0 +1,9 @@
+.basic-button {
+  @include button-theme();
+
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  border: none;
+}

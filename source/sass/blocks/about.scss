@@ -1,0 +1,12 @@
+.about {
+  color: $text-clr-light;
+  background-color: $bg-main-dark;
+}
+
+.about__heading {
+  @include heading();
+}
+
+.about__slogan {
+  font-weight: bold;
+}

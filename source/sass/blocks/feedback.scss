@@ -1,0 +1,24 @@
+.feedback {
+  color: $text-clr-light;
+
+  background-color: $bg-main-dark;
+}
+
+.feedback__heading {
+  @include heading();
+}
+
+.feedback__text {
+  a {
+    color: $bg-button-basic;
+  }
+}
+
+.feedback__submit {
+  background-color: $bg-button-basic;
+  border: none;
+}
+
+.feedback__contacts {
+  color: $bg-button-basic;
+}
