@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
+  <head class="page">
     <meta charset="utf-8">
     <title>Направления | "Погнали"</title>
   </head>
-  <body>
+  <body class="page__body">
     <header class="main-header">
 
       <div class="main-header__top">
@@ -43,19 +43,21 @@
 
       <ul class="main-header__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в фейсбук</a>
+          <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в ВКонтакте</a>
+          <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в Инстаграм</a>
+          <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
         </li>
       </ul>
 
     </header>
     <main>
-      <h1 class="page__heading">Направления</h1>
+      <section class="intro">
+        <h1 class="intro__heading">Направления</h1>
+      </section>
 
       <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
         <section class="direction-form__user-profile user-profile">
@@ -78,19 +80,25 @@
             <legend class="user-profile__label">Транспорт</legend>
             <ul class="user-profile__transport transport">
               <li>
-                <label class="transport__item transport__item--plane" for="plane">Самолет</label>
-                <input type="checkbox" id="plane" name="transport" value="plane" checked>
+                <label class="transport__item transport__item--plane" for="plane">
+                  <span class="visually-hidden">Самолет</span>               </label>
+                <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
               </li>
               <li>
-                <label class="transport__item transport__item--auto" for="auto">Авто</label>
-                <input type="checkbox" id="auto" name="transport" value="auto" checked>
+                <label class="transport__item transport__item--car" for="car">
+                  <span class="visually-hidden">Автомобиль</span>
+                </label>
+                <input type="checkbox" id="car" name="transport" value="car" checked>
               </li>
               <li>
-                <label class="transport__item transport__item--bike" for="bike">Велосипед</label>
+                <label class="transport__item transport__item--bike" for="bike">
+                  <span class="visually-hidden">Велосипед</span>
+                </label>
                 <input type="checkbox" id="bike" name="transport" value="bike">
               </li>
               <li>
-                <label class="transport__item transport__item--walk" for="walk">Пешком</label>
+                <label class="transport__item transport__item--walk" for="walk">
+                  <span class="visually-hidden">Пешком</span>              </label>
                 <input type="checkbox" id="walk" name="transport" value="walk" checked>
               </li>
             </ul>
@@ -144,8 +152,8 @@
                 <span class="number-field__units">чел.</span>
               </label>
               <input class="number-field__input" type="text" id="companions-count" name="companions-count" value="2" pattern="[0-9]*">
-              <button class="number-field__control number-field__control--minus" type="button">Уменьшить</button>
-              <button class="number-field__control number-field__control--plus" type="button">Увеличить</button>
+              <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
+              <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
             </div>
 
             <div class="step__number-field number-field">
@@ -154,8 +162,8 @@
                 <span class="number-field__units">дн.</span>
               </label>
               <input class="number-field__input" type="text" id="days-count" name="days-count" value="3" pattern="[0-9]*" required>
-              <button class="number-field__control number-field__control--minus" type="button">Уменьшить</button>
-              <button class="number-field__control number-field__control--plus" type="button">Увеличить</button>
+              <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
+              <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
             </div>
 
             <div class="step__children-field checkbox-field">
@@ -166,10 +174,10 @@
             <div class="step__calendar calendar">
               <header class="calendar__header">
                 <h4 class="calendar__month">Март 2019</h4>
-                <button class="calendar__button calendar__button--back" type="button">Назад</button>
-                <button class="calendar__button calendar__button--forward" type="button">Вперед</button>
+                <button class="calendar__button calendar__button--back" type="button" aria-label="Назад"></button>
+                <button class="calendar__button calendar__button--forward" type="button" aria-label="Вперед"></button>
               </header>
-
+              <!-- Это потом попробую переделать списком на гридах -->
               <table class="calendar__sheet">
                 <tr class="calendar__row">
                   <th class="calendar__day-of-week">п</th>
@@ -419,7 +427,7 @@
                 <div class="country-field__container">
                   <label class="visually-hidden" for="selected-country-1">Страна: </label>
                   <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
-                  <button class="country-field__open-select" type="button">Выбрать страну</button>
+                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                   </div>
@@ -432,7 +440,7 @@
                 <div class="country-field__container">
                   <label class="visually-hidden" for="selected-country-2">Страна: </label>
                   <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
-                  <button class="country-field__open-select" type="button">Выбрать страну</button>
+                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                   </div>
@@ -445,7 +453,7 @@
                 <div class="country-field__container">
                   <label class="visually-hidden" for="selected-country-3">Страна: </label>
                   <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                  <button class="country-field__open-select" type="button">Выбрать страну</button>
+                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
 
                   <button class="country-field__close">
                     <span class="visually-hidden">Закрыть</span>
@@ -454,152 +462,150 @@
                 <div class="country-field__dropdown dropdown">
                   <header class="dropdown__header">
                     <h4 class="dropdown__title">Выберите страну</h4>
-                    <button class="dropdown__close" type="button">Закрыть</button>
+                    <button class="dropdown__close" type="button">
+                      <span class="visually-hidden">Закрыть</span>
+                    </button>
                   </header>
-                  <ul class="dropdown__alphabet">
-                    <li class="dropdown__letter">
-                      <button class="dropdown__letter dropdown__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
-                      <!-- Здесь я долго размышляла, какой элемент использовать: radio-button или просто button,
-                        но выбрала кнопку, потому что в данные формы должна попадать не буква, на которую начинается название страны,
-                        а само название страны, хотя JS-ом все можно отменить... В общем здесь мне хотелось бы твое мнение узнать,
-                         и возможно, это даже тема для беседы)) -->
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-2" aria-pressed="false">б</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-3" aria-pressed="false">в</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-4" aria-pressed="false">г</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-5" aria-pressed="false">д</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-6" aria-pressed="false">е</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-7" aria-pressed="false">з</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-8" aria-pressed="false">и</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-9" aria-pressed="false">к</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-10" aria-pressed="false">л</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-11" aria-pressed="false">м</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-12" aria-pressed="false">н</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-13" aria-pressed="false">о</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-14" aria-pressed="false">п</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-15" aria-pressed="false">р</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-16" aria-pressed="false">с</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-17" aria-pressed="false">т</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-18" aria-pressed="false">у</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-19" aria-pressed="false">ф</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-20" aria-pressed="false">х</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-21" aria-pressed="false">ц</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-22" aria-pressed="false">ч</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-23" aria-pressed="false">ш</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-24" aria-pressed="false">э</button>
-                    </li>
-                    <li class="dropdown__letter">
-                      <button class="dropdown__button" type="button" id="letter-25" aria-pressed="false">ю</button>
-                    </li>
-                  </ul>
-                  <ul class="dropdown__countries-list">
-                    <li class="dropdown__list-item">
-                      <!-- Здесь тоже долго колебалась между ссылками и радио-кнопками, остановилась на радио-кнопках.
-                        Подозреваю, что в этом случае, не принципиально, все равно без JS ничего работать не будет.
-                        Я думаю, так: чекнутая страна попадает в атрибут value соотвествующего тэга input[name="selected-countries"]
-                        и дальше уже может отправляться в массиве выбранных стран на сервер
-                        Может я усложняю все, и не надо так далеко вперед заглядывать...  -->
-
-                      <label class="dropdown__country">Австралия
-                        <input type="radio" class="visually-hidden" name="country" value="Австралия">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Австрия
-                        <input type="radio" class="visually-hidden" name="country" value="Австрия">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Азербайджан
-                        <input type="radio" class="visually-hidden" name="country" value="Азербайджан">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Албания
-                        <input type="radio" class="visually-hidden" name="country" value="Албания">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Алжир
-                        <input type="radio" class="visually-hidden" name="country" value="Алжир">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Ангола
-                        <input type="radio" class="visually-hidden" name="country" value="Ангола">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Андорра
-                        <input type="radio" class="visually-hidden" name="country" value="Андорра">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Антигуа и Барбуда
-                        <input type="radio" class="visually-hidden" name="country" value="Antigua and Barbuda">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Аргентина
-                        <input type="radio" class="visually-hidden" name="country" value="Антигуа и Барбуда">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Армения
-                        <input type="radio" class="visually-hidden" name="country" value="Армения">
-                      </label>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <label class="dropdown__country">Афганистан
-                        <input type="radio" class="visually-hidden" name="country" value="Афганистан">
-                      </label>
-                    </li>
-                  </ul>
+                  <div class="dropdown__alphabetic-sort alphabetic-sort">
+                    <ul class="alphabetic-sort__alphabet">
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__letter alphabetic-sort__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
+                        <!-- Здесь я долго размышляла, какой элемент использовать: radio-button или просто button,
+                          но выбрала кнопку, потому что в данные формы должна попадать не буква, на которую начинается название страны,
+                          а само название страны, хотя JS-ом все можно отменить... В общем здесь мне хотелось бы твое мнение узнать,
+                           и возможно, это даже тема для беседы)) -->
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-2" aria-pressed="false">б</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-3" aria-pressed="false">в</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-4" aria-pressed="false">г</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-5" aria-pressed="false">д</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-6" aria-pressed="false">е</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-7" aria-pressed="false">з</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-8" aria-pressed="false">и</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-9" aria-pressed="false">к</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-10" aria-pressed="false">л</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-11" aria-pressed="false">м</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-12" aria-pressed="false">н</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-13" aria-pressed="false">о</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-14" aria-pressed="false">п</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-15" aria-pressed="false">р</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-16" aria-pressed="false">с</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-17" aria-pressed="false">т</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-18" aria-pressed="false">у</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-19" aria-pressed="false">ф</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
+                      </li>
+                      <li class="alphabetic-sort__letter">
+                        <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+                      </li>
+                    </ul>
+                    <ul class="alphabetic-sort__countries-list countries-list">
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Австралия
+                          <input type="radio" class="visually-hidden" name="country" value="Австралия">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Австрия
+                          <input type="radio" class="visually-hidden" name="country" value="Австрия">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Азербайджан
+                          <input type="radio" class="visually-hidden" name="country" value="Азербайджан">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Албания
+                          <input type="radio" class="visually-hidden" name="country" value="Албания">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Алжир
+                          <input type="radio" class="visually-hidden" name="country" value="Алжир">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Ангола
+                          <input type="radio" class="visually-hidden" name="country" value="Ангола">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Андорра
+                          <input type="radio" class="visually-hidden" name="country" value="Андорра">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Антигуа и Барбуда
+                          <input type="radio" class="visually-hidden" name="country" value="Antigua and Barbuda">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Аргентина
+                          <input type="radio" class="visually-hidden" name="country" value="Антигуа и Барбуда">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Армения
+                          <input type="radio" class="visually-hidden" name="country" value="Армения">
+                        </label>
+                      </li>
+                      <li class="countries-list__item">
+                        <label class="countries-list__name">Афганистан
+                          <input type="radio" class="visually-hidden" name="country" value="Афганистан">
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
               <li class="fields-list__item country-field">
@@ -656,13 +662,13 @@
 
       <ul class="main-footer__list social-list social-list--footer">
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в фейсбук</a>
+          <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в ВКонтакте</a>
+          <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в Инстаграм</a>
+          <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
         </li>
       </ul>
 
