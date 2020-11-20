@@ -1,7 +1,8 @@
-@import "variables.scss";
-@import "mixins.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
 @import "blocks/about.scss";
-@import "blocks/button.scss";
+@import "blocks/basic-button.scss";
 @import "blocks/companions.scss";
 @import "blocks/contacts-list.scss";
 @import "blocks/contacts.scss";
@@ -10,8 +11,8 @@
 @import "blocks/directions.scss";
 @import "blocks/feedback.scss";
 @import "blocks/flags-list.scss";
-@import "blocks/heading.scss";
 @import "blocks/level.scss";
+@import "blocks/link-button.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-footer.scss";
 @import "blocks/main-header.scss";
@@ -25,6 +26,6 @@
 @import "blocks/site-list.scss";
 @import "blocks/social-list.scss";
 @import "blocks/transport.scss";
+@import "blocks/user-card.scss";
 @import "blocks/user-list.scss";
-@import "blocks/user.scss";
 @import "blocks/visually-hidden.scss";

@@ -1,0 +1,15 @@
+.user-card {
+  color: $text-clr-basic;
+  background-color: $text-clr-light;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.user-card__name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: $text-clr-medium;
+}

@@ -1,0 +1,24 @@
+.country {
+  background-color: $text-clr-light;
+}
+
+.country__name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: $text-clr-darker;
+}
+
+.country__slogan {
+  line-height: 18px;
+  font-weight: 500;
+
+  opacity: 0.3;
+}
+
+.country__count {
+  line-height: 20px;
+  font-weight: 500;
+
+  opacity: 0.3;
+}
