@@ -54,9 +54,162 @@
       </ul>
 
     </header>
+
     <main>
       <section class="intro">
         <h1 class="intro__heading">Попутчики</h1>
+      </section>
+
+      <section class="countries-filter">
+        <header class="countries-filter__header">
+          <h2 class="countries-filter__title">Фильтрация по странам:</h2>
+          <button class="countries-filter__toggle" type="button">
+            <span class="visually-hidden">Показать / Скрыть</span>
+          </button>
+        </header>
+
+        <div class="countries-filter__dropdown modal">
+          <ul class="continent-filter">
+            <li class="continent-filter__item">
+              <label class="continent-filter__name">Европа
+                <input class="visually-hidden" type="checkbox" id="europe" name="europe" checked>
+              </label>
+            </li>
+            <li class="continent-filter__item">
+              <label class="continent-filter__name">Азия
+                <input class="visually-hidden" type="checkbox" id="asia" name="asia">
+              </label>
+            </li>
+            <li class="continent-filter__item">
+              <label class="continent-filter__name">Америка
+                <input class="visually-hidden" type="checkbox" id="america" name="america">
+              </label>
+            </li>
+            <li class="continent-filter__item">
+              <label class="continent-filter__name">Острова
+                <input class="visually-hidden" type="checkbox" id="islands" name="islands">
+              </label>
+            </li>
+          </ul>
+
+          <div class="countries-filter__alphabetic-sort alphabetic-sort">
+            <ul class="alphabetic-sort__alphabet">
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__letter alphabetic-sort__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-2" aria-pressed="false">б</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-3" aria-pressed="false">в</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-4" aria-pressed="false">г</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-5" aria-pressed="false">д</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-6" aria-pressed="false">е</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-7" aria-pressed="false">з</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-8" aria-pressed="false">и</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-9" aria-pressed="false">к</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-10" aria-pressed="false">л</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-11" aria-pressed="false">м</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-12" aria-pressed="false">н</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-13" aria-pressed="false">о</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-14" aria-pressed="false">п</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-15" aria-pressed="false">р</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-16" aria-pressed="false">с</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-17" aria-pressed="false">т</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-18" aria-pressed="false">у</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-19" aria-pressed="false">ф</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
+              </li>
+              <li class="alphabetic-sort__letter">
+                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+              </li>
+            </ul>
+            <ul class="alphabetic-sort__countries-list countries-list countries-list--catalog">
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/australia/australia.html">Австралия</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/europe/austria.html">Австрия</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/europe/azerbaijan.html">Азербайджан</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/europe/albania.html">Албания</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/africa/algeria.html">Алжир</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/africa/angola.html">Ангола</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/europe/andorra.html">Андорра</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/islands/antigua.html">Антигуа и Барбуда</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/america/argentina.html">Аргентина</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/europe/armenia.html">Армения</a>
+              </li>
+              <li class="countries-list__item">
+                <a class="countries-list__link" href="./countries/asia/afganistan.html">Афганистан</a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="countries-filter__button basic-button basic-button--light modal__close" type="button">Свернуть</button>
+        </div>
+
       </section>
     </main>
       <footer class="main-footer">
