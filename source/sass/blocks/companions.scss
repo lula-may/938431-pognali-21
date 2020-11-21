@@ -1,0 +1,13 @@
+.companions {
+  color: $text-clr-light;
+
+  background-color: $bg-main-dark;
+}
+
+.companions__heading {
+  @include heading();
+}
+
+.companions__slogan {
+  font-weight: bold;
+}

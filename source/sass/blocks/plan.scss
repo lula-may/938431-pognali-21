@@ -1,0 +1,22 @@
+.plan {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $text-clr-dark;
+}
+
+.plan__item {
+  background-color: $bg-special-light;
+
+  &:first-child {
+    background-color: $bg-special-bright;
+  }
+
+  &:nth-child(2) {
+    background-color: $bg-special-medium;
+  }
+
+  &:last-child {
+    background-color: $bg-button-basic;
+  }
+}

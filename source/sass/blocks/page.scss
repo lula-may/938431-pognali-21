@@ -1,0 +1,23 @@
+.page {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page__body {
+  margin: 0;
+
+  @include basic-text();
+  color: $text-clr-basic;
+
+  background-color: $bg-main-light;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
