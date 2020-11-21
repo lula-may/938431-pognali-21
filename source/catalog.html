@@ -209,7 +209,155 @@
 
           <button class="countries-filter__button basic-button basic-button--light modal__close" type="button">Свернуть</button>
         </div>
+      </section>
 
+      <section class="companions-filter">
+        <h2 class="companions-filter__heading">Выберите идеального попутчика</h2>
+
+        <form class="companions-filter__form companion-form" id="companion-form" method="get" action="https://echo.htmlacademy.ru">
+          <ul class="companion-form__list">
+
+            <li class="companion-form__item field-group">
+              <header class="field-group__header">
+                <h3 class="field-group__name">Хобби:</h3>
+                <button class="field-group__toggle" type="button">
+                  <span class="visually-hidden">Свернуть / Развернуть</span>
+                </button>
+              </header>
+              <ul class="field-group__list">
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="hobby-1" name="hobby" value="gim">
+                  <label class="field-group__label" for="hobby-1">Спортзал</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="hobby-2" name="hobby" value="hookah">
+                  <label class="field-group__label" for="hobby-2">Кальян</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="hobby-3" name="hobby" value="sofa">
+                  <label class="field-group__label" for="hobby-3">Диван</label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="companion-form__item field-group">
+              <header class="field-group__header">
+                <h3 class="field-group__name">Музыка:</h3>
+                <button class="field-group__toggle" type="button">
+                  <span class="visually-hidden">Свернуть / Развернуть</span>
+                </button>
+              </header>
+              <ul class="field-group__list">
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="music-1" name="music" value="hard-rock">
+                  <label class="field-group__label" for="music-1">Тяжелый рок</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="music-2" name="music" value="russian-rap">
+                  <label class="field-group__label" for="music-2">Русский рэп</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="music-3" name="music" value="eurodance">
+                  <label class="field-group__label" for="music-3">Евроденс</label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="companion-form__item field-group">
+              <header class="field-group__header">
+                <h3 class="field-group__name">Еда:</h3>
+                <button class="field-group__toggle" type="button">
+                  <span class="visually-hidden">Свернуть / Развернуть</span>
+                </button>
+              </header>
+              <ul class="field-group__list">
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="meals-1" name="meals" value="meat">
+                  <label class="field-group__label" for="meals-1">Мясоед</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="meals-2" name="meals" value="healthy-diet">
+                  <label class="field-group__label" for="meals-2">Сидит на ПП</label>
+                </li>
+                <li class="field-group__item">
+                  <input class="visually-hidden" type="checkbox" id="meals-3" name="meals" value="vegan">
+                  <label class="field-group__label" for="meals-3">Веган сыроед</label>
+                </li>
+              </ul>
+            </li>
+
+            <li class="companion-form__item field-group">
+              <header class="field-group__header">
+                <h3 class="field-group__name">Транспорт:</h3>
+                <button class="field-group__toggle" type="button">
+                  <span class="visually-hidden">Свернуть / Развернуть</span>
+                </button>
+              </header>
+              <ul class="field-group__transport transport">
+                <li>
+                  <label class="transport__item transport__item--plane" for="plane">
+                    <span class="visually-hidden">Самолет</span>               </label>
+                  <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
+                </li>
+                <li>
+                  <label class="transport__item transport__item--car" for="car">
+                    <span class="visually-hidden">Автомобиль</span>
+                  </label>
+                  <input type="checkbox" id="car" name="transport" value="car" checked>
+                </li>
+                <li>
+                  <label class="transport__item transport__item--bike" for="bike">
+                    <span class="visually-hidden">Велосипед</span>
+                  </label>
+                  <input type="checkbox" id="bike" name="transport" value="bike">
+                </li>
+                <li>
+                  <label class="transport__item transport__item--walk" for="walk">
+                    <span class="visually-hidden">Пешком</span>
+                  </label>
+                  <input type="checkbox" id="walk" name="transport" value="walk" checked>
+                </li>
+              </ul>
+            </li>
+
+            <li class="companion-form__item field-group">
+              <header class="field-group__header">
+                <h3 class="field-group__name">Левел:</h3>
+                <button class="field-group__toggle" type="button">
+                  <span class="visually-hidden">Свернуть / Развернуть</span>
+                </button>
+              </header>
+
+              <div class="field-group__level level-choose">
+                <p class="visually-hidden">
+                  <label for="level-min">Минимальный уровень попутчика</label>
+                  <label for="level-max">Максимальный уровень попутчика</label>
+                </p>
+
+                <div class="level-choose__output">
+                  <input class="level-choose__min-value" type="number" id="level-min" name="level-min" value="30" readonly>
+                  <input class="level-choose__max-value" type="number" id="level-max" name="level-max" value="100" readonly>
+                </div>
+
+                <div class="level-choose__slider slider">
+                  <button class="slider__handle slider__handle--min">
+                    <span class="visually-hidden">Выбрать минимальный уровень</span>
+                  </button>
+                  <button class="slider__handle slider__handle--max">
+                    <span class="visually-hidden">Выбрать максимальный уровень</span>
+                  </button>
+                  <div class="slider__bar"></div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+          <button class="companion-form__submit basic-button" type="submit">Показать</button>
+        </form>
+      </section>
+
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог попутчиков</h2>
       </section>
     </main>
       <footer class="main-footer">
