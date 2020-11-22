@@ -19,3 +19,25 @@
 
   background-color: $bg-button-basic;
 }
+
+@mixin theme($bg-clr: $bg-card, $text-clr: $text-clr-basic) {
+  color: $text-clr;
+  background-color: $bg-clr;
+}
+
+@mixin offset-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset() {
+  @include offset-reset();
+  list-style: none;
+}
+
+// Временный миксин
+
+@mixin outline($color: rgba(225, 0, 0, 0.5)) {
+  outline: 5px solid $color;
+  outline-offset: -5px;
+}

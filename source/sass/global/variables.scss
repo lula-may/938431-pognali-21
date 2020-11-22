@@ -1,5 +1,6 @@
 $basic-font: "Blogger Sans", "Arial", sans-serif;
 $bg-header: #182044;
+$bg-card: #ffffff;
 $bg-main-light: #edeff6;
 $bg-main-medium: #e6e8f1;
 $bg-main-dark: #192144;
@@ -21,3 +22,8 @@ $text-clr-medium: #1d2e5b;
 $text-clr-dark: #161c35;
 $text-clr-darker: #000000;
 $text-clr-link: #132576;
+
+// BREAKPOINTS
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
