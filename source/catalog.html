@@ -358,33 +358,262 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог попутчиков</h2>
-      </section>
-    </main>
-      <footer class="main-footer">
+        <!-- TODO: Write catalog list -->
+        <ul class="catalog__list">
 
-        <a class="main-footer__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
-        </a>
+          <li class="catalog__item companion-card">
+            <a class="companion-card__link" href="#">
+              <h3 class="companion-card__name">Таня Фирсова</h3>
+            </a>
 
-        <ul class="main-footer__list social-list social-list--footer">
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
+            <p class="companion-card__likes likes">
+              <button class="likes__toggle" type="button" aria-pressed="true">
+                <span class="visually-hidden">Поставить лайк</span>
+              </button>
+              <span class="likes__count">1,5 M</span>
+            </p>
+
+            <a class="companion-card__image" href="#">
+              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+            </a>
+
+            <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+            <div class="companion-card__wish">
+              <h4 class="companion-card__subheading">Хочет посетить:</h4>
+              <ul class="companion-card__wish-list wish-list">
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                  <span class="wish-list__name">Шри-Ланка</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Тайланда">
+                  <span class="wish-list__name">Тайланд</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшеловых островов">
+                  <span class="wish-list__name">Сейшелы</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="companion-card__transport">
+              <h4 class="companion-card__subheading">Транспорт:</h4>
+              <ul class="companion-card__transport-list transport">
+                <li class="transport__item transport__item--active">Самолет</li>
+                <li class="transport__item">Автомобиль</li>
+                <li class="transport__item">Велосипед</li>
+                <li class="transport__item">Пешком</li>
+              </ul>
+            </div>
+
+            <div class="companion-card__level-block">
+              <h4 class="companion-card__subheading">Левел:</h4>
+              <div class="companion-card__level level">
+                <b class="level__count">99</b>
+                <span class="level__text">level</span>
+              </div>
+            </div>
+
+            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
           </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
+
+          <li class="catalog__item companion-card">
+            <a class="companion-card__link" href="#">
+              <h3 class="companion-card__name">Петя Демин</h3>
+            </a>
+            <p class="companion-card__likes likes">
+              <button class="likes__toggle" type="button" aria-pressed="false">
+                <span class="visually-hidden">Поставить лайк</span>
+              </button>
+              <span class="likes__count">1500</span>
+            </p>
+
+            <a class="companion-card__image" href="#">
+              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+            </a>
+
+            <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+
+            <div class="companion-card__wish">
+              <h4 class="companion-card__subheading">Хочет посетить:</h4>
+              <ul class="companion-card__wish-list wish-list">
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                  <span class="wish-list__name">Бельгия</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                  <span class="wish-list__name">Чехия</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="companion-card__transport">
+              <h4 class="companion-card__subheading">Транспорт:</h4>
+              <ul class="companion-card__transport-list transport">
+                <li class="transport__item transport__item--active">Самолет</li>
+                <li class="transport__item transport__item--active">Автомобиль</li>
+                <li class="transport__item">Велосипед</li>
+                <li class="transport__item transport__item--active">Пешком</li>
+              </ul>
+            </div>
+
+            <div class="companion-card__level-block">
+              <h4 class="companion-card__subheading">Левел:</h4>
+              <div class="companion-card__level level">
+                <b class="level__count">80</b>
+                <span class="level__text">level</span>
+              </div>
+            </div>
+
+            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
           </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
+
+          <li class="catalog__item companion-card">
+            <a class="companion-card__link" href="#">
+              <h3 class="companion-card__name">Марк Смолов</h3>
+            </a>
+            <p class="companion-card__likes likes">
+              <button class="likes__toggle" type="button" aria-pressed="false">
+                <span class="visually-hidden">Поставить лайк</span>
+              </button>
+              <span class="likes__count">170</span>
+            </p>
+
+            <a class="companion-card__image" href="#">
+              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+            </a>
+
+            <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+
+            <div class="companion-card__wish">
+              <h4 class="companion-card__subheading">Хочет посетить:</h4>
+              <ul class="companion-card__wish-list wish-list">
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                  <span class="wish-list__name">США</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралия">
+                  <span class="wish-list__name">Австралия</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканской республики">
+                  <span class="wish-list__name">Доминикана</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="companion-card__transport">
+              <h4 class="companion-card__subheading">Транспорт:</h4>
+              <ul class="companion-card__transport-list transport">
+                <li class="transport__item transport__item--active">Самолет</li>
+                <li class="transport__item">Автомобиль</li>
+                <li class="transport__item transport__item--active">Велосипед</li>
+                <li class="transport__item">Пешком</li>
+              </ul>
+            </div>
+
+            <div class="companion-card__level-block">
+              <h4 class="companion-card__subheading">Левел:</h4>
+              <div class="companion-card__level level">
+                <b class="level__count">25</b>
+                <span class="level__text">level</span>
+              </div>
+            </div>
+
+            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+          </li>
+
+          <li class="catalog__item companion-card">
+            <a class="companion-card__link" href="#">
+              <h3 class="companion-card__name">Лариса Роговая</h3>
+            </a>
+
+            <p class="companion-card__likes likes">
+              <button class="likes__toggle" type="button" aria-pressed="false">
+                <span class="visually-hidden">Поставить лайк</span>
+              </button>
+              <span class="likes__count">23</span>
+            </p>
+
+            <a class="companion-card__image" href="#">
+              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+            </a>
+
+            <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
+
+            <div class="companion-card__wish">
+              <h4 class="companion-card__subheading">Хочет посетить:</h4>
+              <ul class="companion-card__wish-list wish-list">
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                  <span class="wish-list__name">Великобритания</span>
+                </li>
+                <li class="wish-list__item">
+                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                  <span class="wish-list__name">Германия</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="companion-card__transport">
+              <h4 class="companion-card__subheading">Транспорт:</h4>
+              <ul class="companion-card__transport-list transport">
+                <li class="transport__item transport__item--active">Самолет</li>
+                <li class="transport__item transport__item--active">Автомобиль</li>
+                <li class="transport__item">Велосипед</li>
+                <li class="transport__item">Пешком</li>
+              </ul>
+            </div>
+
+            <div class="companion-card__level-block">
+              <h4 class="companion-card__subheading">Левел:</h4>
+              <div class="companion-card__level level">
+                <b class="level__count">50</b>
+                <span class="level__text">level</span>
+              </div>
+            </div>
+
+            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
           </li>
         </ul>
 
-        <p class="main-footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTMLAcademy">
-          </a>
-        </p>
+        <a class="catalog__show-more" href="#">Показать еще</a>
 
-      </footer>
-    </body>
-  </html>
+        <div class="catalog__pagination pagination">
+          <a class="pagination__button pagination__button--back" href="#">Назад</a>
+          <a class="pagination__button pagination__button--forward" href="#">Вперед</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+
+      <a class="main-footer__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
+      </a>
+
+      <ul class="main-footer__list social-list social-list--footer">
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
+        </li>
+      </ul>
+
+      <p class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTMLAcademy">
+        </a>
+      </p>
+
+    </footer>
+  </body>
+</html>
