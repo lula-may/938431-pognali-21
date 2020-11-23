@@ -3,6 +3,17 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@mixin bolder-text {
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
 @mixin heading() {
@@ -33,6 +44,11 @@
 @mixin list-reset() {
   @include offset-reset();
   list-style: none;
+}
+
+@mixin center-position($width: $desktop-content-width) {
+  width: $width;
+  margin: 0 auto;
 }
 
 // Временный миксин

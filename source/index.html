@@ -9,91 +9,95 @@
   <body class="page__body">
     <header class="main-header main-header--scroll">
 
-      <div class="main-header__top">
-        <a class="main-header__logo logo">
-          <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
-        </a>
-        <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
+      <div class="main-header__container">
+        <div class="main-header__top">
+          <a class="main-header__logo logo">
+            <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
+          </a>
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
+
+        <ul class="main-header__site-list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#about">О сервисе</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Направления</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+
+        <div class="main-header__user-list user-list">
+          <a class="user-list__login basic-button" href="#">Авторизация</a>
+        </div>
+
+        <ul class="main-header__contacts-list contacts-list">
+          <li class="contacts-list__item">
+            <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+          </li>
+          <li class="contacts-list__item">
+            <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+
+        <ul class="main-header__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">Мы в фейсбук</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">Мы в ВКонтакте</a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">Мы в Инстаграм</a>
+          </li>
+        </ul>
+
       </div>
-
-      <ul class="main-header__site-list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="#about">О сервисе</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Направления</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Попутчики</a>
-        </li>
-      </ul>
-
-      <div class="main-header__user-list user-list">
-        <a class="user-list__login basic-button" href="#">Авторизация</a>
-      </div>
-
-      <ul class="main-header__contacts-list contacts-list">
-        <li class="contacts-list__item">
-          <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contacts-list__item">
-          <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-
-      <ul class="main-header__social-list social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в фейсбук</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в ВКонтакте</a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">Мы в Инстаграм</a>
-        </li>
-      </ul>
-
     </header>
     <main>
       <h1 class="visually-hidden">Главная страница сайта "Погнали"</h1>
 
       <section class="promo">
-        <h2 class="visually-hidden">Введение</h2>
+        <div class="promo__container">
+          <h2 class="visually-hidden">Введение</h2>
 
-        <header class="promo__header">
-          <p class="promo__slogan">В путешествие с крутыми попутчиками</p>
+          <header class="promo__header">
+            <p class="promo__slogan">В путешествие с крутыми попутчиками</p>
 
-          <div class="promo__links">
-            <ul class="contacts-list contacts-list--short">
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--button contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-              </li>
-              <li class="contacts-list__item">
-                <a class="contacts-list__link contacts-list__link--button contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </li>
-            </ul>
-            <div class="user-list">
-              <a href="#" class="user-list__login basic-button">Авторизация</a>
+            <div class="promo__links">
+              <ul class="contacts-list contacts-list--short">
+                <li class="contacts-list__item">
+                  <a class="contacts-list__link contacts-list__link--button contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+                </li>
+                <li class="contacts-list__item">
+                  <a class="contacts-list__link contacts-list__link--button contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </li>
+              </ul>
+              <div class="user-list">
+                <a href="#" class="user-list__login basic-button">Авторизация</a>
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
 
-        <blockquote class="promo__review">
-          <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="promo__quote-author">
-            Мурат Эльтазин главный редактор газеты «гаджетлайф»
-          </cite>
-        </blockquote>
+          <blockquote class="promo__review">
+            <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
+            <cite class="promo__quote-author">
+              Мурат Эльтазин главный редактор газеты «гаджетлайф»
+            </cite>
+          </blockquote>
 
-        <ul class="promo__plan plan">
-          <li class="plan__item">Выберите направление</li>
-          <li class="plan__item">Изучите идеи путешественников</li>
-          <li class="plan__item">Находите тех, кто похож на вас</li>
-          <li class="plan__item">Путешествуйте вместе!</li>
-        </ul>
+          <ul class="promo__plan plan">
+            <li class="plan__item">Выберите направление</li>
+            <li class="plan__item">Изучите идеи путешественников</li>
+            <li class="plan__item">Находите тех, кто похож на вас</li>
+            <li class="plan__item">Путешествуйте вместе!</li>
+          </ul>
 
+        </div>
       </section>
 
       <section class="about" id="about">

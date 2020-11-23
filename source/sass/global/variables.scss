@@ -1,12 +1,15 @@
 $basic-font: "Blogger Sans", "Arial", sans-serif;
+
 $bg-header: #182044;
 $bg-card: #ffffff;
+
 $bg-main-light: #edeff6;
 $bg-main-medium: #e6e8f1;
 $bg-main-dark: #192144;
 $bg-inner-medium: #d4d9eb;
 $bg-inner-light: #cbced9;
 $bg-inner-lighter: #dfe3f0;
+
 $bg-special-bright: #ff8d30;
 $bg-special-medium: #ffa530;
 $bg-special-light: #ffbd2e;
@@ -16,14 +19,19 @@ $bg-button-light: #f3f4f8;
 $bg-indicator-no: #f97676;
 $bg-indicator-yes: #81e31e;
 $bg-level: rgba(0, 0, 0, 0.6);
-$text-clr-light: #ffffff;
+
+$text-clr-light: $bg-card;
 $text-clr-basic: #444444;
 $text-clr-medium: #1d2e5b;
 $text-clr-dark: #161c35;
 $text-clr-darker: #000000;
 $text-clr-link: #132576;
+$text-clr-header: $bg-main-dark;
 
 // BREAKPOINTS
 $tablet-width: 768px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;
+
+// OTHER SIZES
+$desktop-content-width: 1320px;
