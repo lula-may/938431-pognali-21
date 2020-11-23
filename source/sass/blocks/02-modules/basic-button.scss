@@ -6,4 +6,13 @@
   text-transform: uppercase;
 
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-special-light;
+  }
+
+  &:active {
+    color: rgba($text-clr-dark, 0.3);
+  }
 }

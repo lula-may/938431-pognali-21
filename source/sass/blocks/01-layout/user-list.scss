@@ -1,4 +1,8 @@
 // TODO: Write more useful code for layout
-.copyright {
-  color: inherit;
+.user-list {
+
+  .user-list__login[href]:hover,
+  .user-list__login[href]:focus {
+    opacity: 1;
+  }
 }

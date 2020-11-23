@@ -24,12 +24,13 @@ $bg-button-dark: #121936;
 $bg-button-light: #f3f4f8;
 $bg-indicator-no: #f97676;
 $bg-indicator-yes: #81e31e;
-$bg-level: rgba(0, 0, 0, 0.6);
+$bg-level: rgba(#000000, 0.6);
 
 // COLORS: TEXT
-$text-clr-light: #ffffff;
+$text-clr-light: $bg-card;
 $text-clr-basic: #444444;
 $text-clr-medium: #1d2e5b;
 $text-clr-dark: #161c35;
 $text-clr-darker: #000000;
 $text-clr-link: #132576;
+$text-clr-header: $bg-main-dark;

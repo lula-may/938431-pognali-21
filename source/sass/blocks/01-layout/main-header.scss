@@ -6,5 +6,14 @@
   &--scroll {
     color: $bg-main-dark;
     background-color: $bg-card;
+
+    a[href]:hover,
+    a[href]:focus {
+      opacity: 0.6;
+    }
+
+    a:active{
+      opacity: 0.3;
+    }
   }
 }

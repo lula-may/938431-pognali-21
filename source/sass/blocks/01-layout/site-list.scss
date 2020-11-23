@@ -1,4 +1,6 @@
 .site-list {
+  @include list-reset();
+
   font-size: 30px;
   font-weight: 500;
   line-height: 35px;
