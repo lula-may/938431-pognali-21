@@ -1,0 +1,22 @@
+.level--main {
+  color: $text-clr-light;
+
+  background-color: $bg-level;
+
+}
+
+.level--form {
+  .level__count {
+    font-size: 38px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $text-clr-dark;
+  }
+
+  .level__text {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    color: $text-clr-basic;
+  }
+}

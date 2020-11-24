@@ -1,0 +1,20 @@
+.countries-list__list {
+  @include list-reset();
+}
+
+.countries-list__letter {
+  display: none;
+}
+.countries-list__name {
+  font-weight: normal;
+  color: $text-clr-basic;
+}
+
+input:hover + .countries-list__name,
+input:focus + .countries-list__name {
+  color: $text-clr-medium;
+}
+
+input:active + .countries-list__name {
+  color: rgba($text-clr-medium, 0.3);
+}

@@ -1,4 +1,6 @@
 .contacts-list {
+  @include list-reset();
+
   font-size: 16px;
   font-weight: bold;
   line-height: 18px;

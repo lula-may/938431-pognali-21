@@ -1,0 +1,57 @@
+.trip-plans {
+  color: $text-clr-medium;
+
+  background-color: $bg-inner-lighter;
+}
+
+.trip-plans__heading {
+  @include offset-reset();
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.trip-plans__list {
+  @include list-reset();
+}
+
+.trip-plans__item {
+  background-color: $bg-card;
+}
+
+.trip-plans__name {
+  @include offset-reset();
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.trip-plans__info {
+  @include offset-reset();
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.trip-plans__change {
+  color: rgba($text-clr-darker, 0.3);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($text-clr-darker, 0.6);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba($text-clr-darker, 0.1);
+  }
+}
