@@ -13,7 +13,7 @@
           <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
         </a>
         <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Закрыть</span>
+          <span class="visually-hidden">Удалить</span>
         </button>
       </div>
 
@@ -384,53 +384,47 @@
             </h3>
             <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
             <ul class="step__fields-list fields-list">
-              <li class="fields-list__item country-field">
-                <div class="country-field__container">
+              <li class="fields-list__item">
+                <div class="country-field">
                   <label class="visually-hidden" for="selected-country-1">Страна: </label>
                   <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
-                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
+                  <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                   </div>
-                  <button class="country-field__close">
-                    <span class="visually-hidden">Закрыть</span>
+                  <button class="country-field__delete">
+                    <span class="visually-hidden">Удалить</span>
                   </button>
                 </div>
               </li>
-              <li class="fields-list__item country-field">
-                <div class="country-field__container">
+              <li class="fields-list__item">
+                <div class="country-field">
                   <label class="visually-hidden" for="selected-country-2">Страна: </label>
                   <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
-                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
+                  <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
                   <div class="country-field__indicator">
                     <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                   </div>
-                  <button class="country-field__close">
-                    <span class="visually-hidden">Закрыть</span>
+                  <button class="country-field__delete">
+                    <span class="visually-hidden">Удалить</span>
                   </button>
                 </div>
               </li>
-              <li class="fields-list__item country-field">
-                <div class="country-field__container">
+              <li class="fields-list__item">
+                <div class="country-field country-field--opened">
                   <label class="visually-hidden" for="selected-country-3">Страна: </label>
                   <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                  <button class="country-field__open-select" type="button" aria-label="Выбрать страну"></button>
+                  <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
 
-                  <button class="country-field__close">
-                    <span class="visually-hidden">Закрыть</span>
+                  <button class="country-field__delete">
+                    <span class="visually-hidden">Удалить</span>
                   </button>
                 </div>
-                <div class="country-field__dropdown dropdown">
-                  <header class="dropdown__header">
-                    <h4 class="dropdown__title">Выберите страну</h4>
-                    <button class="dropdown__close" type="button">
-                      <span class="visually-hidden">Закрыть</span>
-                    </button>
-                  </header>
+                <div class="fields-list__dropdown dropdown">
                   <div class="dropdown__alphabetic-sort alphabetic-sort">
                     <ul class="alphabetic-sort__alphabet">
                       <li class="alphabetic-sort__letter">
-                        <button class="alphabetic-sort__letter alphabetic-sort__letter--active" type="button" id="letter-1" aria-pressed="true">а</button>
+                        <button class="alphabetic-sort__button" type="button" id="letter-1" aria-pressed="true">а</button>
                       </li>
                       <li class="alphabetic-sort__letter">
                         <button class="alphabetic-sort__button" type="button" id="letter-2" aria-pressed="false">б</button>
@@ -505,68 +499,60 @@
                         <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
                       </li>
                     </ul>
-                    <ul class="alphabetic-sort__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Австралия
-                          <input type="radio" class="visually-hidden" name="country" value="Австралия">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Австрия
-                          <input type="radio" class="visually-hidden" name="country" value="Австрия">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Азербайджан
-                          <input type="radio" class="visually-hidden" name="country" value="Азербайджан">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Албания
-                          <input type="radio" class="visually-hidden" name="country" value="Албания">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Алжир
-                          <input type="radio" class="visually-hidden" name="country" value="Алжир">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Ангола
-                          <input type="radio" class="visually-hidden" name="country" value="Ангола">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Андорра
-                          <input type="radio" class="visually-hidden" name="country" value="Андорра">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Антигуа и Барбуда
-                          <input type="radio" class="visually-hidden" name="country" value="Antigua and Barbuda">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Аргентина
-                          <input type="radio" class="visually-hidden" name="country" value="Антигуа и Барбуда">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Армения
-                          <input type="radio" class="visually-hidden" name="country" value="Армения">
-                        </label>
-                      </li>
-                      <li class="countries-list__item">
-                        <label class="countries-list__name">Афганистан
-                          <input type="radio" class="visually-hidden" name="country" value="Афганистан">
-                        </label>
-                      </li>
-                    </ul>
+                    <div class="alphabetic-sort__countries-list countries-list">
+                      <h4 class="countries-list__letter">А</h4>
+                      <ul class="countries-list__list" id="list-a">
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-1" value="Австралия">
+                          <label class="countries-list__name" for="country-a-1">Австралия</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-2" value="Австрия">
+                          <label class="countries-list__name" for="country-a-2">Австрия</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-3" value="Азербайджан">
+                          <label class="countries-list__name" for="country-a-3">Азербайджан</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-4" value="Албания">
+                          <label class="countries-list__name" for="country-a-4">Албания</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-5" value="Алжир">
+                          <label class="countries-list__name" for="country-a-5">Алжир</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-6" value="Ангола">
+                          <label class="countries-list__name" for="country-a-6">Ангола</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-7" value="Андорра">
+                          <label class="countries-list__name" for="country-a-7">Андорра</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-8" value="Antigua and Barbuda">
+                          <label class="countries-list__name" for="country-a-8">Антигуа и Барбуда</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-9" value="Антигуа и Барбуда">
+                          <label class="countries-list__name" for="country-a-9">Аргентина</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-10" value="Армения">
+                          <label class="countries-list__name" for="country-a-10">Армения</label>
+                        </li>
+                        <li class="countries-list__item">
+                          <input type="radio" class="visually-hidden" name="country" id="country-a-11" value="Афганистан">
+                          <label class="countries-list__name" for="country-a-11">Афганистан</label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </li>
-              <li class="fields-list__item country-field">
-                <div class="country-field__container">
+              <li class="fields-list__item">
+                <div class="country-field">
                   <button class="country-field__country country-field__country--add" type="button">
                     Добавить страну
                   </button>
@@ -592,14 +578,14 @@
                   <h4 class="activity-plan__country">Босния и Герцеговина</h4>
                   <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                 </header>
-                <textarea class="activity-plan__text" name="activity-plan-1" id="activity-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                <textarea class="activity-plan__text" name="activity-plan-1" id="activity-plan-1" cols="30" rows="10" placeholder="План действий" required></textarea>
               </li>
               <li class="step__country-plan activity-plan">
                 <header class="activity-plan__header">
                   <h4 class="activity-plan__country">Чехия</h4>
                   <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                 </header>
-                <textarea class="activity-plan__text" name="activity-plan-2" id="activity-plan-2" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                <textarea class="activity-plan__text" name="activity-plan-2" id="activity-plan-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                 </textarea>
               </li>
             </ul>

@@ -1,0 +1,37 @@
+.country-field--opened {
+  .country-field__country {
+    color: $bg-card;
+    background-color: $text-clr-medium;
+    border: none;
+  }
+}
+
+.country-field__country {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+
+  border: 1px solid $bg-inner-light;
+
+  &:hover,
+  &:focus {
+    border-color: $border-textarea-hover;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &--add {
+    @include button-reset();
+    background-color: $bg-main-light;
+
+    &:hover {
+      background-color: $bg-inner-lighter;
+    }
+  }
+}

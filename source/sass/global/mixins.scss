@@ -1,3 +1,22 @@
+// DEFAULT STYLES RESET
+@mixin offset-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset() {
+  @include offset-reset();
+  list-style: none;
+}
+
+@mixin button-reset {
+  @include offset-reset();
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+// TYPOGRAPHY STYLES
 @mixin basic-text() {
   font-family: $basic-font;
   font-size: 16px;
@@ -18,7 +37,17 @@
   color: $bg-special-bright;
 }
 
+// COLOR STYLES
+
+@mixin theme($bg-clr: $bg-card, $text-clr: $text-clr-basic) {
+  color: $text-clr;
+  background-color: $bg-clr;
+}
+
+// CUSTOM ELEMENTS STYLES
 @mixin button-theme() {
+  @include button-reset();
+
   font-weight: bold;
   text-decoration: none;
   color: $text-clr-medium;
@@ -26,18 +55,18 @@
   background-color: $bg-button-basic;
 }
 
-@mixin theme($bg-clr: $bg-card, $text-clr: $text-clr-basic) {
-  color: $text-clr;
-  background-color: $bg-clr;
+@mixin border-styles() {
+  border: 1px solid $bg-inner-light;
+
+  &:hover,
+  &:focus {
+    border-color: $border-textarea-hover;
+    outline: none;
+  }
+
+  &:focus-within {
+    border-color: $text-clr-dark;
+  }
 }
 
-@mixin offset-reset() {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin list-reset() {
-  @include offset-reset();
-  list-style: none;
-}
 

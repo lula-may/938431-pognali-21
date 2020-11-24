@@ -27,3 +27,15 @@
   color: $text-clr-medium;
   text-transform: uppercase;
 }
+
+.user-profile__hashtags {
+  resize: none;
+
+  font: inherit;
+
+  &::placeholder {
+    color: rgba($text-clr-basic, 0.6);
+  }
+
+  @include border-styles();
+}
