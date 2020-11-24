@@ -1,0 +1,22 @@
+.step {
+  background-color: $bg-card;
+}
+
+.step__heading {
+  @include offset-reset();
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $text-clr-medium;
+
+  span {
+    display: block;
+  }
+}
+
+.step__desc {
+  @include offset-reset();
+}
+
+

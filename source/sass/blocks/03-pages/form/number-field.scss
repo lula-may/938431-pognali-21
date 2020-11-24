@@ -1,0 +1,18 @@
+.number-field {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+}
+
+.number-field__units {
+  color: rgba($text-clr-medium, 0.3);
+}
+
+.number-field__input {
+  color: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
