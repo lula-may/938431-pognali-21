@@ -2,10 +2,11 @@
 <html class="page" lang="ru">
   <head class="page">
     <meta charset="utf-8">
-    <title>Направления | "Погнали"</title>
+    <title>Попутчики | "Погнали"</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--scroll">
 
       <div class="main-header__top">
         <a class="main-header__logo logo" href="index.html">
@@ -296,7 +297,8 @@
               <ul class="field-group__transport transport">
                 <li>
                   <label class="transport__item transport__item--plane" for="plane">
-                    <span class="visually-hidden">Самолет</span>               </label>
+                    <span class="visually-hidden">Самолет</span>
+                  </label>
                   <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
                 </li>
                 <li>
@@ -361,230 +363,250 @@
 
         <ul class="catalog__list">
 
-          <li class="catalog__item companion-card">
-            <a class="companion-card__link" href="#">
-              <h3 class="companion-card__name">Таня Фирсова</h3>
-            </a>
+          <li class="catalog__item">
 
-            <p class="companion-card__likes likes">
-              <button class="likes__toggle" type="button" aria-pressed="true">
-                <span class="visually-hidden">Поставить лайк</span>
-              </button>
-              <span class="likes__count">1,5 M</span>
-            </p>
+            <article class="companion-card">
+              <a class="companion-card__link" href="#">
+                <h3 class="companion-card__name">Таня Фирсова</h3>
+              </a>
 
-            <a class="companion-card__image" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-            </a>
+              <p class="companion-card__likes likes">
+                <button class="likes__toggle" type="button" aria-pressed="true">
+                  <span class="visually-hidden">Поставить лайк</span>
+                </button>
+                <span class="likes__count">1,5 M</span>
+              </p>
 
-            <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <a class="companion-card__image" href="#">
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+              </a>
 
-            <div class="companion-card__wish">
-              <h4 class="companion-card__subheading">Хочет посетить:</h4>
-              <ul class="companion-card__wish-list wish-list">
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
-                  <span class="wish-list__name">Шри-Ланка</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Тайланда">
-                  <span class="wish-list__name">Тайланд</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшеловых островов">
-                  <span class="wish-list__name">Сейшелы</span>
-                </li>
-              </ul>
-            </div>
+              <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
 
-            <div class="companion-card__transport">
-              <h4 class="companion-card__subheading">Транспорт:</h4>
-              <ul class="companion-card__transport-list transport">
-                <li class="transport__item transport__item--active">Самолет</li>
-                <li class="transport__item">Автомобиль</li>
-                <li class="transport__item">Велосипед</li>
-                <li class="transport__item">Пешком</li>
-              </ul>
-            </div>
-
-            <div class="companion-card__level-block">
-              <h4 class="companion-card__subheading">Левел:</h4>
-              <div class="companion-card__level level">
-                <b class="level__count">99</b>
-                <span class="level__text">level</span>
+              <div class="companion-card__wish">
+                <h4 class="companion-card__subheading">Хочет посетить:</h4>
+                <ul class="companion-card__countries-to-visit countries-to-visit">
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                    <span class="countries-to-visit__name">Шри-Ланка</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Тайланда">
+                    <span class="countries-to-visit__name">Тайланд</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшеловых островов">
+                    <span class="countries-to-visit__name">Сейшелы</span>
+                  </li>
+                </ul>
               </div>
-            </div>
 
-            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+              <div class="companion-card__transport">
+                <h4 class="companion-card__subheading">Транспорт:</h4>
+                <ul class="companion-card__transport-list transport">
+                  <li class="transport__item transport__item--active">Самолет</li>
+                  <li class="transport__item">Автомобиль</li>
+                  <li class="transport__item">Велосипед</li>
+                  <li class="transport__item">Пешком</li>
+                </ul>
+              </div>
+
+              <div class="companion-card__level-block">
+                <h4 class="companion-card__subheading">Левел:</h4>
+                <div class="companion-card__level level">
+                  <b class="level__count">99</b>
+                  <span class="level__text">level</span>
+                </div>
+              </div>
+
+              <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+            </article>
+          </li>
+
+          <li class="catalog__item">
+
+            <article class="companion-card">
+              <a class="companion-card__link" href="#">
+                <h3 class="companion-card__name">Петя Демин</h3>
+              </a>
+              <p class="companion-card__likes likes">
+                <button class="likes__toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Поставить лайк</span>
+                </button>
+                <span class="likes__count">1500</span>
+              </p>
+
+              <a class="companion-card__image" href="#">
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+              </a>
+
+              <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+
+              <div class="companion-card__wish">
+                <h4 class="companion-card__subheading">Хочет посетить:</h4>
+                <ul class="companion-card__countries-to-visit countries-to-visit">
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                    <span class="countries-to-visit__name">Бельгия</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                    <span class="countries-to-visit__name">Чехия</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companion-card__transport">
+                <h4 class="companion-card__subheading">Транспорт:</h4>
+                <ul class="companion-card__transport-list transport">
+                  <li class="transport__item transport__item--active">Самолет</li>
+                  <li class="transport__item transport__item--active">Автомобиль</li>
+                  <li class="transport__item">Велосипед</li>
+                  <li class="transport__item transport__item--active">Пешком</li>
+                </ul>
+              </div>
+
+              <div class="companion-card__level-block">
+                <h4 class="companion-card__subheading">Левел:</h4>
+                <div class="companion-card__level level">
+                  <b class="level__count">80</b>
+                  <span class="level__text">level</span>
+                </div>
+              </div>
+
+              <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+              </article>
+          </li>
+
+          <li class="catalog__item">
+
+            <article class="companion-card">
+              <a class="companion-card__link" href="#">
+                <h3 class="companion-card__name">Марк Смолов</h3>
+              </a>
+              <p class="companion-card__likes likes">
+                <button class="likes__toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Поставить лайк</span>
+                </button>
+                <span class="likes__count">170</span>
+              </p>
+
+              <a class="companion-card__image" href="#">
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+              </a>
+
+              <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+
+              <div class="companion-card__wish">
+                <h4 class="companion-card__subheading">Хочет посетить:</h4>
+                <ul class="companion-card__countries-to-visit countries-to-visit">
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                    <span class="countries-to-visit__name">США</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралия">
+                    <span class="countries-to-visit__name">Австралия</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканской республики">
+                    <span class="countries-to-visit__name">Доминикана</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companion-card__transport">
+                <h4 class="companion-card__subheading">Транспорт:</h4>
+                <ul class="companion-card__transport-list transport">
+                  <li class="transport__item transport__item--active">Самолет</li>
+                  <li class="transport__item">Автомобиль</li>
+                  <li class="transport__item transport__item--active">Велосипед</li>
+                  <li class="transport__item">Пешком</li>
+                </ul>
+              </div>
+
+              <div class="companion-card__level-block">
+                <h4 class="companion-card__subheading">Левел:</h4>
+                <div class="companion-card__level level">
+                  <b class="level__count">25</b>
+                  <span class="level__text">level</span>
+                </div>
+              </div>
+
+              <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+            </article>
           </li>
 
           <li class="catalog__item companion-card">
-            <a class="companion-card__link" href="#">
-              <h3 class="companion-card__name">Петя Демин</h3>
-            </a>
-            <p class="companion-card__likes likes">
-              <button class="likes__toggle" type="button" aria-pressed="false">
-                <span class="visually-hidden">Поставить лайк</span>
-              </button>
-              <span class="likes__count">1500</span>
-            </p>
 
-            <a class="companion-card__image" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-            </a>
+            <article class="companion-card">
+              <a class="companion-card__link" href="#">
+                <h3 class="companion-card__name">Лариса Роговая</h3>
+              </a>
 
-            <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+              <p class="companion-card__likes likes">
+                <button class="likes__toggle" type="button" aria-pressed="false">
+                  <span class="visually-hidden">Поставить лайк</span>
+                </button>
+                <span class="likes__count">23</span>
+              </p>
 
-            <div class="companion-card__wish">
-              <h4 class="companion-card__subheading">Хочет посетить:</h4>
-              <ul class="companion-card__wish-list wish-list">
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
-                  <span class="wish-list__name">Бельгия</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
-                  <span class="wish-list__name">Чехия</span>
-                </li>
-              </ul>
-            </div>
+              <a class="companion-card__image" href="#">
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+              </a>
 
-            <div class="companion-card__transport">
-              <h4 class="companion-card__subheading">Транспорт:</h4>
-              <ul class="companion-card__transport-list transport">
-                <li class="transport__item transport__item--active">Самолет</li>
-                <li class="transport__item transport__item--active">Автомобиль</li>
-                <li class="transport__item">Велосипед</li>
-                <li class="transport__item transport__item--active">Пешком</li>
-              </ul>
-            </div>
+              <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
 
-            <div class="companion-card__level-block">
-              <h4 class="companion-card__subheading">Левел:</h4>
-              <div class="companion-card__level level">
-                <b class="level__count">80</b>
-                <span class="level__text">level</span>
+              <div class="companion-card__wish">
+                <h4 class="companion-card__subheading">Хочет посетить:</h4>
+                <ul class="companion-card__countries-to-visit countries-to-visit">
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                    <span class="countries-to-visit__name">Великобритания</span>
+                  </li>
+                  <li class="countries-to-visit__item">
+                    <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                    <span class="countries-to-visit__name">Германия</span>
+                  </li>
+                </ul>
               </div>
-            </div>
 
-            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
-          </li>
-
-          <li class="catalog__item companion-card">
-            <a class="companion-card__link" href="#">
-              <h3 class="companion-card__name">Марк Смолов</h3>
-            </a>
-            <p class="companion-card__likes likes">
-              <button class="likes__toggle" type="button" aria-pressed="false">
-                <span class="visually-hidden">Поставить лайк</span>
-              </button>
-              <span class="likes__count">170</span>
-            </p>
-
-            <a class="companion-card__image" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-            </a>
-
-            <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-
-            <div class="companion-card__wish">
-              <h4 class="companion-card__subheading">Хочет посетить:</h4>
-              <ul class="companion-card__wish-list wish-list">
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
-                  <span class="wish-list__name">США</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралия">
-                  <span class="wish-list__name">Австралия</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканской республики">
-                  <span class="wish-list__name">Доминикана</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="companion-card__transport">
-              <h4 class="companion-card__subheading">Транспорт:</h4>
-              <ul class="companion-card__transport-list transport">
-                <li class="transport__item transport__item--active">Самолет</li>
-                <li class="transport__item">Автомобиль</li>
-                <li class="transport__item transport__item--active">Велосипед</li>
-                <li class="transport__item">Пешком</li>
-              </ul>
-            </div>
-
-            <div class="companion-card__level-block">
-              <h4 class="companion-card__subheading">Левел:</h4>
-              <div class="companion-card__level level">
-                <b class="level__count">25</b>
-                <span class="level__text">level</span>
+              <div class="companion-card__transport">
+                <h4 class="companion-card__subheading">Транспорт:</h4>
+                <ul class="companion-card__transport-list transport">
+                  <li class="transport__item transport__item--active">Самолет</li>
+                  <li class="transport__item transport__item--active">Автомобиль</li>
+                  <li class="transport__item">Велосипед</li>
+                  <li class="transport__item">Пешком</li>
+                </ul>
               </div>
-            </div>
 
-            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
-          </li>
-
-          <li class="catalog__item companion-card">
-            <a class="companion-card__link" href="#">
-              <h3 class="companion-card__name">Лариса Роговая</h3>
-            </a>
-
-            <p class="companion-card__likes likes">
-              <button class="likes__toggle" type="button" aria-pressed="false">
-                <span class="visually-hidden">Поставить лайк</span>
-              </button>
-              <span class="likes__count">23</span>
-            </p>
-
-            <a class="companion-card__image" href="#">
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
-            </a>
-
-            <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
-
-            <div class="companion-card__wish">
-              <h4 class="companion-card__subheading">Хочет посетить:</h4>
-              <ul class="companion-card__wish-list wish-list">
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
-                  <span class="wish-list__name">Великобритания</span>
-                </li>
-                <li class="wish-list__item">
-                  <img class="wish-list__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
-                  <span class="wish-list__name">Германия</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="companion-card__transport">
-              <h4 class="companion-card__subheading">Транспорт:</h4>
-              <ul class="companion-card__transport-list transport">
-                <li class="transport__item transport__item--active">Самолет</li>
-                <li class="transport__item transport__item--active">Автомобиль</li>
-                <li class="transport__item">Велосипед</li>
-                <li class="transport__item">Пешком</li>
-              </ul>
-            </div>
-
-            <div class="companion-card__level-block">
-              <h4 class="companion-card__subheading">Левел:</h4>
-              <div class="companion-card__level level">
-                <b class="level__count">50</b>
-                <span class="level__text">level</span>
+              <div class="companion-card__level-block">
+                <h4 class="companion-card__subheading">Левел:</h4>
+                <div class="companion-card__level level">
+                  <b class="level__count">50</b>
+                  <span class="level__text">level</span>
+                </div>
               </div>
-            </div>
 
-            <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+              <a class="companion-card__open-modal basic-button" href="#">Позвать!</a>
+            </article>
           </li>
         </ul>
 
         <a class="catalog__show-more" href="#">Показать еще</a>
 
         <div class="catalog__pagination pagination">
-          <a class="pagination__button pagination__button--back" href="#">Назад</a>
-          <a class="pagination__button pagination__button--forward" href="#">Вперед</a>
+          <ul class="pagination__page-list">
+            <li class="pagination__page"><a class="pagination__link pagination__link--current" href="#">1</a></li>
+            <li class="pagination__page"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__page"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__page"><a class="pagination__link" href="#">4</a></li>
+          </ul>
+          <p class="pagination__buttons">
+            <a class="pagination__button pagination__button--back" href="#" aria-label="Назад"></a>
+            <a class="pagination__button pagination__button--forward" href="#" aria-label="Вперед"></a>
+          </p>
         </div>
       </section>
     </main>
