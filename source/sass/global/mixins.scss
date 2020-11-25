@@ -30,15 +30,12 @@
 }
 
 @mixin bolder-text {
-  font-size: 21px;
-  line-height: 24px;
   font-weight: bold;
-}
 
-@mixin bolder-text {
-  font-size: 21px;
-  line-height: 24px;
-  font-weight: bold;
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+  }
 }
 
 @mixin heading() {
