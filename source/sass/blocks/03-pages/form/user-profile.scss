@@ -1,0 +1,41 @@
+.user-profile__change-photo {
+  font: inherit;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $text-clr-dark;
+  text-transform: uppercase;
+
+  background-color: $bg-inner-lighter;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-inner-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba($text-clr-dark, 0.3);
+  }
+}
+
+.user-profile__label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $text-clr-medium;
+  text-transform: uppercase;
+}
+
+.user-profile__hashtags {
+  resize: none;
+
+  font: inherit;
+
+  &::placeholder {
+    color: rgba($text-clr-basic, 0.6);
+  }
+
+  @include border-styles();
+}

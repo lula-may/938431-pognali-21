@@ -1,3 +1,7 @@
+.social-list {
+  @include list-reset();
+}
+
 .social-list--footer {
   .social-list__link {
     background-color: $bg-button-basic;

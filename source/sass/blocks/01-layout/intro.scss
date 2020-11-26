@@ -1,0 +1,11 @@
+.intro {
+  @include theme($bg-header, $text-clr-light);
+}
+
+.intro__heading {
+  @include offset-reset();
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}

@@ -1,0 +1,44 @@
+.step {
+  background-color: $bg-card;
+}
+
+.step__heading {
+  @include offset-reset();
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $text-clr-medium;
+
+  span {
+    display: block;
+  }
+}
+
+.step__desc {
+  @include offset-reset();
+}
+
+.step__back {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.step__activity-list {
+  @include list-reset();
+}
+
+

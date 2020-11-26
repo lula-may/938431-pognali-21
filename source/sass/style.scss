@@ -1,31 +1,59 @@
-@import "global/fonts.scss";
+// Global Styles And Helpers
 @import "global/variables.scss";
+@import "global/fonts.scss";
 @import "global/mixins.scss";
-@import "blocks/about.scss";
-@import "blocks/basic-button.scss";
-@import "blocks/companions.scss";
-@import "blocks/contacts-list.scss";
-@import "blocks/contacts.scss";
-@import "blocks/copyright.scss";
-@import "blocks/country.scss";
-@import "blocks/directions.scss";
-@import "blocks/feedback.scss";
-@import "blocks/flags-list.scss";
-@import "blocks/level.scss";
-@import "blocks/link-button.scss";
-@import "blocks/logo.scss";
-@import "blocks/main-footer.scss";
-@import "blocks/main-header.scss";
-@import "blocks/modal.scss";
-@import "blocks/page.scss";
-@import "blocks/plan.scss";
-@import "blocks/price-list.scss";
-@import "blocks/price.scss";
-@import "blocks/pricing-plan.scss";
-@import "blocks/promo.scss";
-@import "blocks/site-list.scss";
-@import "blocks/social-list.scss";
-@import "blocks/transport.scss";
-@import "blocks/user-card.scss";
-@import "blocks/user-list.scss";
-@import "blocks/visually-hidden.scss";
+
+// Sections Get Repeated On Different Pages
+@import "blocks/01-layout/copyright.scss";
+@import "blocks/01-layout/intro.scss";
+@import "blocks/01-layout/logo.scss";
+@import "blocks/01-layout/main-footer.scss";
+@import "blocks/01-layout/main-header.scss";
+@import "blocks/01-layout/page.scss";
+@import "blocks/01-layout/site-list.scss";
+@import "blocks/01-layout/social-list.scss";
+@import "blocks/01-layout/user-list.scss";
+
+// Smaller Elements Get Repeated On Different Pages
+@import "blocks/02-modules/alphabetic-sort.scss";
+@import "blocks/02-modules/basic-button.scss";
+@import "blocks/02-modules/contacts-list.scss";
+@import "blocks/02-modules/countries-list.scss";
+@import "blocks/02-modules/level.scss";
+@import "blocks/02-modules/modal.scss";
+@import "blocks/02-modules/transport.scss";
+@import "blocks/02-modules/visually-hidden.scss";
+
+// Pages Styles
+// Index Page
+@import "blocks/03-pages/index/about.scss";
+@import "blocks/03-pages/index/companions.scss";
+@import "blocks/03-pages/index/contacts.scss";
+@import "blocks/03-pages/index/country.scss";
+@import "blocks/03-pages/index/directions.scss";
+@import "blocks/03-pages/index/feedback.scss";
+@import "blocks/03-pages/index/flags-list.scss";
+@import "blocks/03-pages/index/link-button.scss";
+@import "blocks/03-pages/index/plan.scss";
+@import "blocks/03-pages/index/price-list.scss";
+@import "blocks/03-pages/index/price.scss";
+@import "blocks/03-pages/index/pricing-plan.scss";
+@import "blocks/03-pages/index/promo.scss";
+@import "blocks/03-pages/index/user-card.scss";
+
+// Form Page
+@import "blocks/03-pages/form/activity-plan.scss";
+@import "blocks/03-pages/form/add-trip.scss";
+@import "blocks/03-pages/form/calendar.scss";
+@import "blocks/03-pages/form/checkbox-field.scss";
+@import "blocks/03-pages/form/country-field.scss";
+@import "blocks/03-pages/form/direction-form.scss";
+@import "blocks/03-pages/form/dropdown.scss";
+@import "blocks/03-pages/form/fields-list.scss";
+@import "blocks/03-pages/form/number-field.scss";
+@import "blocks/03-pages/form/step.scss";
+@import "blocks/03-pages/form/trip-plans.scss";
+@import "blocks/03-pages/form/user-profile.scss";
+
+// TOGO: Catalog Page
+

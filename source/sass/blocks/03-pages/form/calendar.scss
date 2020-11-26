@@ -1,0 +1,59 @@
+.calendar {
+  color: $text-clr-medium;
+}
+
+.calendar__month {
+  @include offset-reset();
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar__sheet {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+
+  border-collapse: collapse;
+}
+
+.calendar__day-of-week {
+  text-transform: uppercase;
+  color: $text-clr-basic;
+  font-weight: normal;
+  text-align: center;
+
+  &--weekend {
+    color: $text-clr-calendar;
+  }
+}
+
+.calendar__day {
+  @include offset-reset();
+  text-align: center;
+  border: 1px solid $border-clr-field;
+}
+
+.calendar__label {
+  display: block;
+  width: 100%;
+  background-color: $bg-main-light;
+}
+
+input:disabled + .calendar__label {
+  background-color: $bg-card;
+  color: rgba($text-clr-basic, 0.3);
+}
+
+input:checked + .calendar__label {
+  @include theme($text-clr-medium, $text-clr-light);
+}
+
+input:not(:disabled):hover + .calendar__label {
+  outline: 2px solid $text-clr-calendar;
+  outline-offset: -1px;
+}
+
+

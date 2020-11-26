@@ -1,11 +1,22 @@
+// TIPOGRAPHY
 $basic-font: "Blogger Sans", "Arial", sans-serif;
+
+// COLORS BACKGROUND GENERAL
 $bg-header: #182044;
+$bg-card: #ffffff;
+
+// COLORS: BACKGROUND MAIN PAGE
 $bg-main-light: #edeff6;
 $bg-main-medium: #e6e8f1;
 $bg-main-dark: #192144;
+
+// COLORS: BACKGROUND INNER PAGES
 $bg-inner-medium: #d4d9eb;
 $bg-inner-light: #cbced9;
 $bg-inner-lighter: #dfe3f0;
+$bg-inner-hover: #d1d7e9;
+
+// COLORS: BUTTONS AND OTHER ELEMENTS
 $bg-special-bright: #ff8d30;
 $bg-special-medium: #ffa530;
 $bg-special-light: #ffbd2e;
@@ -14,10 +25,20 @@ $bg-button-dark: #121936;
 $bg-button-light: #f3f4f8;
 $bg-indicator-no: #f97676;
 $bg-indicator-yes: #81e31e;
-$bg-level: rgba(0, 0, 0, 0.6);
-$text-clr-light: #ffffff;
+$bg-level: rgba(#000000, 0.6);
+
+// COLORS: TEXT
+$text-clr-light: $bg-card;
 $text-clr-basic: #444444;
 $text-clr-medium: #1d2e5b;
 $text-clr-dark: #161c35;
 $text-clr-darker: #000000;
 $text-clr-link: #132576;
+$text-clr-header: $bg-main-dark;
+$text-clr-calendar: #ff5c23;
+
+// COLORS: BORDERS
+$border-clr-field: #d6d9e6;
+$border-clr-hover: #959bb2;
+$border-textarea-hover: #aeb4cb;
+$border-textarea-invalid: #f47e7e;
