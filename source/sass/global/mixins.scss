@@ -83,6 +83,21 @@
   margin: 0 auto;
 }
 
+@mixin container() {
+  padding-left: 7.81%;
+  padding-right: 7.81%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 5.2%;
+    padding-right: 5.2%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 // Временный миксин
 
 @mixin outline($color: rgba(225, 0, 0, 0.5)) {
