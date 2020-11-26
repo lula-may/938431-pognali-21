@@ -1,15 +1,97 @@
 .promo {
+  @include outline;
+
   color: $text-clr-light;
   background-color: $bg-header;
 }
 
+.promo__container {
+  @include outline(rgb(0, 195, 255));
+  padding: 21px 7.81% 0;
+}
+
+.promo__header {
+  @include outline(pink);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 503px;
+}
+
 .promo__slogan {
+  @include offset-reset();
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
 }
 
+.promo__links {
+  @include list-reset();
+  display: flex;
+}
+
+.promo__review {
+  @include outline(green);
+  @include offset-reset();
+  width: 161px;
+  margin: 48px auto 29px 25px;
+}
+
+.promo__quote {
+  @include offset-reset();
+}
+
 .promo__quote-author {
-  font-weight: bold;
+  @include bolder-text();
+
   font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__container {
+    padding: 0 5.2%;
+  }
+
+  .promo__header {
+    min-height: auto;
+  }
+
+  .promo__links {
+    display: none;
+  }
+
+  .promo__review {
+    min-height: 612px;
+    width: 264px;
+    margin: 76px auto auto 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__container {
+    @include center-position();
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content min-content;
+    padding: 0;
+
+  }
+
+  .promo__header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .promo__review {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .promo__plan {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
 }

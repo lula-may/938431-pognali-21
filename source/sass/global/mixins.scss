@@ -22,12 +22,20 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 @mixin bolder-text {
-  font-size: 21px;
-  line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+  }
 }
 
 @mixin heading() {
@@ -69,4 +77,15 @@
   }
 }
 
+// LAYOUT STYLES
+@mixin center-position($width: $desktop-content-width) {
+  width: $width;
+  margin: 0 auto;
+}
 
+// Временный миксин
+
+@mixin outline($color: rgba(225, 0, 0, 0.5)) {
+  outline: 5px solid $color;
+  outline-offset: -5px;
+}

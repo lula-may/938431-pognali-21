@@ -9,5 +9,5 @@
 }
 
 .companions__slogan {
-  font-weight: bold;
+  @include bolder-text();
 }

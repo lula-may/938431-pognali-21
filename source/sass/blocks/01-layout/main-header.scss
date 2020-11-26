@@ -1,19 +1,7 @@
 .main-header {
-  text-transform: uppercase;
-
-  background-color: $bg-header;
+  @include theme($bg-header, $text-clr-light);
 
   &--scroll {
-    color: $bg-main-dark;
-    background-color: $bg-card;
-
-    a[href]:hover,
-    a[href]:focus {
-      opacity: 0.6;
-    }
-
-    a:active{
-      opacity: 0.3;
-    }
+    @include theme($bg-card, $text-clr-header);
   }
 }
