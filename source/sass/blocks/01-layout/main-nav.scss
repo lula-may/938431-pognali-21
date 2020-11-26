@@ -19,24 +19,18 @@
   a:active{
     opacity: 0.3;
   }
+}
 
-  .main-nav__site-list,
-  .main-nav__user-list,
-  .main-nav__contacts-list,
-  .main-nav__social-list {
-    display: none;
-  }
+.main-nav__content {
+  position: absolute;
+  top: 73px;
+  left: 0;
 
-  &--open {
-    background-color: $bg-card;
+  display: none;
+  width: 100%;
+  padding: 0 7.81%;
 
-    .main-nav__site-list,
-    .main-nav__user-list,
-    .main-nav__contacts-list,
-    .main-nav__social-list {
-      display: block;
-    }
-  }
+  @include theme($bg-card, $text-clr-header);
 }
 
 .main-nav__header {
@@ -51,34 +45,21 @@
   padding-top: 27px;
 }
 
-.main-nav__content {
-  position: absolute;
-  top: 73px;
-  left: 0;
+.main-nav--open {
+  background-color: $bg-card;
 
-  width: 100%;
-  padding: 0 7.81%;
-
-  @include theme($bg-card, $text-clr-header);
+  .main-nav__content {
+    display: block;
+  }
 }
 
 .main-nav__site-list {
   @include list-reset();
-
-  width: 100%;
-}
-
-.main-nav__user-list {
-  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
     padding: 0 5.2%;
-
-    .main-nav__user-list {
-      display: block;
-    }
   }
 
   .main-nav__header {
@@ -92,22 +73,34 @@
   }
 
   .main-nav__content {
-    top: 133px;
+    position: absolute;
+    top: 132px;
+
+    display: block;
+    width: 100%;
   }
 
   .main-nav__user-list {
     position: absolute;
     top: -92px;
     right: 5.2%;
+
+    display: block;
     width: 188px;
   }
 
-  .main-nav__contacts-list {
-    width: 100%;
+  .main-nav__site-list,
+  .main-nav__contacts-list,
+  .main-nav__social-list {
+    display: none;
   }
 
-  .main-nav__social-list {
-    width: 100%;
+  .main-nav--open {
+    .main-nav__site-list,
+    .main-nav__contacts-list,
+    .main-nav__social-list {
+      display: block;
+    }
   }
 }
 
@@ -130,6 +123,10 @@
     &--open {
       color: inherit;
       background-color: inherit;
+
+      .main-nav__content {
+        display: flex;
+      }
     }
   }
 
@@ -168,5 +165,4 @@
     width: auto;
     margin-left: auto
   }
-
 }
