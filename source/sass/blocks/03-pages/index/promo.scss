@@ -11,6 +11,7 @@
 
 .promo__header {
   @include outline(pink);
+  @include container();
 
   display: flex;
   flex-direction: column;
@@ -18,7 +19,6 @@
 
   min-height: 503px;
 
-  @include container();
   padding-top: 21px;
 }
 
@@ -36,9 +36,11 @@
 
 .promo__review {
   @include outline(green);
+  display: flex;
+  flex-direction: column;
   width: auto;
   margin: 0;
-  padding: 48px 15% 109px;
+  padding: 48px 15.63% 109px;
 
   background-color: $text-clr-dark;
 }
@@ -86,10 +88,12 @@
     padding: 76px 9.38% 350px;
   }
 
+  .promo__plan-container {
+    background-color: $bg-header;
+  }
+
   .promo__plan {
     top: -140px;
-
-    background-color: $bg-header;
   }
 }
 

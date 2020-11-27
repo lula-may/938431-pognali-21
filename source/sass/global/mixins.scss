@@ -43,6 +43,11 @@
   line-height: 24px;
   font-weight: bold;
   color: $bg-special-bright;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 // COLOR STYLES
@@ -95,6 +100,21 @@
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@mixin narrow-container() {
+  padding-left: 9.26%;
+  padding-right: 9.26%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 4.65%;
+    padding-right: 4.65%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
