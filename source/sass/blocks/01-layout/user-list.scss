@@ -1,8 +1,7 @@
 // TODO: Write more useful code for layout
 .user-list {
 
-  .user-list__login[href]:hover,
-  .user-list__login[href]:focus {
+  .user-list__login[href]:hover{
     opacity: 1;
   }
 }

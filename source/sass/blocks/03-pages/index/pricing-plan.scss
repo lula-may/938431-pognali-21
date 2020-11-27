@@ -1,4 +1,11 @@
 .pricing-plan {
+  @include outline();
+  @include container();
+  position: relative;
+
+  padding-top: 90px;
+  padding-bottom: 38px;
+
   background-color: $bg-main-medium;
 }
 
@@ -7,5 +14,34 @@
 }
 
 .pricing-plan__business {
+  position: absolute;
+  top: 42px;
+  left: 7.81%;
+
+  width: 84.38%;
+
   background-color: $bg-card;
+}
+
+@media (min-width: $tablet-width) {
+  .pricing-plan {
+    padding-top: 135px;
+    padding-bottom: 63px;
+  }
+
+  .pricing-plan__business {
+    top: 61px;
+    left: 5.21%;
+
+    width: 89.58%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pricing-plan {
+    width: 1177px;
+    margin: 0 auto;
+    padding-top: 135px;
+    padding-bottom: 165px;
+  }
 }
