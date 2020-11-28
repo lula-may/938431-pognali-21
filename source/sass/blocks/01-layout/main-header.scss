@@ -1,19 +1,34 @@
 .main-header {
-  text-transform: uppercase;
-
-  background-color: $bg-header;
+  @include theme($bg-header, $text-clr-light);
 
   &--scroll {
-    color: $bg-main-dark;
-    background-color: $bg-card;
+    @include theme($bg-card, $text-clr-header);
+  }
+}
 
-    a[href]:hover,
-    a[href]:focus {
-      opacity: 0.6;
+.main-header--no-js {
+  @media (max-width: $tablet-width-only) {
+    .main-nav {
+      position: static;
     }
 
-    a:active{
-      opacity: 0.3;
+    .main-nav__content {
+      position: relative;
+      top: auto;
+
+      display: block;
     }
+
+    .main-nav__site-list,
+    .main-nav__contacts-list,
+    .main-nav__social-list {
+      display: block;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    @include theme($bg-card, $text-clr-header);
   }
 }

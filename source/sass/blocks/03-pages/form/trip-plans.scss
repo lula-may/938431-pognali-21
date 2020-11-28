@@ -45,8 +45,7 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: rgba($text-clr-darker, 0.6);
     outline: none;
   }

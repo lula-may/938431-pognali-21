@@ -1,0 +1,169 @@
+.main-nav {
+  @include outline;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 7.81%;
+
+  color: inherit;
+  text-transform: uppercase;
+
+  background-color: inherit;
+
+  a[href]:hover {
+    opacity: 0.6;
+  }
+
+  a:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__content {
+  position: absolute;
+  top: 73px;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  padding: 0 7.81%;
+
+  @include theme($bg-card, $text-clr-header);
+}
+
+.main-nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main-nav__logo {
+  min-height: 73px;
+  padding-top: 27px;
+}
+
+.main-nav--open {
+  background-color: $bg-card;
+
+  .main-nav__content {
+    display: block;
+  }
+}
+
+.main-nav__site-list {
+  @include list-reset();
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    padding: 0 5.2%;
+  }
+
+  .main-nav__header {
+    width: calc(50% + 12px);
+  }
+
+  .main-nav__logo {
+    width: 166px;
+    min-height: 132px;
+    padding-top: 45px;
+  }
+
+  .main-nav__content {
+    position: absolute;
+    top: 132px;
+
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav__user-list {
+    position: absolute;
+    top: -92px;
+    right: 5.2%;
+
+    display: block;
+    width: 188px;
+  }
+
+  .main-nav__site-list,
+  .main-nav__contacts-list,
+  .main-nav__social-list {
+    display: none;
+  }
+
+  .main-nav--open {
+    .main-nav__site-list,
+    .main-nav__contacts-list,
+    .main-nav__social-list {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include center-position();
+    padding: 0;
+
+    .main-nav__site-list,
+    .main-nav__contacts-list {
+      display: block;
+    }
+
+    .main-nav__social-list {
+      display: none;
+    }
+
+    &--open {
+      color: inherit;
+      background-color: inherit;
+
+      .main-nav__content {
+        display: flex;
+      }
+    }
+  }
+
+  .main-nav__header {
+    width: 302px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__content {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    width: auto;
+
+    @include offset-reset();
+
+    background-color: inherit;
+    color: $text-clr-light;
+  }
+
+  .main-nav__site-list {
+    width: 560px;
+  }
+
+  .main-nav__user-list {
+    position: static;
+    order: 2;
+    margin: 0;
+  }
+
+  .main-nav__contacts-list {
+    width: auto;
+    margin-left: auto;
+  }
+}

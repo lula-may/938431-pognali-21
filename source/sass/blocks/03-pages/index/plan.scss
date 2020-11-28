@@ -1,4 +1,6 @@
 .plan {
+  @include list-reset();
+
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
@@ -6,6 +8,13 @@
 }
 
 .plan__item {
+  display: flex;
+  align-items: center;
+
+  min-height: 80px;
+  padding-left: 8.9%;
+  padding-right: 20%;
+
   background-color: $bg-special-light;
 
   &:first-child {
@@ -18,5 +27,23 @@
 
   &:last-child {
     background-color: $bg-button-basic;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .plan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 140px 140px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plan {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
   }
 }

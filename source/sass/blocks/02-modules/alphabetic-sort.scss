@@ -23,8 +23,7 @@
     border-color: $bg-main-light;
   }
 
-  &:not([aria-pressed="true"]):hover,
-  &:not([aria-pressed="true"]):focus {
+  &:not([aria-pressed="true"]):hover {
     outline: none;
     border-color: $border-clr-hover;
   }
@@ -34,4 +33,3 @@
     border-color: $text-clr-medium;
   }
 }
-

@@ -1,18 +1,21 @@
-.basic-button {
+.button {
   @include button-theme();
 
   font-size: 17px;
   line-height: 20px;
-  text-transform: uppercase;
 
   border: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $bg-special-light;
   }
 
   &:active {
     color: rgba($text-clr-dark, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
   }
 }

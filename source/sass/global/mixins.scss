@@ -22,12 +22,20 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 @mixin bolder-text {
-  font-size: 21px;
-  line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+  }
 }
 
 @mixin heading() {
@@ -35,6 +43,11 @@
   line-height: 24px;
   font-weight: bold;
   color: $bg-special-bright;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 // COLOR STYLES
@@ -58,8 +71,7 @@
 @mixin border-styles() {
   border: 1px solid $bg-inner-light;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $border-textarea-hover;
     outline: none;
   }
@@ -69,4 +81,45 @@
   }
 }
 
+// LAYOUT STYLES
+@mixin center-position($width: $desktop-content-width) {
+  width: $width;
+  margin: 0 auto;
+}
 
+@mixin container() {
+  padding-left: 7.81%;
+  padding-right: 7.81%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 5.2%;
+    padding-right: 5.2%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin narrow-container() {
+  padding-left: 9.26%;
+  padding-right: 9.26%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 4.65%;
+    padding-right: 4.65%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Временный миксин
+
+@mixin outline($color: rgba(225, 0, 0, 0.5)) {
+  outline: 5px solid $color;
+  outline-offset: -5px;
+}
