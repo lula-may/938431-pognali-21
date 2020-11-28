@@ -92,12 +92,12 @@
           </blockquote>
 
           <div class="promo__plan-container">
-          	<ul class="promo__plan plan">
-          	  <li class="plan__item">Выберите направление</li>
-          	  <li class="plan__item">Изучите идеи путешественников</li>
-          	  <li class="plan__item">Находите тех, кто похож на вас</li>
-          	  <li class="plan__item">Путешествуйте вместе!</li>
-          	</ul>
+            <ul class="promo__plan plan">
+              <li class="plan__item">Выберите направление</li>
+              <li class="plan__item">Изучите идеи путешественников</li>
+              <li class="plan__item">Находите тех, кто похож на вас</li>
+              <li class="plan__item">Путешествуйте вместе!</li>
+            </ul>
           </div>
 
         </div>
@@ -294,30 +294,34 @@
       </section>
 
       <section class="feedback">
-        <h2 class="feedback__heading">Заинтересовались?</h2>
-        <p class="feedback__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-          <a href="#">авторизуйтесь</a>.
-        </p>
+        <div class="feedback__container">
+          <h2 class="feedback__heading">Заинтересовались?</h2>
+          <p class="feedback__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+            <a href="#">авторизуйтесь</a>.
+          </p>
 
-        <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="feedback-email">Ваш email</label>
-          <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="E-mail" required>
-          <button class="feedback__submit" type="submit">Отправить</button>
-        </form>
+          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="feedback-email">Ваш email</label>
+            <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="E-mail" required>
+            <button class="feedback__submit button" type="submit">
+              <span class="visually-hidden">Отправить</span>
+            </button>
+          </form>
 
-        <p class="feedback__text">
-          Остались вопросы?
-          Мы с радостью на них ответим!
-        </p>
+          <p class="feedback__text">
+            Остались вопросы?
+            Мы с радостью на них ответим!
+          </p>
 
-        <ul class="feedback__contacts contacts-list">
-          <li class="contacts-list__item contacts-list__item--feedback">
-            <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-          </li>
-          <li class="contacts-list__item contacts-list__item--feedback">
-            <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-        </ul>
+          <ul class="feedback__contacts contacts-list">
+            <li class="contacts-list__item contacts-list__item--feedback">
+              <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts-list__item contacts-list__item--feedback">
+              <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="contacts">
@@ -326,8 +330,10 @@
           width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
         </iframe>
         <div class="contacts__container">
-          <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
-          <a class="contacts__navigate button button--stroke" href="https://goo.gl/maps/NU5NKi9H9gxkuwxi6">Проложить маршрут</a>
+          <div class="contacts__wrapper">
+            <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+            <a class="contacts__navigate button button--stroke" href="https://goo.gl/maps/NU5NKi9H9gxkuwxi6">Проложить маршрут</a>
+          </div>
         </div>
       </section>
 
@@ -335,28 +341,30 @@
 
     <footer class="main-footer">
 
-      <a class="main-footer__logo logo">
-        <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
-      </a>
-
-      <ul class="main-footer__list social-list social-list--footer">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
-        </li>
-      </ul>
-
-      <p class="main-footer__copyright copyright">
-        <span class="copyright__text">Разработано</span>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="img/htmlacademy.svg" width="27" height="33" alt="Логотип HTMLAcademy">
+      <div class="main-footer__container">
+        <a class="main-footer__logo logo">
+          <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
         </a>
-      </p>
+
+        <ul class="main-footer__list social-list social-list--footer">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
+          </li>
+        </ul>
+
+        <p class="main-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img src="img/htmlacademy.svg" width="27" height="33" alt="Логотип HTMLAcademy">
+          </a>
+        </p>
+      </div>
 
     </footer>
   </body>

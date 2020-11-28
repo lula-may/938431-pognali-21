@@ -41,15 +41,9 @@
     @include narrow-container();
     margin-bottom: 46px;
   }
-
-  .directions__show-more {
-    font-size: 24px;
-    line-height: 24px;
-  }
 }
 
 @media (min-width: $desktop-width) {
-
   .directions {
     padding-top: 176px;
     padding-bottom: 87px;

@@ -110,9 +110,7 @@
 }
 
 @media (min-width: $desktop-width) {
-
   .price {
-
     &--business {
       width: 750px;
       margin: auto;
@@ -120,7 +118,6 @@
   }
 
   .price__list {
-
     &--private {
       padding: 0 272px 0 0;
       margin-bottom: 33px;
@@ -137,4 +134,3 @@
     line-height: 26px;
   }
 }
-

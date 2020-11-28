@@ -1,10 +1,22 @@
 .feedback {
+  @include container();
+  padding-top: 105px;
+  padding-bottom: 16px;
+
   color: $text-clr-light;
 
   background-color: $bg-main-dark;
 }
 
+.feedback__container {
+  @include outline(teal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .feedback__heading {
+  @include offset-reset();
   @include heading();
 }
 
@@ -15,10 +27,48 @@
 }
 
 .feedback__submit {
-  background-color: $bg-button-basic;
-  border: none;
+  width: 60px;
+  height: 62px;
+
+  border-radius: 10px;
 }
 
 .feedback__contacts {
+  align-self: start;
   color: $bg-button-basic;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    padding-top: 133px;
+    padding-bottom: 77px;
+  }
+
+  .feedback__container {
+    @include narrow-container();
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    padding-top: 208px;
+    padding-bottom: 103px;
+  }
+
+  .feedback__container {
+    @include center-position();
+    padding-left: 75px;
+    padding-right: 73px;
+  }
+
+  .feedback__contacts {
+    align-self: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 868px;
+  }
 }

@@ -55,8 +55,9 @@
     justify-content: center;
 
     width: 100%;
-    @include narrow-container();
     margin-bottom: 31px;
+
+    @include narrow-container();
   }
 
   .companions__item {
@@ -109,7 +110,7 @@
     margin-bottom: 0;
   }
 
-  .companions__item{
+  .companions__item {
     &:nth-child(n) {
       margin-left: auto;
     }

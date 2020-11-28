@@ -1,6 +1,7 @@
 .transport {
   @include list-reset();
 }
+
 .transport__item {
   background-color: $bg-card;
 }

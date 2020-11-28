@@ -43,7 +43,7 @@
 
 @media (min-width: $desktop-width) {
   .plan {
-    grid-template-columns: repeat( 4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
   }
 }
