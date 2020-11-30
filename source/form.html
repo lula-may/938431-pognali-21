@@ -8,7 +8,7 @@
   </head>
   <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
     Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
-  <body class="page__body">
+  <body class="page__body page__body--no-js">
     <header class="main-header">
       <!-- Для отображения раскрытого меню используется класс "main-nav--open"
         при отсутствии этого класса меню свернуто -->
@@ -64,7 +64,9 @@
 
     <main>
       <section class="intro">
-        <h1 class="intro__heading">Направления</h1>
+        <div class="intro__container">
+          <h1 class="intro__heading">Направления</h1>
+        </div>
       </section>
 
       <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">

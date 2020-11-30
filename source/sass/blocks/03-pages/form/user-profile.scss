@@ -1,3 +1,8 @@
+.user-profile {
+  @include outline();
+  @include form-container();
+}
+
 .user-profile__change-photo {
   font: inherit;
   font-size: 20px;
