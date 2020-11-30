@@ -117,6 +117,22 @@
   }
 }
 
+@mixin form-container() {
+  padding-left: 7.81%;
+  padding-right: 7.81%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 9.77%;
+    padding-right: 9.77%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 159px;
+    padding-right: 159px;
+  }
+
+}
+
 // Временный миксин
 
 @mixin outline($color: rgba(225, 0, 0, 0.5)) {
