@@ -1,0 +1,18 @@
+.field-group__name {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+}
+
+.field-group__list {
+  @include list-reset();
+}
+
+.field-group__label {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  color: $text-clr-darker;
+}

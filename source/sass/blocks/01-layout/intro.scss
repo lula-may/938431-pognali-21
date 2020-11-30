@@ -1,4 +1,9 @@
 .intro {
+  @include outline();
+  @include container();
+  padding-top: 25px;
+  padding-bottom: 11px;
+
   @include theme($bg-header, $text-clr-light);
 }
 
@@ -8,4 +13,11 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .intro__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

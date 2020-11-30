@@ -1,0 +1,31 @@
+.catalog {
+  @include outline();
+  @include container();
+}
+
+.catalog__list {
+  @include outline(teal);
+  @include list-reset();
+}
+
+.catalog__item {
+  margin-bottom: 10px;
+}
+
+.catalog__show-more {
+  font: inherit;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

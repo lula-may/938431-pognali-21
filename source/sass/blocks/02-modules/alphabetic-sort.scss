@@ -1,11 +1,21 @@
 .alphabetic-sort__alphabet {
   @include list-reset();
+
+  height: 205px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.alphabetic-sort__letter {
+  display: flex;
 }
 
 .alphabetic-sort__button {
   @include button-reset();
-  // TODO: Set responsive size
-  width: 44px;
+
+  flex-grow: 1;
   height: 41px;
 
   font-size: 14px;
