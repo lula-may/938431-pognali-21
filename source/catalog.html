@@ -2,58 +2,65 @@
 <html class="page" lang="ru">
   <head class="page">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики | "Погнали"</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
+  <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
+    Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
   <body class="page__body">
-    <header class="main-header main-header--scroll">
+    <header class="main-header">
+      <!-- Для отображения раскрытого меню используется класс "main-nav--open"
+        при отсутствии этого класса меню свернуто -->
+      <nav class="main-header__main-nav main-nav">
+        <div class="main-nav__header">
+          <a class="main-header__logo logo" href="index.html">
+            <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
+          </a>
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
 
-      <div class="main-header__top">
-        <a class="main-header__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
-        </a>
-        <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-      </div>
+        <div class="main-nav__content">
+          <ul class="main-nav__site-list site-list">
+            <li class="site-list__item">
+              <a href="index.html#about" class="site-list__link">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html" class="site-list__link">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--current">Попутчики</a>
+            </li>
+          </ul>
 
-      <ul class="main-header__site-list site-list">
-        <li class="site-list__item">
-          <a href="index.html#about" class="site-list__link">О сервисе</a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html" class="site-list__link">Направления</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link site-list__link--current">Попутчики</a>
-        </li>
-      </ul>
+          <div class="main-nav__user-list user-list">
+            <a class="user-list__login button" href="#">Авторизация</a>
+          </div>
 
-      <div class="main-header__user-list user-list">
-        <a class="user-list__login button" href="#">Авторизация</a>
-      </div>
+          <ul class="main-nav__contacts-list contacts-list">
+            <li class="contacts-list__item">
+              <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
 
-      <ul class="main-header__contacts-list contacts-list">
-        <li class="contacts-list__item">
-          <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contacts-list__item">
-          <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-
-      <ul class="main-header__social-list social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
-        </li>
-      </ul>
-
+          <ul class="main-nav__social-list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -794,6 +801,7 @@
           <button class="countries-filter__button" type="button">Свернуть</button>
         </div>
       </section>
+
       <section class="catalog">
         <h2 class="visually-hidden">Каталог попутчиков</h2>
 
