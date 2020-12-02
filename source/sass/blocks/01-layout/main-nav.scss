@@ -47,7 +47,7 @@
 }
 
 .main-nav--open {
-  background-color: $bg-card;
+  @include theme($bg-card, $text-clr-header);
 
   .main-nav__content {
     display: block;

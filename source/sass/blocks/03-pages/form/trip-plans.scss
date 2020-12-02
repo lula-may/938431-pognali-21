@@ -1,11 +1,20 @@
 .trip-plans {
+  padding-top: 28px;
+  padding-bottom: 59px;
   color: $text-clr-medium;
 
   background-color: $bg-inner-lighter;
 }
 
+.trip-plans__container {
+  @include outline();
+  @include form-container();
+}
+
 .trip-plans__heading {
   @include offset-reset();
+
+  margin-bottom: 29px;
 
   font-size: 24px;
   line-height: 24px;
@@ -13,11 +22,17 @@
 }
 
 .trip-plans__list {
+  @include outline(teal);
   @include list-reset();
 }
 
 .trip-plans__item {
+  padding: 23px 9.26%;
   background-color: $bg-card;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .trip-plans__name {
@@ -28,22 +43,23 @@
   font-weight: bold;
 }
 
-.trip-plans__info {
-  @include offset-reset();
-
+.trip-plans__item-content {
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
+.trip-plans__info {
+  @include offset-reset();
+
+  letter-spacing: 0.06em;
+}
+
 .trip-plans__change {
   color: rgba($text-clr-darker, 0.3);
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.03em;
 
   &:hover {
     color: rgba($text-clr-darker, 0.6);
@@ -52,5 +68,71 @@
 
   &:active {
     color: rgba($text-clr-darker, 0.1);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .trip-plans {
+    padding-top: 57px;
+    padding-bottom: 118px;
+  }
+
+  .trip-plans__heading {
+    margin-bottom: 48px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .trip-plans__item {
+    padding: 40px 0 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+
+  .trip-plans__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .trip-plans__item-content {
+    display: flex;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  .trip-plans__date {
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .trip-plans {
+    padding-top: 54px;
+    padding-bottom: 121px;
+  }
+
+  .trip-plans__container {
+    padding-left: 64px;
+  }
+
+  .trip-plans__heading {
+    margin-bottom: 49px;
+  }
+
+  .trip-plans__item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 36px 42px;
+
+    &:not(:last-child) {
+    margin-bottom: 15px;
+  }
   }
 }
