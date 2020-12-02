@@ -1,11 +1,15 @@
-.activity-plan__country {
+.activity__list {
+  @include list-reset();
+}
+
+.activity__country {
   font-size: 18px;
   line-height: 18px;
   font-weight: 500;
   color: $text-clr-medium;
 }
 
-.activity-plan__text {
+.activity__text {
   resize: none;
 
   font: inherit;
