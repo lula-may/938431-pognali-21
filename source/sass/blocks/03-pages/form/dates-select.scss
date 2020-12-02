@@ -1,0 +1,63 @@
+.dates-select {
+  @include outline(teal);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.dates-select__children {
+  margin-bottom: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .dates-select {
+    row-gap: 25px;
+
+    margin-bottom: 47px;
+  }
+
+  .dates-select__children {
+    grid-row: 2;
+
+    margin-bottom: 0;
+  }
+
+  .dates-select__duration {
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .dates-select {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 0;
+
+    margin-bottom: 57px;
+  }
+
+  .dates-select__companions {
+    grid-column: 1;
+    grid-row: 1;
+
+    margin-bottom: 14px;
+  }
+
+  .dates-select__duration {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .dates-select__children {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .dates-select__calendar {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+}

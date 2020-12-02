@@ -55,3 +55,10 @@ input:not(:disabled):hover + .calendar__label {
   outline: 2px solid $text-clr-calendar;
   outline-offset: -1px;
 }
+
+@media (min-width: $tablet-width) {
+  .calendar__month {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
