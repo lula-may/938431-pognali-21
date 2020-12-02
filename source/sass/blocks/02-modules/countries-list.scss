@@ -1,9 +1,39 @@
+.countries-list {
+  @include list-reset();
+}
+
 .countries-list__list {
   @include list-reset();
 }
 
+.countries-list__letter-list {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 .countries-list__letter {
   display: none;
+}
+
+.countries-list__sublist {
+  @include list-reset();
+}
+
+.countries-list__link {
+  font-weight: normal;
+  color: $text-clr-basic;
+  text-decoration: none;
+
+  &:hover {
+    color: $text-clr-medium;
+  }
+
+  &:active {
+    color: rgba($text-clr-medium, 0.3);
+  }
 }
 
 .countries-list__name {

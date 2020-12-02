@@ -6,8 +6,13 @@
     <title>Сервис для поиска попутчиков "Погнали"</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
+
+  <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
+    Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
   <body class="page__body">
-    <header class="main-header main-header--no-js">
+    <header class="main-header">
+      <!-- Для отображения раскрытого меню используется класс "main-nav--open"
+       при отсутствии этого класса меню свернуто -->
       <nav class="main-header__main-nav main-nav">
         <div class="main-nav__header">
           <a class="main-nav__logo logo">
@@ -266,6 +271,8 @@
         </section>
 
 
+        <!-- По умолчанию блок с тарифами для бизнеса скрыт,
+          для показа блока используется класс "modal--show" -->
         <section class="pricing-plan__business price price--business modal">
           <h3 class="price__heading price__heading--business">Бизнес-тарифы</h3>
 

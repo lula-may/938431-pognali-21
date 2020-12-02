@@ -1,0 +1,7 @@
+.companion-form {
+  @include outline(green);
+}
+
+.companion-form__list {
+  @include list-reset();
+}

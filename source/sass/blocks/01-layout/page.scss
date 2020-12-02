@@ -1,11 +1,17 @@
 .page {
   box-sizing: border-box;
+  min-width: 320px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .page__body {
@@ -17,7 +23,56 @@
   background-color: $bg-main-light;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.page__body--no-js {
+  @media (max-width: $tablet-width-only) {
+    .main-header {
+      @include theme($bg-card, $text-clr-header);
+    }
+
+    .main-nav {
+      position: static;
+    }
+
+    .main-nav__content {
+      position: relative;
+      top: auto;
+
+      display: block;
+    }
+
+    .main-nav__site-list,
+    .main-nav__contacts-list,
+    .main-nav__social-list {
+      display: block;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+}
+
+.page__body--scroll {
+  position: relative;
+  z-index: 10;
+  padding-top: 73px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 132px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 120px;
+  }
+
+  .main-header {
+    @include theme($bg-card, $text-clr-header);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    margin: 0;
+  }
 }

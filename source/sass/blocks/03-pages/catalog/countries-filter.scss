@@ -1,0 +1,42 @@
+.countries-filter {
+  @include outline();
+  @include container();
+  padding-top: 33px;
+  padding-bottom: 17px;
+  margin-bottom: 31px;
+
+  @include theme($bg-inner-filter, $bg-main-dark);
+}
+
+.countries-filter__title {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.countries-filter__dropdown {
+  @include outline(teal);
+  @include narrow-container();
+}
+
+.countries-filter__button {
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $bg-main-dark;
+
+  background-color: $bg-close-button;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: darken($bg-close-button, 2);
+  }
+
+  &:active {
+    color: rgba($bg-main-dark, 0.3);
+  }
+}

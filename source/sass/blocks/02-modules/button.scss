@@ -14,6 +14,16 @@
     color: rgba($text-clr-dark, 0.3);
   }
 
+  &--catalog {
+    line-height: 17px;
+    color: $text-clr-dark;
+    text-transform: uppercase;
+  }
+
+  &--light {
+    background-color: $bg-card;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;

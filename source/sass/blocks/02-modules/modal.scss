@@ -1,9 +1,7 @@
-.modal__close {
-  font: inherit;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $text-clr-medium;
+.modal {
+  display: none;
 
-  background-color: $bg-button-light;
-  border: none;
+  &--show {
+    display: block;
+  }
 }

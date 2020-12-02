@@ -1,0 +1,15 @@
+.continent-filter {
+  @include list-reset();
+}
+
+.continent-filter__name {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+input:not(:checked) + .continent-filter__name {
+  opacity: 0.3;
+}

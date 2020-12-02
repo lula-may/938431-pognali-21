@@ -1,0 +1,43 @@
+.companion-card {
+  @include outline(tomato);
+
+  padding-top: 15px;
+  padding-bottom: 23px;
+
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: normal;
+
+  background-color: $bg-card;
+}
+
+.companion-card__link {
+  display: block;
+  color: $text-clr-medium;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.companion-card__name {
+  @include offset-reset();
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.companion-card__hashtags {
+  line-height: 18px;
+}
+
+.companion-card__subheading {
+  font-weight: normal;
+  text-transform: lowercase;
+}
