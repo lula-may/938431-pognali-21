@@ -1,13 +1,48 @@
 .add-trip {
+  padding-top: 30px;
+  padding-bottom: 63px;
+
   color: $text-clr-medium;
 
   background-color: $bg-inner-medium;
 }
 
+.add-trip__container {
+  @include outline();
+  @include form-container();
+}
+
 .add-trip__heading {
   @include offset-reset();
+  margin-bottom: 29px;
 
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+  .add-trip {
+    padding-top: 53px;
+    padding-bottom: 118px;
+  }
+
+  .add-trip__heading {
+    margin-bottom: 56px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-trip {
+    padding-top: 70px;
+    padding-bottom: 125px;
+  }
+
+  .add-trip__heading {
+    margin-left: 69px;
+    margin-bottom: 54px;
+  }
 }

@@ -127,10 +127,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 159px;
-    padding-right: 159px;
-  }
+    @include center-position();
 
+    padding: 0;
+  }
 }
 
 // Временный миксин

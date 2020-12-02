@@ -1,9 +1,13 @@
 .step {
+  padding: 24px 9.26% 23px;
+  margin-bottom: 10px;
+
   background-color: $bg-card;
 }
 
 .step__heading {
   @include offset-reset();
+  margin-bottom: 16px;
 
   font-size: 20px;
   line-height: 20px;
@@ -17,6 +21,7 @@
 
 .step__desc {
   @include offset-reset();
+  margin-bottom: 20px;
 }
 
 .step__back {
@@ -38,4 +43,41 @@
 
 .step__activity-list {
   @include list-reset();
+}
+
+@media (min-width: $tablet-width) {
+  .step {
+    padding: 48px 6.47% 56px;
+    margin-bottom: 39px;
+  }
+
+  .step__heading {
+    margin-bottom: 35px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .step__desc {
+    margin-bottom: 38px;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .step {
+    padding: 100px 160px 104px;
+    margin-bottom: 44px;
+  }
+
+  .step__heading {
+    margin-bottom: 33px;
+  }
+
+  .step__desc {
+    margin-bottom: 55px;
+  }
 }
