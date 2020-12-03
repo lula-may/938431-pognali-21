@@ -43,6 +43,7 @@
 
 .number-field__control {
   position: absolute;
+
   &--minus {
     left: 0;
   }
@@ -99,5 +100,4 @@
     grid-column: 2;
     grid-row: 1;
   }
-
 }
