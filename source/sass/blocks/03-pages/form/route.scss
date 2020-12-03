@@ -2,4 +2,25 @@
 
 .route__list {
   @include list-reset();
+  margin-bottom: 3px;
+}
+
+.route__item {
+  margin-bottom: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .route__list {
+    margin-bottom: 35px;
+  }
+
+  .route__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .route__list {
+    margin-bottom: 43px;
+  }
 }
