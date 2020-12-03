@@ -1,5 +1,5 @@
 // TODO: Write styles for layout
 
 .dropdown {
-  display: block;
+  @include outline(teal);
 }
