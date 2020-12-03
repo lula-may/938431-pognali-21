@@ -393,7 +393,9 @@
                 </div>
               </div>
 
-              <a class="step__next button" href="#step-2">Следующий шаг</a>
+              <footer class="step__footer">
+                <a class="step__next button" href="#step-2">Следующий шаг</a>
+              </footer>
             </section>
 
             <section class="step" id="step-2">
@@ -407,9 +409,11 @@
                   <li class="route__item">
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-1">Страна: </label>
-                      <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
-                      <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
-                      <div class="country-field__indicator">
+                      <div class="country-field__select">
+                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
+                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                      </div>
+                      <div class="country-field__flag">
                         <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                       </div>
                       <button class="country-field__delete">
@@ -420,9 +424,11 @@
                   <li class="route__item">
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-2">Страна: </label>
-                      <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
-                      <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
-                      <div class="country-field__indicator">
+                      <div class="country-field__select">
+                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
+                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                      </div>
+                      <div class="country-field__flag">
                         <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                       </div>
                       <button class="country-field__delete">
@@ -431,158 +437,166 @@
                     </div>
                   </li>
                   <li class="route__item">
-                    <div class="country-field country-field--opened">
+                    <!-- Для открытия выпадающего списка используется класс "country-field--open"  -->
+                    <div class="country-field">
                       <label class="visually-hidden" for="selected-country-3">Страна: </label>
-                      <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                      <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
-
+                      <div class="country-field__select">
+                        <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
+                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                      </div>
                       <button class="country-field__delete">
                         <span class="visually-hidden">Удалить</span>
                       </button>
-                    </div>
-                    <div class="route__dropdown dropdown">
-                      <div class="dropdown__alphabetic-sort alphabetic-sort">
-                        <ul class="alphabetic-sort__alphabet">
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-1" aria-pressed="true">а</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-2" aria-pressed="false">б</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-3" aria-pressed="false">в</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-4" aria-pressed="false">г</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-5" aria-pressed="false">д</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-6" aria-pressed="false">е</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-7" aria-pressed="false">з</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-8" aria-pressed="false">и</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-9" aria-pressed="false">к</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-10" aria-pressed="false">л</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-11" aria-pressed="false">м</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-12" aria-pressed="false">н</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-13" aria-pressed="false">о</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-14" aria-pressed="false">п</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-15" aria-pressed="false">р</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-16" aria-pressed="false">с</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-17" aria-pressed="false">т</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-18" aria-pressed="false">у</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-19" aria-pressed="false">ф</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
-                          </li>
-                          <li class="alphabetic-sort__letter">
-                            <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
-                          </li>
-                        </ul>
-                        <div class="alphabetic-sort__countries-list countries-list">
-                          <h4 class="countries-list__letter">А</h4>
-                          <ul class="countries-list__list" id="list-a">
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-1" value="Австралия">
-                              <label class="countries-list__name" for="country-a-1">Австралия</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-2" value="Австрия">
-                              <label class="countries-list__name" for="country-a-2">Австрия</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-3" value="Азербайджан">
-                              <label class="countries-list__name" for="country-a-3">Азербайджан</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-4" value="Албания">
-                              <label class="countries-list__name" for="country-a-4">Албания</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-5" value="Алжир">
-                              <label class="countries-list__name" for="country-a-5">Алжир</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-6" value="Ангола">
-                              <label class="countries-list__name" for="country-a-6">Ангола</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-7" value="Андорра">
-                              <label class="countries-list__name" for="country-a-7">Андорра</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-8" value="Antigua and Barbuda">
-                              <label class="countries-list__name" for="country-a-8">Антигуа и Барбуда</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-9" value="Антигуа и Барбуда">
-                              <label class="countries-list__name" for="country-a-9">Аргентина</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-10" value="Армения">
-                              <label class="countries-list__name" for="country-a-10">Армения</label>
-                            </li>
-                            <li class="countries-list__item">
-                              <input type="radio" class="visually-hidden" name="country" id="country-a-11" value="Афганистан">
-                              <label class="countries-list__name" for="country-a-11">Афганистан</label>
-                            </li>
-                          </ul>
+                      <div class="country-field__dropdown dropdown">
+                        <div class="dropdown__alphabetic-sort alphabetic-sort">
+                          <div class="alphabetic-sort__wrapper">
+                            <ul class="alphabetic-sort__alphabet">
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-1" aria-pressed="true">а</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-2" aria-pressed="false">б</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-3" aria-pressed="false">в</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-4" aria-pressed="false">г</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-5" aria-pressed="false">д</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-6" aria-pressed="false">е</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-7" aria-pressed="false">з</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-8" aria-pressed="false">и</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-9" aria-pressed="false">к</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-10" aria-pressed="false">л</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-11" aria-pressed="false">м</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-12" aria-pressed="false">н</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-13" aria-pressed="false">о</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-14" aria-pressed="false">п</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-15" aria-pressed="false">р</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-16" aria-pressed="false">с</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-17" aria-pressed="false">т</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-18" aria-pressed="false">у</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-19" aria-pressed="false">ф</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
+                              </li>
+                              <li class="alphabetic-sort__letter">
+                                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="alphabetic-sort__countries-list countries-list">
+                            <h4 class="countries-list__letter">А</h4>
+                            <ul class="countries-list__list" id="list-a">
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-1" value="Австралия">
+                                <label class="countries-list__name" for="country-a-1">Австралия</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-2" value="Австрия">
+                                <label class="countries-list__name" for="country-a-2">Австрия</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-3" value="Азербайджан">
+                                <label class="countries-list__name" for="country-a-3">Азербайджан</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-4" value="Албания">
+                                <label class="countries-list__name" for="country-a-4">Албания</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-5" value="Алжир">
+                                <label class="countries-list__name" for="country-a-5">Алжир</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-6" value="Ангола">
+                                <label class="countries-list__name" for="country-a-6">Ангола</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-7" value="Андорра">
+                                <label class="countries-list__name" for="country-a-7">Андорра</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-8" value="Antigua and Barbuda">
+                                <label class="countries-list__name" for="country-a-8">Антигуа и Барбуда</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-9" value="Антигуа и Барбуда">
+                                <label class="countries-list__name" for="country-a-9">Аргентина</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-10" value="Армения">
+                                <label class="countries-list__name" for="country-a-10">Армения</label>
+                              </li>
+                              <li class="countries-list__item">
+                                <input type="radio" class="visually-hidden" name="country" id="country-a-11" value="Афганистан">
+                                <label class="countries-list__name" for="country-a-11">Афганистан</label>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </li>
                   <li class="route__item">
                     <div class="country-field">
-                      <button class="country-field__country country-field__country--add" type="button">
-                        Добавить страну
-                      </button>
+                      <div class="country-field__select">
+                        <button class="country-field__country country-field__country--add" type="button">
+                          Добавить страну
+                        </button>
+                        </div>
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <a class="step__next button" href="#step-3">Следующий шаг</a>
-              <a class="step__back" href="#step-1">На шаг назад</a>
+              <footer class="step__footer">
+                <a class="step__next button" href="#step-3">Следующий шаг</a>
+                <a class="step__back" href="#step-1">На шаг назад</a>
+              </footer>
 
             </section>
 
@@ -598,22 +612,25 @@
                   <li class="activity__item">
                     <header class="activity__header">
                       <h4 class="activity__country">Босния и Герцеговина</h4>
-                      <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                      <img class="activity__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
                     </header>
                     <textarea class="activity__text" name="activity-1" id="activity-1" cols="30" rows="10" placeholder="План действий" required></textarea>
                   </li>
                   <li class="activity__item">
                     <header class="activity__header">
                       <h4 class="activity__country">Чехия</h4>
-                      <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                      <img class="activity__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
                     </header>
                     <textarea class="activity__text" name="activity-2" id="activity-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                     </textarea>
                   </li>
                 </ul>
               </div>
-              <button class="step__submit button" type="submit">Отправить</button>
-              <a class="step__back" href="#step-2">На шаг назад</a>
+
+              <footer class="step__footer">
+                <button class="step__submit button" type="submit">Отправить</button>
+                <a class="step__back" href="#step-2">На шаг назад</a>
+              </footer>
 
             </section>
           </div>
