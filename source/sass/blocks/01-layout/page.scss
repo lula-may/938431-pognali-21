@@ -1,6 +1,5 @@
 .page {
   box-sizing: border-box;
-  min-width: 320px;
 }
 
 *,
@@ -10,11 +9,13 @@
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 .page__body {
+  min-width: 320px;
   margin: 0;
 
   @include basic-text();

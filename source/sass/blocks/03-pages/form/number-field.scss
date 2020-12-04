@@ -1,4 +1,8 @@
 .number-field {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  row-gap: 8px;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
@@ -6,15 +10,94 @@
   color: $text-clr-medium;
 }
 
+.number-field__label {
+  grid-column: 1;
+  grid-row: 1;
+  letter-spacing: 0.09em;
+}
+
 .number-field__units {
+  grid-column: 2;
+  grid-row: 1;
+
+  letter-spacing: 0.07em;
   color: rgba($text-clr-medium, 0.3);
+  text-align: right;
+}
+
+.number-field__wrapper {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .number-field__input {
   color: inherit;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 15px;
   text-align: center;
+  width: 100%;
 
   @include border-styles();
+}
+
+.number-field__control {
+  position: absolute;
+
+  &--minus {
+    left: 0;
+  }
+
+  &--plus {
+    right: 0;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .number-field {
+    row-gap: 24px;
+
+    font-size: 20px;
+  }
+
+  .number-field__label {
+    letter-spacing: 0.1em;
+  }
+
+  .number-field__units {
+    letter-spacing: 0.08em;
+  }
+
+  .number-field__input {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .number-field {
+    grid-template-columns: 186px 180px 1fr;
+    row-gap: 0;
+    justify-items: start;
+    column-gap: 35px;
+
+    font-size: 20px;
+  }
+
+  .number-field__label {
+    letter-spacing: normal;
+  }
+
+  .number-field__units {
+    grid-column: 3;
+    grid-row: 1;
+
+    letter-spacing: normal;
+  }
+
+  .number-field__wrapper {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }

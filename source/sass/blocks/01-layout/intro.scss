@@ -1,14 +1,21 @@
 .intro {
-  @include outline();
-  @include container();
-  padding-top: 25px;
-  padding-bottom: 11px;
+  padding-left: 7.81%;
+  padding-right: 7.81%;
 
   @include theme($bg-header, $text-clr-light);
 }
 
+.intro__container {
+  @include outline();
+
+  display: flex;
+}
+
 .intro__heading {
+  @include outline(teal);
   @include offset-reset();
+  padding-top: 25px;
+  padding-bottom: 12px;
 
   font-size: 36px;
   line-height: 36px;
@@ -16,8 +23,33 @@
 }
 
 @media (min-width: $tablet-width) {
+  .intro {
+    padding-left: 9.77%;
+    padding-right: 9.77%;
+  }
+
   .intro__heading {
+    padding-top: 104px;
+    padding-bottom: 66px;
+
     font-size: 60px;
     line-height: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .intro__container {
+    @include center-position();
+  }
+
+  .intro__heading {
+    padding-top: 103px;
+    padding-bottom: 68px;
+    margin-left: 64px;
   }
 }
