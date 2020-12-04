@@ -71,17 +71,17 @@
         </div>
       </section>
 
-      <section class="countries-filter">
+      <!-- Класс "countries-filter--expanded" показывает блок выбора стран
+      В отсутствие этого класса блок скрыт  -->
+      <section class="countries-filter countries-filter--expanded">
         <header class="countries-filter__header">
           <h2 class="countries-filter__title">Фильтрация по странам:</h2>
-          <button class="countries-filter__toggle" type="button">
-            <span class="visually-hidden">Показать / Скрыть</span>
+          <button class="countries-filter__toggle" type="button" aria-label="Свернуть">
+            <span class="countries-filter__label countries-filter__label--close">Свернуть</span>
+            <span class="countries-filter__label countries-filter__label--open">Показать все</span>
           </button>
-        </header>
-          <!-- Класс modal скрывает блок
-          Класс modal--show показывает блок  -->
-        <div class="countries-filter__dropdown modal modal--show">
-          <ul class="continent-filter">
+
+          <ul class="countries-filter__continent-filter continent-filter">
             <li class="continent-filter__item">
               <input class="visually-hidden" type="checkbox" id="europe" name="europe" checked>
               <label class="continent-filter__name" for="europe">Европа</label>
@@ -99,8 +99,10 @@
               <label class="continent-filter__name" for="islands">Острова</label>
             </li>
           </ul>
+        </header>
 
-          <div class="countries-filter__alphabetic-sort alphabetic-sort">
+        <div class="countries-filter__dropdown">
+          <div class="alphabetic-sort">
             <ul class="alphabetic-sort__alphabet">
               <li class="alphabetic-sort__letter">
                 <button class="alphabetic-sort__button" type="button" id="letter-1" aria-pressed="true">а</button>
