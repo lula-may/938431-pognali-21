@@ -1,9 +1,10 @@
 .countries-filter {
+  position: relative;
+
   @include outline();
   @include container();
   padding-top: 42px;
-  padding-bottom: 17px;
-  margin-bottom: 31px;
+  margin-bottom: 21px;
 
   @include theme($bg-inner-filter, $bg-main-dark);
 
@@ -18,7 +19,7 @@
   }
 }
 
-.countries-filter__header {
+.countries-filter__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -30,6 +31,7 @@
 .countries-filter__title {
   @include offset-reset();
   padding-left: 10%;
+  margin-bottom: 18px;
 
   font-size: 16px;
   line-height: 18px;
@@ -62,9 +64,16 @@
 
 .countries-filter__dropdown {
   @include outline(teal);
-  @include narrow-container();
-  padding-top: 21px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
   display: none;
+
+  width: 100%;
+  padding: 21px 15.63% 28px;
+
+  background-color: $bg-inner-filter;
 }
 
 .countries-filter__button {
@@ -90,7 +99,8 @@
 
 @media (min-width: $tablet-width) {
   .countries-filter {
-    padding: 184px 10.47% 56px;
+    padding: 184px 9.36% 56px;
+    margin-bottom: 43px;
 
     &--expanded {
       .countries-filter__label--open {
@@ -132,21 +142,52 @@
   }
 
   .countries-filter__dropdown {
-    padding-top: 63px;
+    padding: 7px 9.36% 79px;
+  }
+
+  .countries-filter__alphabetic-sort {
+    margin-bottom: 77px;
+  }
+
+  .countries-filter__button {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .countries-filter {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 151px;
+    background-color: $bg-main-light;
+  }
+
+  .countries-filter__header {
+    padding: 183px 0 50px;
+
+    background-color: $bg-inner-filter;
+  }
+
+  .countries-filter__container {
     @include center-position();
-    padding: 183px 0 57px;
   }
 
   .countries-filter__title {
     display: block;
     padding-left: 45px;
+    margin-bottom: 0;
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .countries-filter__dropdown {
+    position: relative;
+
+    display: block;
+    padding: 0 36px;
+
+    background-color: inherit;
   }
 }

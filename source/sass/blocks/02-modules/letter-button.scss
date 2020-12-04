@@ -1,0 +1,58 @@
+.letter-button {
+  @include button-reset();
+
+  flex-grow: 1;
+  height: 100%;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $text-clr-medium;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: $bg-card;
+  border: 1px solid $bg-inner-light;
+
+  &:not([aria-pressed="true"]):hover {
+    outline: none;
+    border-color: $border-clr-hover;
+  }
+
+  &[aria-pressed="true"],
+  &:not([aria-pressed="true"]):active {
+    @include theme($text-clr-medium, $text-clr-light);
+    border-color: $text-clr-medium;
+  }
+
+  &--catalog {
+    line-height: 14px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .letter-button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .letter-button--catalog {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    color: rgba($text-clr-header, 0.3);
+
+    border: none;
+    background-color: transparent;
+
+    &:not([aria-pressed="true"]):hover {
+      color: rgba($text-clr-header, 0.6);
+    }
+
+    &[aria-pressed="true"],
+    &:not([aria-pressed="true"]):active {
+      color: $text-clr-header;
+      background-color: transparent;
+    }
+  }
+}
