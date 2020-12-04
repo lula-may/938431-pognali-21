@@ -1,23 +1,70 @@
 .countries-filter {
   @include outline();
   @include container();
-  padding-top: 33px;
+  padding-top: 42px;
   padding-bottom: 17px;
   margin-bottom: 31px;
 
   @include theme($bg-inner-filter, $bg-main-dark);
+
+  &--expanded {
+    .countries-filter__continent-filter {
+      display: flex;
+    }
+
+    .countries-filter__dropdown {
+      display: block;
+    }
+  }
+}
+
+.countries-filter__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-right: 1.85%;
 }
 
 .countries-filter__title {
+  @include offset-reset();
+  padding-left: 10%;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
+.countries-filter__continent-filter {
+  display: none;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 9.26%;
+}
+
+.countries-filter__toggle {
+  order: 2;
+
+  font: inherit;
+  color: $bg-main-dark;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  border: none;
+  background-color: transparent;
+}
+
+.countries-filter__label {
+  display: none;
+}
+
 .countries-filter__dropdown {
   @include outline(teal);
   @include narrow-container();
+  padding-top: 21px;
+  display: none;
 }
 
 .countries-filter__button {
@@ -38,5 +85,68 @@
 
   &:active {
     color: rgba($bg-main-dark, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .countries-filter {
+    padding: 184px 10.47% 56px;
+
+    &--expanded {
+      .countries-filter__label--open {
+        display: none;
+      }
+
+      .countries-filter__label--close {
+        display: inline;
+      }
+    }
+  }
+
+  .countries-filter__header {
+    margin-right: 0;
+  }
+
+  .countries-filter__title {
+    display: none;
+  }
+
+  .countries-filter__continent-filter {
+    display: flex;
+
+    width: auto;
+    padding: 0;
+  }
+
+  .countries-filter__toggle {
+    padding-right: 49px;
+  }
+
+  .countries-filter__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &--open {
+      display: inline;
+    }
+  }
+
+  .countries-filter__dropdown {
+    padding-top: 63px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-filter {
+    @include center-position();
+    padding: 183px 0 57px;
+  }
+
+  .countries-filter__title {
+    display: block;
+    padding-left: 45px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 }
