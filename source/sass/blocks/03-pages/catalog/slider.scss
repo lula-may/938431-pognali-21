@@ -1,1 +1,68 @@
 // TODO: Write some code for slider
+.slider {
+  position: relative;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.slider__bar {
+  height: 2px;
+
+  background-color: $text-clr-medium;
+  opacity: 0.2;
+}
+
+.slider__handle {
+  position: absolute;
+  top: 0;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  background-color: $text-clr-medium;
+  border-radius: 50%;
+  border: none;
+
+  &--min {
+    left: 30%;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
+.slider__interval {
+  position: absolute;
+  top: 4px;
+  left: calc(30% + 5px);
+  right: 5px;
+
+  height: 2px;
+  background-color: $text-clr-medium;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .slider__bar {
+    height: 3px;
+  }
+
+  .slider__handle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .slider__interval {
+    top: 5px;
+
+    height: 3px;
+  }
+}

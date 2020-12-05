@@ -1,3 +1,85 @@
+.pagination {
+  width: 100%;
+  height: 51px;
+  padding-top: 19px;
+
+  background-color: $bg-card;
+}
+
 .pagination__page-list {
   display: none;
+}
+
+.pagination__buttons {
+  @include offset-reset();
+  width: 53.33%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__button {
+  width: 33px;
+  height: 18px;
+
+  background-color: tomato;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    padding: 0 5.09% 0 4.07%;
+  }
+
+  .pagination__page-list {
+    @include list-reset();
+    display: flex;
+  }
+
+  .pagination__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    font: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-clr-medium;
+
+    border-radius: 50%;
+
+    &[href]:hover {
+      color: rgba($text-clr-medium, 0.7);
+    }
+
+    &[href]:active {
+      color: rgba($text-clr-medium, 0.3);
+
+    }
+
+    &--current {
+      background-color: $bg-button-basic;
+    }
+  }
+
+  .pagination__buttons {
+    width: 53px;
+    height: 20px;
+    margin: 0;
+  }
+
+  .pagination__button {
+    width: 50%;
+  }
 }
