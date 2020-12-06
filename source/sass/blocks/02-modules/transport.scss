@@ -3,7 +3,12 @@
 
   display: flex;
   align-items: stretch;
+}
 
+.transport--companion {
+  .transport__item {
+    background-color: $bg-main-light;
+  }
 }
 
 .transport__item {
@@ -17,17 +22,43 @@
 }
 
 input:hover + .transport__item {
-  filter: drop-shadow(0px 2px 6px rgba(22, 28, 53, 0.17));
+  box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
 }
 
 input:active + .transport__item {
   background-color: $bg-inner-filter;
-  filter: none;
+  box-shadow: none;
 }
 
 @media (min-width: $tablet-width) {
+  .transport--companion {
+    flex-direction: column;
+
+    .transport__item {
+      width: 26px;
+      height: 22px;
+      margin-bottom: 10px;
+
+      background-color: tomato;
+      border-radius: 0;
+    }
+  }
+
   .transport__item {
     width: 43px;
     height: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport--companion {
+    flex-direction: row;
+
+    .transport__item {
+      width: 22px;
+
+      margin-right: 14px;
+      margin-bottom: 0;
+    }
   }
 }

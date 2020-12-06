@@ -39,6 +39,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog__list {
+    width: 100%;
     margin-bottom: 7px;
   }
 
@@ -71,7 +72,7 @@
   .catalog__filter {
     grid-column: 2;
     grid-row: 1 / -1;
-    justify-self: end;;
+    justify-self: end;
   }
 
   .catalog__list {

@@ -5,3 +5,10 @@
   color: $text-clr-dark;
   text-transform: uppercase;
 }
+
+@media (min-width: $tablet-width) {
+  .likes {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
