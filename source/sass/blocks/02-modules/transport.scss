@@ -1,7 +1,64 @@
 .transport {
   @include list-reset();
+
+  display: flex;
+  align-items: stretch;
+}
+
+.transport--companion {
+  .transport__item {
+    background-color: $bg-main-light;
+  }
 }
 
 .transport__item {
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin-right: 1px;
+
   background-color: $bg-card;
+  border-radius: 50%;
+}
+
+input:hover + .transport__item {
+  box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+}
+
+input:active + .transport__item {
+  background-color: $bg-inner-filter;
+  box-shadow: none;
+}
+
+@media (min-width: $tablet-width) {
+  .transport--companion {
+    flex-direction: column;
+
+    .transport__item {
+      width: 26px;
+      height: 22px;
+      margin-bottom: 10px;
+
+      background-color: tomato;
+      border-radius: 0;
+    }
+  }
+
+  .transport__item {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport--companion {
+    flex-direction: row;
+
+    .transport__item {
+      width: 22px;
+
+      margin-right: 14px;
+      margin-bottom: 0;
+    }
+  }
 }

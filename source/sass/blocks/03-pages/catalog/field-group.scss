@@ -1,4 +1,14 @@
+.field-group__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0 4px;
+}
+
 .field-group__name {
+  @include offset-reset();
+
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
@@ -15,4 +25,65 @@
   line-height: 20px;
   font-weight: normal;
   color: $text-clr-darker;
+}
+
+@media (min-width: $tablet-width) {
+  .field-group {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row: min-content;
+
+    margin-bottom: 13px;
+  }
+
+  .field-group__header {
+    grid-column: 1;
+
+    padding: 0;
+  }
+
+  .field-group__name {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .field-group__toggle {
+    display: none;
+  }
+
+  .field-group__list {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .field-group__item {
+    width: 30%;
+    margin-right: 3.33%;
+  }
+
+  .field-group__label {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-group {
+    display: block;
+    margin-bottom: 17px;
+  }
+
+  .field-group__toggle {
+    display: block;
+  }
+
+  .field-group__list {
+    flex-direction: column;
+  }
+
+  .field-group__item {
+    width: 100%;
+    margin-right: 0;
+  }
 }

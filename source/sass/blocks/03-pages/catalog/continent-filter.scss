@@ -1,15 +1,37 @@
 .continent-filter {
   @include list-reset();
+  flex-direction: column;
+}
+
+.continent-filter__item {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .continent-filter__name {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
   color: inherit;
   text-transform: uppercase;
 }
 
-input:not(:checked) + .continent-filter__name {
+input + .continent-filter__name {
   opacity: 0.3;
+}
+
+input:checked + .continent-filter__name {
+  opacity: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .continent-filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .continent-filter__item {
+    margin-right: 28px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

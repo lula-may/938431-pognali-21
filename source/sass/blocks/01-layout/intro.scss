@@ -7,19 +7,25 @@
 
 .intro__container {
   @include outline();
+  padding-top: 25px;
 
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .intro__heading {
   @include outline(teal);
   @include offset-reset();
-  padding-top: 25px;
   padding-bottom: 12px;
 
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
+}
+
+.intro__link {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,12 +34,36 @@
     padding-right: 9.77%;
   }
 
-  .intro__heading {
+  .intro__container {
     padding-top: 104px;
+  }
+
+  .intro__heading {
     padding-bottom: 66px;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  .intro__link {
+    display: block;
+    padding-top: 20px;
+    padding-right: 60px;
+
+    font: inherit;
+    color: inherit;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $bg-button-basic;
+    }
+
+    &:active {
+      color: rgba($bg-button-basic, 0.3);
+    }
   }
 }
 
@@ -45,11 +75,12 @@
 
   .intro__container {
     @include center-position();
+    padding-top: 103px;
+    padding-left: 64px;
+    padding-right: 63px;
   }
 
   .intro__heading {
-    padding-top: 103px;
     padding-bottom: 68px;
-    margin-left: 64px;
   }
 }

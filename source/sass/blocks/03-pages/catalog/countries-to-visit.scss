@@ -1,3 +1,47 @@
 .countries-to-visit {
   @include list-reset();
+
+  color: $text-clr-medium;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.countries-to-visit__item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.countries-to-visit__image {
+  width: 26px;
+  height: 18px;
+  margin-right: 11px;
+}
+
+@media (min-width: $tablet-width) {
+  .countries-to-visit {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .countries-to-visit__item {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .countries-to-visit__image {
+    width: 36px;
+    height: 24px;
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-to-visit {
+    flex-direction: column;
+  }
+
+  .countries-to-visit__item {
+    margin-right: 0;
+    margin-bottom: 13px;
+  }
 }

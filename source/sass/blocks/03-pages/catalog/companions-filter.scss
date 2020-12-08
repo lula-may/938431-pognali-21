@@ -11,10 +11,39 @@
 
 .companions-filter__heading {
   @include offset-reset();
+  margin-bottom: 23px;
 
   font-size: 22px;
   line-height: 22px;
   font-weight: bold;
   letter-spacing: 0.02em;
   color: $text-clr-medium;
+}
+
+@media (min-width: $tablet-width) {
+  .companions-filter {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    margin-bottom: 40px;
+  }
+
+  .companions-filter__heading {
+    margin-bottom: 38px;
+
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: normal;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-filter {
+    width: 285px;
+    padding: 46px 45px 48px 48px;
+    margin-bottom: auto;
+  }
+
+  .companions-filter__heading {
+    margin-bottom: 34px;
+  }
 }
