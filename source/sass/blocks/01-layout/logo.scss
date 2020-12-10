@@ -1,4 +1,19 @@
-// TODO: Write more useful code for layout
-.copyright {
-  color: inherit;
+.logo__image {
+  display: block;
+  width: 100px;
+  height: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__image {
+    width: 166px;
+    height: 44px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    width: 200px;
+    height: 52px;
+  }
 }

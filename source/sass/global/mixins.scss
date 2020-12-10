@@ -61,7 +61,6 @@
 @mixin button-theme() {
   @include button-reset();
 
-  font-weight: bold;
   text-decoration: none;
   color: $text-clr-medium;
 

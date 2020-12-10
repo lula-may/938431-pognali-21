@@ -1,3 +1,7 @@
 .main-header {
   @include theme($bg-header, $text-clr-light);
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+  }
 }
