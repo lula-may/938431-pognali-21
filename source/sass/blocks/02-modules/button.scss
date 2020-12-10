@@ -1,8 +1,9 @@
 .button {
-  @include button-theme();
+  $mobile-base-size: 18px;
+  $tablet-base-size: 24px;
 
-  font-size: 17px;
-  line-height: 20px;
+  @include button-theme();
+  font-weight: bold;
 
   border: none;
 
@@ -14,18 +15,45 @@
     color: rgba($text-clr-dark, 0.3);
   }
 
+  &--login {
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 4px;
+
+    font-size: 17px;
+    line-height: 1.176;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 25px;
+  }
+
+  &--index {
+    font-weight: $mobile-base-size;
+    line-height: 1;
+  }
+
   &--catalog {
-    line-height: 17px;
+    line-height: 1;
     color: $text-clr-dark;
     text-transform: uppercase;
   }
 
   &--light {
+    line-height: 1;
     background-color: $bg-card;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    font-size: 24px;
-    line-height: 24px;
+@media (min-width: $tablet-width) {
+  .button {
+    &--login {
+      padding: 14px 0 16px;
+
+      font-size: 20px;
+      line-height: 1;
+    }
   }
 }

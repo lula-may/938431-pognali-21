@@ -1,9 +1,7 @@
-.user-list {
-  .user-list__login[href]:hover {
-    opacity: 1;
-  }
-}
 
-.user-list__login {
-  text-transform: uppercase;
+@media (min-width: $tablet-width) {
+  .user-list {
+    display: block;
+    width: 188px;
+  }
 }

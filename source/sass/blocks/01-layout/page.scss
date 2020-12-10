@@ -30,18 +30,8 @@ img {
       @include theme($bg-card, $text-clr-header);
     }
 
-    .main-nav {
-      position: static;
-    }
-
-    .main-nav__content {
-      position: relative;
-      top: auto;
-
-      display: block;
-    }
-
     .main-nav__site-list,
+    .main-nav__user-list,
     .main-nav__contacts-list,
     .main-nav__social-list {
       display: block;

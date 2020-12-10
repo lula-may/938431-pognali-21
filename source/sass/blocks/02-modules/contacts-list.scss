@@ -2,17 +2,138 @@
   @include list-reset();
 
   font-size: 16px;
+  line-height: 1;
   font-weight: bold;
-  line-height: 18px;
-
-  @media (min-width: $tablet-width) {
-
-    font-size: 28px;
-    line-height: 28px;
-  }
 }
 
 .contacts-list__link {
+  display: block;
+
   color: inherit;
   text-decoration: none;
+
+  @media (max-width: $tablet-width-only) {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts-list__label {
+  position: relative;
+  display: block;
+  padding: 15px 15px 14px 61px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: $bg-button-dark;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--phone::before {
+    background-image: url("../img/icons/telephone.svg");
+    background-size: 16px 15px;
+  }
+
+  &--email::before {
+    background-image: url("../img/icons/mail-envelope.svg");
+    background-size: 19px 13px;
+  }
+}
+
+.contacts-list__icon {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-list {
+    font-size: 28px;
+  }
+
+  .contacts-list__label {
+    padding: 23px 25px 17px 91px;
+
+    &--phone::before {
+      background-size: 24px 23px;
+    }
+
+    &--email {
+      padding-top: 21px;
+
+      &::before {
+        background-size: 28px 19px;
+      }
+    }
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-list {
+    display: flex;
+  }
+
+  .contacts-list__link {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    &:active {
+      .contacts-list__icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .contacts-list__link--phone {
+    background-color: $bg-special-bright;
+
+    &:hover,
+    &:active {
+      background-color: $bg-special-bright-hover;
+    }
+  }
+
+  .contacts-list__link--email {
+    background-color: $bg-special-light;
+
+    &:hover,
+    &:active {
+      background-color: $bg-special-bright;
+    }
+  }
+
+  .contacts-list__label {
+    display: none;
+  }
+
+  .contacts-list__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: block;
+    margin: auto;
+  }
 }
