@@ -21,7 +21,7 @@ img {
   @include basic-text();
   color: $text-clr-basic;
 
-  background-image: linear-gradient(to bottom, $bg-header 0, $bg-header 30px, $bg-main-light 100%);
+  background-image: linear-gradient(to bottom, $bg-header 0, $bg-header 30px, $bg-main-light 30px, $bg-main-light 100%);
 }
 
 .page__body--no-js {

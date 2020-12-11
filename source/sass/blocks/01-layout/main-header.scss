@@ -2,6 +2,18 @@
   @include theme($bg-header, $text-clr-light);
 
   @media (min-width: $desktop-width) {
-    padding-top: 30px;
+    padding-top: 28px;
+  }
+}
+
+.main-header--index {
+  background-color: $bg-header-mobile;
+
+  @media (min-width: $tablet-width) {
+    background-color: $bg-header;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-header-desktop;
   }
 }
