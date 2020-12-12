@@ -31,8 +31,32 @@
   }
 
   &--index {
-    font-weight: $mobile-base-size;
+    font-size: $mobile-base-size;
     line-height: 1;
+    text-align: left;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      padding: 27px 33px 29px;
+
+      font-size: $tablet-base-size;
+
+      border-radius: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 34px;
+        right: 26px;
+        z-index: 10;
+        box-sizing: content-box;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 10px;
+        border-color: transparent transparent transparent $text-clr-medium;
+      }
+    }
   }
 
   &--catalog {

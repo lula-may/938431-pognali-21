@@ -1,16 +1,25 @@
 .about {
+  position: relative;
+  z-index: 6;
+
   @include container();
 
-  padding-top: 33px;
-  padding-bottom: 82px;
+  padding-top: 31px;
+  padding-bottom: 83px;
+  margin-bottom: -30px;
 
   color: $text-clr-light;
   background-color: $bg-main-dark;
+  background-image: url("../img/about-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 75% top;
+
+  border-radius: 0 0 30px 30px;
 }
 
 .about__container {
-  @include outline();
   @include narrow-container();
+  position: relative;
 }
 
 .about__heading,
@@ -26,6 +35,7 @@
 
 .about__text {
   margin-bottom: 20px;
+  margin-right: 5%;
 }
 
 .about__slogan {
@@ -40,8 +50,42 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding-top: 41px;
-    padding-bottom: 75px;
+    padding-top: 37px;
+    padding-bottom: 89px;
+    margin-bottom: -60px;
+
+    background-image: none;
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      width: 90%;
+      height: 212px;
+      margin: 0 auto;
+
+      background-color: $bg-decor-block;
+      border-radius: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48px;
+      left: 50%;
+      width: 376px;
+      height: 548px;
+
+      background-image: url("../img/about-tablet.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+    }
   }
 
   .about__heading {
@@ -49,33 +93,92 @@
   }
 
   .about__text {
+    width: 50%;
     margin-bottom: 31px;
   }
 
   .about__slogan {
-    margin-bottom: 52px;
+    width: 50%;
+    margin-bottom: 55px;
+
+    line-height: 1.195;
+  }
+
+  .about__show-more {
+    width: 44.5%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
-    padding-top: 132px;
+    padding-top: 130px;
     padding-bottom: 163px;
+
+    &::before,
+    &::after {
+      opacity: 0;
+    }
   }
 
   .about__container {
+    position: relative;
+
     @include center-position();
+    padding-top: 58px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      width: 212px;
+      height: 212px;
+
+      background-color: $bg-decor-block;
+      border-radius: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: auto;
+      right: 0;
+      z-index: 0;
+
+      width: 630px;
+      height: 665px;
+
+      background-image: url("../img/about-desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+    }
   }
 
   .about__heading {
-    margin-bottom: 57px;
+    position: relative;
+    margin-bottom: 58px;
   }
 
   .about__text {
-    margin-bottom: 38px;
+    position: relative;
+    width: 53%;
+    margin-bottom: 39px;
+
+    line-height: 1.215;
   }
 
   .about__slogan {
-    margin-bottom: 85px;
+    width: 40%;
+    margin-bottom: 87px;
+
+    line-height: 1.143;
+  }
+
+  .about__show-more {
+    width: 274px;
   }
 }

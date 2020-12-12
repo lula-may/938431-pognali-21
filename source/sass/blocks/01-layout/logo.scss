@@ -8,6 +8,10 @@
   height: 15px;
 
   color: inherit;
+
+  &--open {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

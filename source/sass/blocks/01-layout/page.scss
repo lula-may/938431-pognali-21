@@ -24,6 +24,10 @@ img {
   background-image: linear-gradient(to bottom, $bg-header 0, $bg-header 30px, $bg-main-light 30px, $bg-main-light 100%);
 }
 
+.page__main {
+  position: relative;
+}
+
 .page__body--no-js {
   @media (max-width: $tablet-width-only) {
     .main-header {

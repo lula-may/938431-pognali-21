@@ -1,7 +1,7 @@
 $plan-shift: 80px;
 
 .promo {
-  padding-bottom: 7px;
+  padding-bottom: 9px;
 
   color: $text-clr-light;
   background-color: $bg-main-dark;
@@ -86,6 +86,7 @@ $plan-shift: 80px;
   $plan-shift: 138px;
 
   .promo {
+    padding-bottom: 28px;
     background-color: $bg-header;
   }
 
@@ -143,11 +144,19 @@ $plan-shift: 80px;
 
 @media (min-width: $desktop-width) {
   .promo {
+    position: relative;
+    z-index: 7;
+
+    padding-bottom: 0;
+    margin-bottom: -60px;
+
     background-color: $bg-header-desktop;
     background-image: url("../img/globe-desktop.png");
     background-repeat: no-repeat;
-    background-position: center -110px;
+    background-position: 0 -110px;
     background-size: 1440px 750px;
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
   }
 
   .promo__container {

@@ -10,6 +10,8 @@
 }
 
 @mixin button-reset {
+  display: block;
+
   @include offset-reset();
   font-family: inherit;
   border: none;
