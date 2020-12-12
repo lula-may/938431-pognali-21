@@ -1,7 +1,13 @@
+.logo {
+  color: inherit;
+}
+
 .logo__image {
   display: block;
   width: 100px;
   height: 15px;
+
+  color: inherit;
 }
 
 @media (min-width: $tablet-width) {
@@ -13,7 +19,7 @@
 
 @media (min-width: $desktop-width) {
   .logo__image {
-    width: 200px;
-    height: 52px;
+    width: 198px;
+    height: 60px;
   }
 }

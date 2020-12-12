@@ -71,7 +71,17 @@
     @include theme($bg-card, $text-clr-header);
 
     .main-nav__header {
-      padding-top: 25px;
+      padding: 25px 0 28px;
+    }
+
+    .logo__image {
+      &--open {
+        display: block;
+      }
+
+      &--close {
+        display: none;
+      }
     }
 
     .main-nav__content {
@@ -81,7 +91,7 @@
       z-index: 10;
 
       width: 100%;
-      padding: 41px 7.8% 39px;
+      padding: 37px 7.8% 39px;
     }
 
     .main-nav__toggle::before,
@@ -103,6 +113,16 @@
   .main-nav--close {
     .main-nav__header {
       padding-top: 16px;
+    }
+
+    .logo__image {
+      &--open {
+        display: none;
+      }
+
+      &--close {
+        display: block;
+      }
     }
 
     .main-nav__toggle::before,
@@ -210,7 +230,7 @@
     align-items: center;
 
     @include center-position();
-    padding: 18px 0 20px;
+    padding: 16px 0 6px;
   }
 
   .main-nav__header {
