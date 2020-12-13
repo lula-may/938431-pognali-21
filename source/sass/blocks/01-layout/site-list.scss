@@ -42,12 +42,39 @@
   }
 
   .site-list__link {
-    &:hover {
+    display: inline-block;
+    overflow: hidden;
+    height: 1em;
+    outline: none;
+
+    span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+
       color: $bg-button-basic;
+
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
     }
 
     &:active {
-      color: rgba($bg-button-basic, 0.3);
+      opacity: 0.3;
+    }
+
+    &:hover span,
+    &:focus span {
+      transform: translateY(-100%);
     }
   }
 }
