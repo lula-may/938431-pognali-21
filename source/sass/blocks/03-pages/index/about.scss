@@ -36,6 +36,10 @@
 .about__text {
   margin-bottom: 20px;
   margin-right: 5%;
+
+  br {
+    display: none;
+  }
 }
 
 .about__slogan {
@@ -95,6 +99,10 @@
   .about__text {
     width: 50%;
     margin-bottom: 31px;
+
+    br {
+      display: block;
+    }
   }
 
   .about__slogan {
@@ -169,6 +177,10 @@
     margin-bottom: 39px;
 
     line-height: 1.215;
+
+    br {
+      display: none;
+    }
   }
 
   .about__slogan {

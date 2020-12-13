@@ -1,6 +1,9 @@
 .companions {
+  position: relative;
+  z-index: 4;
+
   @include container();
-  padding-top: 68px;
+  padding-top: 96px;
   padding-bottom: 31px;
 
   color: $text-clr-light;

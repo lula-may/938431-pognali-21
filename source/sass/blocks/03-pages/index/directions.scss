@@ -1,26 +1,37 @@
 .directions {
-  @include outline();
+  position: relative;
+  z-index: 5;
+
   @include container();
 
   padding-top: 101px;
   padding-bottom: 34px;
+  margin-bottom: -30px;
+
+  background-color: $bg-main-light;
+  border-radius: 0 0 30px 30px;
 }
 
 .directions__header {
-  @include outline(green);
   @include narrow-container();
   margin-bottom: 60px;
 }
 
 .directions__heading {
   @include offset-reset();
+  margin-bottom: 19px;
+
   @include heading();
 }
 
+.directions__text {
+  @include offset-reset();
+  margin-right: 5%;
+}
+
 .directions__list {
-  @include outline(green);
   @include list-reset();
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
 .directions__country {
@@ -33,48 +44,132 @@
 
 @media (min-width: $tablet-width) {
   .directions {
-    padding-top: 149px;
+    padding-top: 129px;
     padding-bottom: 80px;
   }
 
+  .directions__container {
+    background-image: url("../img/flags-tablet.png");
+    background-repeat: no-repeat;
+    background-position: right 10px;
+  }
+
+  .directions__header {
+    margin-bottom: 68px;
+  }
+
+  .directions__heading {
+    margin-bottom: 59px;
+  }
+
+  .directions__text {
+    width: 55%;
+  }
+
   .directions__list {
+    position: relative;
+
     @include narrow-container();
+    padding-top: 38px;
     margin-bottom: 46px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: $bg-inner-filter;
+      border-radius: 20px;
+    }
+  }
+
+  .directions__country {
+    position: relative;
+  }
+
+  .directions__show-more {
+    width: 89.8%;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .directions {
-    padding-top: 176px;
+    padding-top: 148px;
     padding-bottom: 87px;
+    margin-bottom: -60px;
+
+    border-radius: 0 0 56px 56px;
   }
 
   .directions__container {
-    @include outline(pink);
+    position: relative;
+
     @include center-position();
-    min-height: 838px;
     padding-bottom: 52px;
+    padding-top: 73px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: min-content min-content;
     column-gap: 60px;
+
+    background-position: right top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+
+      width: 140px;
+      height: 140px;
+
+      background-color: $bg-inner-filter;
+      border-radius: 20px;
+    }
   }
 
   .directions__header {
     grid-column: 2;
     grid-row: 1;
+
+    padding-left: 112px;
+    padding-top: 1px;
+    margin-bottom: 100px;
+  }
+
+  .directions__text {
+    width: 80%;
   }
 
   .directions__list {
     grid-column: 1;
     grid-row: 1 / -1;
 
-    margin-bottom: auto;
+    padding-top: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  .directions__country {
+    margin-bottom: 10px;
   }
 
   .directions__show-more {
     grid-column: 2;
     grid-row: 2;
+    align-self: start;
+
+    width: 275px;
+    margin-left: 113px;
   }
 }
