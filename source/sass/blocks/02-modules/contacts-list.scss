@@ -9,6 +9,11 @@
 .contacts-list--short {
   display: flex;
 
+  .contacts-list__link:hover,
+  .contacts-list__link:focus {
+    opacity: 1;
+  }
+
   .contacts-list__link--phone {
     background-color: $bg-special-bright;
 

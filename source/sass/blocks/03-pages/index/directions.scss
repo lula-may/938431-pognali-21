@@ -45,7 +45,10 @@
 @media (min-width: $tablet-width) {
   .directions {
     padding-top: 129px;
-    padding-bottom: 80px;
+    padding-bottom: 81px;
+    margin-bottom: -60px;
+
+    border-radius: 0 0 60px 60px;
   }
 
   .directions__container {

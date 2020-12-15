@@ -1,4 +1,21 @@
-// TODO: Write more useful code for layout
-.copyright {
-  color: inherit;
+.flags-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include list-reset();
+  padding-right: 1px;
+}
+
+.flags-list__item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    width: 35px;
+    height: 25px;
+  }
 }

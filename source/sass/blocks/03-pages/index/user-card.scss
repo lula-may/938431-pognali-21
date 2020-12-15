@@ -1,15 +1,180 @@
 .user-card {
-  color: $text-clr-basic;
-  background-color: $bg-card;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  a {
-    text-decoration: none;
+  padding-bottom: 22px;
+
+  color: $text-clr-basic;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $bg-card;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    .user-card__image {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
   }
 }
 
+.user-card__image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.user-card__image {
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.user-card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 25px;
+  margin-bottom: 15px;
+}
+
 .user-card__name {
-  font-size: 21px;
-  line-height: 21px;
+  @include offset-reset();
+  padding-right: 16px;
+  margin-left: 10px;
+
+  font-size: $mobile-bolder-size;
+  line-height: 1;
   font-weight: bold;
   color: $text-clr-medium;
+}
+
+.user-card__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 60px;
+  height: 60px;
+}
+
+.user-card__countries-list {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.user-card__hashtags {
+  @include offset-reset();
+  width: 70%;
+  margin: 0 auto 16px;
+
+  line-height: 1.125;
+  text-align: center;
+}
+
+.user-card__transport-list {
+  @include list-reset();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: -8px;
+
+  color: $text-clr-medium;
+}
+
+.user-card__transport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 25px;
+  height: auto;
+  margin-right: 7px;
+  opacity: 0.3;
+
+  font-size: 0;
+
+  svg {
+    max-height: 23px;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-card {
+    height: 100%;
+    padding-bottom: 27px;
+
+    border-radius: 20px;
+  }
+
+  .user-card__header {
+    align-self: flex-start;
+    padding-top: 29px;
+    margin-bottom: 22px;
+    margin-left: 46px;
+  }
+
+  .user-card__name {
+    margin-left: 14px;
+    padding-right: 23px;
+
+    font-size: $mobile-heading-size;
+  }
+
+  .user-card__indicator {
+    margin-top: 3px;
+  }
+
+  .user-card__level {
+    top: 21px;
+    left: 22px;
+  }
+
+  .user-card__countries-list {
+    top: 273px;
+  }
+
+  .user-card__hashtags {
+    width: 223px;
+    margin-bottom: 28px;
+
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .user-card__transport {
+    width: 30px;
+    margin-right: 2px;
+
+    svg {
+      width: 25px;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-card {
+    padding-bottom: 26px;
+  }
 }
