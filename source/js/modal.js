@@ -1,5 +1,4 @@
-// Скрипт реализует показ/скрытие модального окна
-"use strict"
+// Скрипт реализует показ/скрытие модального окна по клику или нажатию Enter
 
 const openModalButton = document.querySelector('.modal__open');
 const modal = document.querySelector('.modal');
@@ -9,6 +8,17 @@ const closePopup = () => {
   modal.classList.remove('modal--show');
   window.removeEventListener('keydown', escPressListener);
 };
+
+const openPopup = () => {
+  modal.classList.add('modal--show');
+
+  closeModalButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  window.addEventListener('keydown', escPressListener);
+}
 
 const escPressListener = (evt) => {
   if (evt.key !== 'Escape') {
@@ -20,14 +30,15 @@ const escPressListener = (evt) => {
 if (openModalButton) {
   openModalButton.addEventListener('click', (evt) => {
     evt.preventDefault();
-    modal.classList.add('modal--show');
+    openPopup();
+  });
 
+  openModalButton.addEventListener('keydown', (evt) => {
+    if (evt.key !== 'Enter') {
+      return;
+    }
 
-    closeModalButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      closePopup();
-    });
-
-    window.addEventListener('keydown', escPressListener);
+    evt.preventDefault();
+    openPopup();
   });
 }
