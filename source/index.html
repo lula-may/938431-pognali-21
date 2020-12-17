@@ -138,7 +138,7 @@
             <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
             <cite class="promo__quote-author">
               <span>Мурат Эльтазин</span>
-              главный&nbsp;редактор газеты «гаджетлайф»
+              главный&nbsp;редактор газеты &laquo;гаджетлайф&raquo;
             </cite>
           </blockquote>
 
@@ -372,58 +372,56 @@
         </div>
       </section>
 
-      <section class="pricing-plan">
-        <h2 class="visually-hidden">Тарифы</h2>
+      <!-- По умолчанию блок с тарифами для бизнеса скрыт,
+        для показа блока используется класс "modal--show" -->
+        <section class="business-price modal">
+          <h3 class="business-price__heading">Бизнес-тарифы</h3>
 
-        <section class="pricing-plan__private price">
-          <h3 class="price__heading price__heading--private">Добавьте свой профиль</h3>
-
-          <dl class="price__list price__list--private">
-            <div class="price__item price__item--private">
-              <dt>Базовое размещение</dt>
-              <dd>Бесплатно</dd>
-            </div>
-            <div class="price__item price__item--private">
-              <dt>Вывод на первых позициях</dt>
-              <dd>99 руб./мес</dd>
-            </div>
-            <div class="price__item price__item--private">
-              <dt>Кастомный цвет карточки</dt>
-              <dd>59 руб./мес</dd>
-            </div>
-          </dl>
-
-          <a class="price__open-modal" href="#">Показать тарифы для бизнеса</a>
-        </section>
-
-
-        <!-- По умолчанию блок с тарифами для бизнеса скрыт,
-          для показа блока используется класс "modal--show" -->
-        <section class="pricing-plan__business price price--business modal">
-          <h3 class="price__heading price__heading--business">Бизнес-тарифы</h3>
-
-          <dl class="price__list price__list--business">
-            <div class="price__item">
+          <dl class="business-price__list">
+            <div class="business-price__item">
               <dt>Реклама у блоггера</dt>
               <dd>300 000 руб./пост</dd>
             </div>
-            <div class="price__item">
+            <div class="business-price__item">
               <dt>Накрутка подписчиков</dt>
               <dd>от 1 руб./шт.</dd>
             </div>
-            <div class="price__item">
+            <div class="business-price__item">
               <dt>Лайки от ботов</dt>
               <dd>от 20 коп./лайк</dd>
             </div>
-            <div class="price__item">
+            <div class="business-price__item">
               <dt>Ваш продакт-плейсмент</dt>
               <dd>Индивидуально</dd>
             </div>
           </dl>
 
-          <button class="price__button modal__close" type="button">Закрыть окно</button>
+          <button class="business-price__button modal__close" type="button">Закрыть окно</button>
         </section>
 
+
+      <section class="pricing-plan">
+        <h2 class="visually-hidden">Тарифы</h2>
+        <div class="pricing-plan__container">
+          <h3 class="pricing-plan__heading">Добавьте свой профиль</h3>
+
+          <dl class="pricing-plan__list">
+            <div class="pricing-plan__item">
+              <dt>Базовое размещение</dt>
+              <dd>Бесплатно</dd>
+            </div>
+            <div class="pricing-plan__item">
+              <dt>Вывод на первых позициях</dt>
+              <dd>99 руб./мес</dd>
+            </div>
+            <div class="pricing-plan__item">
+              <dt>Кастомный цвет карточки</dt>
+              <dd>59 руб./мес</dd>
+            </div>
+          </dl>
+
+          <a class="pricing-plan__open-modal modal__open" href="#">Показать тарифы для бизнеса</a>
+        </div>
       </section>
 
       <section class="feedback">
@@ -501,5 +499,6 @@
 
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
