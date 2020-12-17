@@ -53,7 +53,6 @@
 }
 
 // COLOR STYLES
-
 @mixin theme($bg-clr: $bg-card, $text-clr: $text-clr-basic) {
   color: $text-clr;
   background-color: $bg-clr;
@@ -79,6 +78,23 @@
 
   &:focus-within {
     border-color: $text-clr-dark;
+  }
+}
+
+@mixin section-style {
+  $shift: $section-shift;
+
+  position: relative;
+  margin-bottom: -$shift;
+
+  border-radius: 0 0 $shift $shift;
+
+  @media (min-width: $tablet-width) {
+    $shift: $section-shift * 2;
+
+    margin-bottom: -$shift;
+
+    border-radius: 0 0 $shift $shift;
   }
 }
 

@@ -4,6 +4,7 @@ $mobile-font-size: 16px;
 $mobile-bolder-size: 21px;
 $mobile-heading-size: 24px;
 $tablet-font-size: 28px;
+$tablet-smaller-font-size: 20px;
 $tablet-heading-size: 45px;
 
 // COLORS BACKGROUND GENERAL
@@ -65,3 +66,8 @@ $tablet-width-only: 1439px;
 $desktop-content-width: 1320px;
 $desktop-menu-shift: 30px;
 $level-ring-length: 56 * 3.1415;
+$section-shift: 30px;
+
+// BORDERS
+$private-rates-border: 1px solid #e1e3e9;
+$business-rates-border: 1px solid rgba(0, 0, 0, 0.05);

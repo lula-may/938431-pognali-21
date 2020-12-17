@@ -1,47 +1,268 @@
 .pricing-plan {
-  @include outline();
+  @include section-style();
   @include container();
-  position: relative;
+  z-index: 3;
 
-  padding-top: 90px;
-  padding-bottom: 38px;
+  padding-top: 67px;
+  padding-bottom: 36px;
 
   background-color: $bg-main-medium;
 }
 
-.pricing-plan__private {
-  background-color: inherit;
+.pricing-plan__container {
+  position: relative;
+
+  padding-left: 8.89%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../img/rates.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+  }
 }
 
-.pricing-plan__business {
-  position: absolute;
-  top: 42px;
-  left: 7.81%;
+.pricing-plan__heading {
+  @include offset-reset();
+  padding: 14px 40% 44px 1px;
 
-  width: 84.38%;
+  @include heading();
+}
 
-  background-color: $bg-card;
+.pricing-plan__list {
+  position: relative;
+  z-index: 2;
+
+  @include offset-reset();
+  margin-bottom: 26px;
+  padding-right: 18.5%;
+
+  line-height: 1;
+
+  counter-reset: rates-counter;
+}
+
+.pricing-plan__item {
+  position: relative;
+
+  padding-top: 13px;
+  padding-bottom: 15px;
+
+  border-top: $private-rates-border;
+
+  dd {
+    @include offset-reset();
+  }
+
+  dt {
+    margin-bottom: 5px;
+  }
+
+  &::after {
+    counter-increment: rates-counter;
+    content: counter(rates-counter);
+    position: absolute;
+    top: 3px;
+    right: -22%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: $text-clr-light;
+
+    border-radius: 50%;
+    background-color: $bg-special-light;
+  }
+
+  &:nth-child(3n + 1)::after {
+    background-color: $bg-special-bright;
+  }
+
+  &:nth-child(3n)::after {
+    background-color: $bg-button-basic;
+  }
+
+  &:last-child {
+    border-bottom: $private-rates-border;
+  }
+}
+
+.pricing-plan__open-modal {
+  font-size: $mobile-font-size;
+  line-height: 1;
+  font-weight: bold;
+  text-decoration: none;
+  color: $text-clr-link;
+
+  &:hover {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .pricing-plan {
-    padding-top: 135px;
-    padding-bottom: 63px;
+    padding-top: 130px;
+    padding-bottom: 45px;
+
+    background-color: $bg-main-light;
   }
 
-  .pricing-plan__business {
-    top: 61px;
-    left: 5.21%;
+  .pricing-plan__container {
+    max-width: 1178px;
+    padding: 0;
+    padding-bottom: 19px;
+    margin: 0 auto;
 
-    width: 89.58%;
+    &::after {
+      top: auto;
+      bottom: 0;
+      right: 6.5%;
+    }
+  }
+
+  .pricing-plan__heading {
+    padding: 0;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .pricing-plan__list {
+    z-index: 0;
+    padding: 40px 5.09% 33px 13.08%;
+    margin-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -14px;
+
+      width: 29%;
+
+      background-color: $bg-inner-filter;
+      border-radius: 20px;
+    }
+  }
+
+  .pricing-plan__item {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 18px;
+    padding-bottom: 19px;
+
+    dt {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      top: 0;
+      left: -16%;
+      right: auto;
+
+      width: 68px;
+      height: 68px;
+    }
+
+    &:first-child::after {
+      top: -2px;
+    }
+
+    &:last-child::after {
+      top: 2px;
+    }
+  }
+
+  .pricing-plan__open-modal {
+    position: relative;
+    display: block;
+    padding: 26px 22% 22px 13%;
+
+    font-size: $tablet-smaller-font-size;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 68px;
+      height: 68px;
+
+      background-color: $bg-inner-filter;
+      border-radius: 50%;
+      background-image: url("../img/icons/businessman.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 27px 27px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .pricing-plan {
-    width: 1177px;
+    padding-top: 163px;
+    padding-bottom: 166px;
+  }
+
+  .pricing-plan__container {
+    width: 1178px;
     margin: 0 auto;
-    padding-top: 135px;
-    padding-bottom: 165px;
+    padding-bottom: 0;
+
+    &::after {
+      top: 184px;
+      left: auto;
+      right: 2px;
+
+      width: 198px;
+      height: 198px;
+
+      background-image: url("../img/rates-desktop.png");
+    }
+  }
+
+  .pricing-plan__heading {
+    margin-bottom: 87px;
+  }
+
+  .pricing-plan__list {
+    padding: 50px 161px 32px 90px;
+    margin-right: 113px;
+
+    &::before {
+      width: 446px;
+      bottom: -19px;
+    }
+  }
+
+  .pricing-plan__item {
+    &::after {
+      top: 0;
+      left: -91px;
+    }
+  }
+
+  .pricing-plan__open-modal {
+    width: 50%;
+    padding: 25px 0 23px 89px;
   }
 }

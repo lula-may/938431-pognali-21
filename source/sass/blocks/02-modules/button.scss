@@ -7,7 +7,8 @@
 
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $bg-special-light;
   }
 
@@ -62,7 +63,7 @@
     }
 
     @media (min-width: $tablet-width) {
-      padding: 27px 33px 29px;
+      padding: 27px 32px 29px;
 
       font-size: $tablet-base-size;
 

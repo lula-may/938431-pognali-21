@@ -1,15 +1,13 @@
 .directions {
-  position: relative;
   z-index: 5;
 
+  @include section-style();
   @include container();
 
   padding-top: 101px;
   padding-bottom: 34px;
-  margin-bottom: -30px;
 
   background-color: $bg-main-light;
-  border-radius: 0 0 30px 30px;
 }
 
 .directions__header {
@@ -46,9 +44,6 @@
   .directions {
     padding-top: 129px;
     padding-bottom: 81px;
-    margin-bottom: -60px;
-
-    border-radius: 0 0 60px 60px;
   }
 
   .directions__container {

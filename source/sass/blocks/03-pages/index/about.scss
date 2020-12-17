@@ -1,20 +1,17 @@
 .about {
-  position: relative;
   z-index: 6;
 
   @include container();
+  @include section-style();
 
   padding-top: 31px;
   padding-bottom: 83px;
-  margin-bottom: -30px;
 
   color: $text-clr-light;
   background-color: $bg-main-dark;
   background-image: url("../img/about-mobile.png");
   background-repeat: no-repeat;
   background-position: 75% top;
-
-  border-radius: 0 0 30px 30px;
 }
 
 .about__container {
@@ -56,10 +53,8 @@
   .about {
     padding-top: 37px;
     padding-bottom: 89px;
-    margin-bottom: -60px;
 
     background-image: none;
-    border-radius: 0 0 60px 60px;
     overflow: hidden;
 
     &::before {
