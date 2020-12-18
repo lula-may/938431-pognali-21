@@ -55,6 +55,14 @@
   background-color: $bg-button-light;
   border: none;
   outline: none;
+
+  &:hover {
+    background-color: $bg-main-light;
+  }
+
+  &:active {
+    color: rgba($text-clr-medium, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -98,8 +106,10 @@
 
 @media (min-width: $desktop-width) {
   .business-price {
+    $popup-shift: 357px;
     width: 750px;
-    margin: 159px auto 0 363px;
+    margin-top: 159px;
+    margin-left: calc(50% - $popup-shift);
 
     border-radius: 30px;
   }
