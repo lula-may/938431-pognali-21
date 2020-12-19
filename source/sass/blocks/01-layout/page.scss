@@ -21,7 +21,11 @@ img {
   @include basic-text();
   color: $text-clr-basic;
 
-  background-color: $bg-main-light;
+  background-image: linear-gradient(to bottom, $bg-header 0, $bg-header 30px, $bg-main-light 30px, $bg-main-light 100%);
+}
+
+.page__main {
+  position: relative;
 }
 
 .page__body--no-js {
@@ -30,25 +34,31 @@ img {
       @include theme($bg-card, $text-clr-header);
     }
 
-    .main-nav {
-      position: static;
+    .main-nav__toggle {
+      display: none;
     }
 
-    .main-nav__content {
-      position: relative;
-      top: auto;
-
-      display: block;
-    }
-
+    .main-nav__content,
     .main-nav__site-list,
+    .main-nav__user-list,
     .main-nav__contacts-list,
     .main-nav__social-list {
       display: block;
     }
 
-    .main-nav__toggle {
-      display: none;
+    .main-nav__content {
+      padding: 41px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width-only) and (min-width: $tablet-width) {
+    .main-nav__content {
+      padding: 50px 8.3% 81px;
+    }
+
+    .main-nav__site-list,
+    .main-nav__contacts-list {
+      margin-bottom: 130px;
     }
   }
 }
@@ -57,14 +67,6 @@ img {
   position: relative;
   z-index: 10;
   padding-top: 73px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 132px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 120px;
-  }
 
   .main-header {
     @include theme($bg-card, $text-clr-header);
@@ -75,5 +77,17 @@ img {
     right: 0;
     z-index: 11;
     margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 132px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 120px;
+
+    .main-header {
+      padding-top: 0;
+    }
   }
 }

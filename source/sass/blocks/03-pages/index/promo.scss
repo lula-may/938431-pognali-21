@@ -1,25 +1,29 @@
+$plan-shift: 80px;
+
 .promo {
-  @include outline;
+  padding-bottom: 9px;
 
   color: $text-clr-light;
-  background-color: $bg-header;
-}
-
-.promo__container {
-  @include outline(rgb(0, 195, 255));
+  background-color: $bg-main-dark;
 }
 
 .promo__header {
-  @include outline(pink);
   @include container();
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 503px;
+  min-height: 397px;
+  padding-top: 10px;
 
-  padding-top: 21px;
+  background-color: $bg-header-mobile;
+  background-image: url("../img/traveller-illustration-mobile.png"),
+    url("../img/globe-mobile.png");
+
+  background-repeat: no-repeat;
+  background-position: 62.5% 100%, center center;
+  background-size: 192px 255px, cover;
 }
 
 .promo__slogan {
@@ -27,15 +31,26 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
+  text-align: center;
 }
 
 .promo__links {
-  @include list-reset();
+  position: relative;
+  top: 20px;
+
   display: flex;
+  margin-left: 1px;
+
+  .promo__login {
+    flex-grow: 1;
+    width: auto;
+    padding: 10px 0 10px 3px;
+
+    line-height: 20px;
+  }
 }
 
 .promo__review {
-  @include outline(green);
   display: flex;
   flex-direction: column;
   width: auto;
@@ -47,28 +62,40 @@
 
 .promo__quote {
   @include offset-reset();
+  width: 161px;
+  margin-bottom: 18px;
 }
 
 .promo__quote-author {
-  @include bolder-text();
+  width: 161px;
 
+  @include bolder-text();
   font-style: normal;
 }
 
 .promo__plan-container {
-  @include outline();
   @include container();
-  background-color: $bg-main-dark;
-}
-
-.promo__plan {
   position: relative;
-  top: -80px;
+  margin-top: -$plan-shift;
+  margin-bottom: $plan-shift / 2;
+
+  background-color: transparent;
 }
 
 @media (min-width: $tablet-width) {
+  $plan-shift: 138px;
+
+  .promo {
+    padding-bottom: 28px;
+    background-color: $bg-header;
+  }
+
   .promo__header {
     min-height: auto;
+    padding: 25px 0 12px;
+
+    background-image: none;
+    background-color: transparent;
   }
 
   .promo__slogan {
@@ -86,10 +113,28 @@
   .promo__review {
     min-height: 612px;
     padding: 76px 9.38% 350px;
+
+    background-color: transparent;
+    background-image: url("../img/traveller-illustration-tablet.png"),
+      url("../img/globe-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 72% 23px, center 100%;
+    background-size: 372px 451px, 1479px 612px;
+  }
+
+  .promo__quote {
+    width: 264px;
+    margin-bottom: 45px;
+  }
+
+  .promo__quote-author {
+    width: 264px;
+    line-height: 1.19;
   }
 
   .promo__plan-container {
-    background-color: $bg-header;
+    margin-top: -$plan-shift;
+    margin-bottom: $plan-shift / 2;
   }
 
   .promo__plan {
@@ -98,17 +143,49 @@
 }
 
 @media (min-width: $desktop-width) {
+  .promo {
+    position: relative;
+    z-index: 7;
+
+    padding-bottom: 0;
+    margin-bottom: -60px;
+
+    background-color: $bg-header-desktop;
+    background-image: url("../img/globe-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 0 -110px;
+    background-size: 1440px 750px;
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+  }
+
   .promo__container {
     @include center-position();
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content min-content;
+    row-gap: 105px;
+
+    min-height: 640px;
     padding: 0;
+
+    background-image: url("../img/traveller-illustration-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 544px 100%;
+    background-size: 431px 640px;
   }
 
   .promo__header {
     grid-column: 1 / 3;
     grid-row: 1;
+
+    padding: 95px 50px 0 67px;
+  }
+
+  .promo__slogan {
+    margin: 0;
+
+    text-align: left;
   }
 
   .promo__review {
@@ -116,17 +193,21 @@
     grid-row: 1;
 
     min-height: auto;
-    padding: 0;
+    padding: 108px 0 0 44px;
     margin: 0;
+
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .promo__quote-author {
+    line-height: 1.16;
   }
 
   .promo__plan-container {
+    position: static;
+    margin-top: 0;
     grid-column: 1 / -1;
     grid-row: 2;
-  }
-
-  .promo__plan {
-    position: static;
-    padding: 0;
   }
 }

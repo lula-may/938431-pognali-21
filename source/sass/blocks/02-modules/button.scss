@@ -1,31 +1,134 @@
 .button {
   @include button-theme();
-
-  font-size: 17px;
-  line-height: 20px;
+  font-weight: bold;
 
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $bg-special-light;
   }
 
   &:active {
     color: rgba($text-clr-dark, 0.3);
   }
+}
 
-  &--catalog {
-    line-height: 17px;
-    color: $text-clr-dark;
-    text-transform: uppercase;
+.button--login {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 4px;
+
+  font-size: 17px;
+  line-height: 1.176;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 0 16px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.button--index {
+  position: relative;
+
+  padding: 22px 23px;
+
+  font-size: $mobile-button-font-size;
+  line-height: 1;
+  text-align: left;
+
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 13px;
+    z-index: 10;
+
+    box-sizing: content-box;
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 6px 10px;
+    border-color: transparent transparent transparent $text-clr-medium;
   }
 
-  &--light {
-    background-color: $bg-card;
+  &:active::after {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 24px;
-    line-height: 24px;
+    padding: 27px 32px 29px;
+
+    font-size: $mobile-heading-size;
+
+    border-radius: 20px;
+
+    &::after {
+      top: 34px;
+      right: 24px;
+
+      border-width: 7px 11px;
+    }
+  }
+}
+
+.button--catalog {
+  line-height: 1;
+  color: $text-clr-dark;
+  text-transform: uppercase;
+}
+
+.button--light {
+  line-height: 1;
+  background-color: $bg-card;
+}
+
+.button--stroke {
+  padding: 18px 20px 20px;
+
+  border: 3px solid $bg-main-dark;
+  background-color: transparent;
+
+  &::after {
+    top: 22px;
+    right: 11px;
+  }
+
+  &:hover {
+    color: $text-clr-light;
+
+    background-color: $bg-main-dark;
+
+    &::after {
+      border-left-color: $text-clr-light;
+    }
+  }
+
+  &:active {
+    color: rgba($text-clr-light, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 34px;
+
+    &::after {
+      top: 31px;
+      right: 22px;
+    }
   }
 }

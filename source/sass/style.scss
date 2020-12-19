@@ -20,6 +20,7 @@
 @import "blocks/02-modules/button.scss";
 @import "blocks/02-modules/contacts-list.scss";
 @import "blocks/02-modules/countries-list.scss";
+@import "blocks/02-modules/indicator.scss";
 @import "blocks/02-modules/letter-button.scss";
 @import "blocks/02-modules/level.scss";
 @import "blocks/02-modules/modal.scss";
@@ -29,6 +30,7 @@
 // Pages Styles
 // Index Page
 @import "blocks/03-pages/index/about.scss";
+@import "blocks/03-pages/index/business-price.scss";
 @import "blocks/03-pages/index/companions.scss";
 @import "blocks/03-pages/index/contacts.scss";
 @import "blocks/03-pages/index/country.scss";
@@ -36,7 +38,6 @@
 @import "blocks/03-pages/index/feedback.scss";
 @import "blocks/03-pages/index/flags-list.scss";
 @import "blocks/03-pages/index/plan.scss";
-@import "blocks/03-pages/index/price.scss";
 @import "blocks/03-pages/index/pricing-plan.scss";
 @import "blocks/03-pages/index/promo.scss";
 @import "blocks/03-pages/index/user-card.scss";

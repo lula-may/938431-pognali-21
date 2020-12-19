@@ -1,7 +1,16 @@
 // TIPOGRAPHY
 $basic-font: "Blogger Sans", "Arial", sans-serif;
+$mobile-font-size: 16px;
+$mobile-button-font-size: 18px;
+$mobile-bolder-size: 21px;
+$mobile-heading-size: 24px;
+$tablet-font-size: 28px;
+$tablet-smaller-font-size: 20px;
+$tablet-heading-size: 45px;
 
 // COLORS BACKGROUND GENERAL
+$bg-header-mobile: #161c36;
+$bg-header-desktop: #161c34;
 $bg-header: #182044;
 $bg-card: #ffffff;
 
@@ -19,8 +28,9 @@ $bg-inner-filter: #e2e5f2;
 
 // COLORS: BUTTONS AND OTHER ELEMENTS
 $bg-special-bright: #ff8d30;
+$bg-special-bright-hover: #f26926;
 $bg-special-medium: #ffa530;
-$bg-special-light: #ffbd2e;
+$bg-special-light: #ffbd30;
 $bg-button-basic: #ffd74b;
 $bg-button-dark: #121936;
 $bg-button-light: #f3f4f8;
@@ -28,6 +38,8 @@ $bg-indicator-no: #f97676;
 $bg-indicator-yes: #81e31e;
 $bg-level: rgba(#000000, 0.6);
 $bg-close-button: #d6daed;
+$bg-toggle: #cccccc;
+$bg-decor-block: #141b3b;
 
 // COLORS: TEXT
 $text-clr-light: $bg-card;
@@ -38,6 +50,7 @@ $text-clr-darker: #000000;
 $text-clr-link: #132576;
 $text-clr-header: $bg-main-dark;
 $text-clr-calendar: #ff5c23;
+$error-color: #ff0000;
 
 // COLORS: BORDERS
 $border-clr-field: #d6d9e6;
@@ -53,3 +66,11 @@ $tablet-width-only: 1439px;
 
 // OTHER SIZES
 $desktop-content-width: 1320px;
+$desktop-menu-shift: 30px;
+$level-ring-length: 56 * 3.1415;
+$section-shift: 30px;
+
+// BORDERS
+$private-rates-border: 1px solid #e1e3e9;
+$business-rates-border: 1px solid rgba(0, 0, 0, 0.05);
+$copyright-border: 1px solid #f2f2f2;

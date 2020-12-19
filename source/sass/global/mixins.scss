@@ -10,6 +10,8 @@
 }
 
 @mixin button-reset {
+  display: block;
+
   @include offset-reset();
   font-family: inherit;
   border: none;
@@ -19,13 +21,13 @@
 // TYPOGRAPHY STYLES
 @mixin basic-text() {
   font-family: $basic-font;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: $mobile-font-size;
+  line-height: 1.375;
   font-weight: 300;
 
   @media (min-width: $tablet-width) {
-    font-size: 28px;
-    line-height: 33px;
+    font-size: $tablet-font-size;
+    line-height: 1.179;
   }
 }
 
@@ -33,25 +35,24 @@
   font-weight: bold;
 
   @media (min-width: $tablet-width) {
-    font-size: 21px;
-    line-height: 24px;
+    font-size: $mobile-bolder-size;
+    line-height: 1.143;
   }
 }
 
 @mixin heading() {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: $mobile-heading-size;
+  line-height: 1;
   font-weight: bold;
   color: $bg-special-bright;
 
   @media (min-width: $tablet-width) {
-    font-size: 45px;
-    line-height: 45px;
+    font-size: $tablet-heading-size;
+    line-height: 1;
   }
 }
 
 // COLOR STYLES
-
 @mixin theme($bg-clr: $bg-card, $text-clr: $text-clr-basic) {
   color: $text-clr;
   background-color: $bg-clr;
@@ -61,7 +62,6 @@
 @mixin button-theme() {
   @include button-reset();
 
-  font-weight: bold;
   text-decoration: none;
   color: $text-clr-medium;
 
@@ -78,6 +78,23 @@
 
   &:focus-within {
     border-color: $text-clr-dark;
+  }
+}
+
+@mixin section-style {
+  $shift: $section-shift;
+
+  position: relative;
+  margin-bottom: -$shift;
+
+  border-radius: 0 0 $shift $shift;
+
+  @media (min-width: $tablet-width) {
+    $shift: $section-shift * 2;
+
+    margin-bottom: -$shift;
+
+    border-radius: 0 0 $shift $shift;
   }
 }
 

@@ -1,14 +1,42 @@
 .copyright {
+  @include offset-reset();
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  padding-top: 13px;
+  border-top: $copyright-border;
+
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  padding-top: 5px;
 }
 
 @media (min-width: $tablet-width) {
   .copyright {
-    min-width: 154px;
+    width: 154px;
+    padding-top: 3px;
 
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $tablet-smaller-font-size;
+    line-height: 1;
+
+    border-top: none;
+  }
+
+  .copyright__text {
+    padding-top: 1px;
   }
 }

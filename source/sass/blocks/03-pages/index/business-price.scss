@@ -1,0 +1,135 @@
+.business-price {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 7;
+
+  margin: 19px auto 0;
+  width: 84.38%;
+  padding-top: 32px;
+
+  background-color: $bg-card;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+  overflow: hidden;
+}
+
+.business-price__heading {
+  @include offset-reset();
+  margin-bottom: 29px;
+
+  @include heading();
+  text-align: center;
+}
+
+.business-price__list {
+  width: 81.11%;
+  margin: 0 auto 34px;
+}
+
+.business-price__item {
+  padding: 11px 0 10px;
+
+  border-top: $business-rates-border;
+
+  dd {
+    @include offset-reset();
+  }
+
+  &:last-child {
+    border-bottom: $business-rates-border;
+  }
+}
+
+.business-price__button {
+  display: block;
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 16px;
+
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+
+  background-color: $bg-button-light;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $bg-main-light;
+  }
+
+  &:active {
+    color: rgba($text-clr-medium, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .business-price {
+    width: 89.6%;
+    max-width: 750px;
+    padding-top: 50px;
+    margin-top: $section-shift * 2;
+
+    box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
+  }
+
+  .business-price__heading {
+    margin-bottom: 50px;
+  }
+
+  .business-price__list {
+    width: 73.5%;
+    margin-bottom: 52px;
+
+    font-size: $tablet-smaller-font-size * 1.1;
+    line-height: 1.273;
+  }
+
+  .business-price__item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 13px 2px 13px 0;
+  }
+
+  .business-price__button {
+    padding: 39px 3px 45px 0;
+    padding-top: 39px;
+
+    font-size: $mobile-heading-size;
+    line-height: 1;
+    text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .business-price {
+    $popup-shift: 357px;
+    width: 750px;
+    margin-top: 159px;
+    margin-left: calc(50% - $popup-shift);
+
+    border-radius: 30px;
+  }
+
+  .business-price__heading {
+    margin-bottom: 49px;
+  }
+
+  .business-price__list {
+    width: 631px;
+    padding: 0;
+    margin: 0 auto 53px;
+  }
+
+  .business-price__item {
+    padding: 11px 0 15px;
+  }
+
+  .business-price__button {
+    padding: 38px 2px 42px 0;
+    line-height: 1.182;
+  }
+}

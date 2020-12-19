@@ -1,0 +1,21 @@
+.indicator {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  &--yes {
+    background-color: $bg-indicator-yes;
+  }
+
+  &--no {
+    background-color: $bg-indicator-no;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+}
