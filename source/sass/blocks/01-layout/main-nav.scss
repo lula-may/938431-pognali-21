@@ -175,8 +175,8 @@
     $login-right-shift: 5.2%;
 
     .main-nav__header {
-      padding-top: 45px;
-      padding-bottom: 45px;
+      padding-top: 46px;
+      padding-bottom: 46px;
     }
 
     .main-nav__content {
@@ -201,8 +201,8 @@
 
   .main-nav--close {
     .main-nav__header {
-      padding-top: 45px;
-      padding-bottom: 45px;
+      padding-top: 46px;
+      padding-bottom: 46px;
     }
 
     .main-nav__content {
@@ -230,7 +230,7 @@
     align-items: center;
 
     @include center-position();
-    padding: 16px 0 6px;
+    padding: 18px 0 9px;
   }
 
   .main-nav__header {
