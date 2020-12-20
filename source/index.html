@@ -16,8 +16,16 @@
       <nav class="main-header__main-nav main-nav main-nav--close">
         <div class="main-nav__header">
           <a class="main-nav__logo logo">
-            <img class="logo__image logo__image--close" src="img/logo-mobile-white.png" width="100" height="15" alt="Логотип Погнали">
-            <img class="logo__image logo__image--open" src="img/logo-mobile-dark.png" width="100" height="15" alt="Логотип Погнали">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
+                <img class="logo__image logo__image--close" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+              <img class="logo__image logo__image--open" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -200,33 +208,51 @@
 
           <ul class="directions__list">
             <li class="directions__country country">
-              <img class="country__image" src="img/thailand-mobile.jpg" width="270" height="110" alt="Два поросших зеленью островка, возвышающиеся над голубой поверхностью моря">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                <img class="country__image" src="img/thailand-mobile.jpg" srcset="img/thailand-mobile.jpg 270w, img/thailand-mobile@2x.jpg 540w" sizes="84vw" width="270" height="110" alt="Два поросших зеленью островка, возвышающиеся над голубой поверхностью моря">
+              </picture>
 
               <div class="country__info">
                 <h3 class="country__name">Таиланд</h3>
-                <img class="country__flag" src="img/thailand-flag.png" width="35" height="24" alt="Флаг страны">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/thailand-flag-tablet.png 1x, img/thailand-flag-tablet@2x.png 2x">
+                  <img class="country__flag" src="img/thailand-flag.png" srcset="img/thailand-flag@2x.png 2x" width="35" height="24" alt="Флаг страны">
+                </picture>
                 <p class="country__slogan">Джунгли зовут!</p>
                 <span class="country__count">18321</span>
               </div>
             </li>
 
             <li class="directions__country country">
-              <img class="country__image" src="img/france-mobile.jpg" width="270" height="110" alt="Городская улица со старинными зданиями и зелеными деревьями">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/france-desktop.jpg 1x, img/france-desktop@2x.jpg 2x">
+                <img class="country__image" src="img/france-mobile.jpg" srcset="img/france-mobile.jpg 270w, img/france-mobile@2x.jpg 540w" width="270" height="110" alt="Городская улица со старинными зданиями и зелеными деревьями">
+              </picture>
 
               <div class="country__info">
                 <h3 class="country__name">Франция</h3>
-                <img class="country__flag" src="img/france-flag.png" width="35" height="24" alt="Флаг страны">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/france-flag-tablet.png 1x, img/france-flag-tablet@2x.png 2x">
+                  <img class="country__flag" src="img/france-flag.png" srcset="img/france-flag@2x.png 2x" width="35" height="24" alt="Флаг страны">
+                </picture>
                 <p class="country__slogan">Трэ бьен, манифик!</p>
                 <span class="country__count">12518</span>
               </div>
             </li>
 
             <li class="directions__country country">
-              <img class="country__image" src="img/czech-mobile.jpg" width="270" height="110" alt="Прогулочный корабль, проплывающий по реке на фоне исторического центра города">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/czech-desktop.jpg 1x, img/czech-desktop@2x.jpg 2x">
+                <img class="country__image" src="img/czech-mobile.jpg" srcset="img/czech-mobile.jpg 270w, img/czech-mobile@2x.jpg 540w" width="270" height="110" alt="Прогулочный корабль, проплывающий по реке на фоне исторического центра города">
+              </picture>
 
               <div class="country__info">
                 <h3 class="country__name">Чехия</h3>
-                <img class="country__flag" src="img/czech-flag.png" width="35" height="24" alt="Флаг страны">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                  <img class="country__flag" src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" width="35" height="24" alt="Флаг страны">
+                </picture>
                 <p class="country__slogan">Закоулки старой Европы</p>
                 <span class="country__count">5326</span>
               </div>
@@ -249,7 +275,10 @@
             <li class="companions__item">
               <div class="user-card">
                 <a class="user-card__image-wrapper" href="#">
-                  <img class="user-card__image" src="img/firsova-desktop.jpg" width="270" height="270" alt="Таня Фирсова">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/firsova-tablet.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                    <img class="user-card__image" src="img/firsova-mobile.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
+                  </picture>
                 </a>
                 <a class="user-card__link" href="#">
                   <div class="user-card__indicator indicator indicator--no"></div>
@@ -322,7 +351,10 @@
             <li class="companions__item">
               <div class="user-card">
                 <a class="user-card__image-wrapper" href="#">
-                  <img class="user-card__image" src="img/demin-desktop.jpg" width="270" height="270" alt="Петя Демин">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/demin-tablet.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                    <img class="user-card__image" src="img/demin-mobile.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
+                  </picture>
                 </a>
                 <a class="user-card__link" href="#">
                   <div class="user-card__indicator indicator indicator--yes"></div>
@@ -512,7 +544,11 @@
 
       <div class="main-footer__container">
         <a class="main-footer__logo logo">
-          <img class="logo__image" src="img/logo-mobile-dark.png" width="100" height="15" alt="Логотип Погнали">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+            <img class="logo__image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+          </picture>
         </a>
 
         <div class="main-footer__social">
