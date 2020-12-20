@@ -27,6 +27,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
   }
 }
 
@@ -237,6 +241,10 @@
       height: 198px;
 
       background-image: url("../img/rates-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/rates-desktop@2x.png");
+      }
     }
   }
 

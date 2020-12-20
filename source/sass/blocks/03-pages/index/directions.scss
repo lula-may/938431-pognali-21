@@ -50,6 +50,11 @@
     background-image: url("../img/flags-tablet.png");
     background-repeat: no-repeat;
     background-position: right 10px;
+    background-size: 288px 575px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-tablet@2x.png");
+    }
   }
 
   .directions__header {
@@ -176,6 +181,7 @@
       height: 81px;
 
       background-image: linear-gradient(to bottom, rgba($bg-main-light, 0) 0, $bg-main-light 90%);
+      background-size: 100% 81px;
     }
   }
 
