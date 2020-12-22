@@ -20,6 +20,10 @@
   background-position: 100% top;
   background-size: 143px 143px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png");
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -77,21 +81,21 @@
     width: 71px;
     height: 71px;
 
-    background-image: url("../img/rogovaya-back-desktop.png");
+    background-image: url("../img/rogovaya-back-mobile.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
     border-radius: 10px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rogovaya-back-mobile@2x.png");
+    }
   }
 }
 
 .companions__item {
   position: relative;
   margin-bottom: 9px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -112,6 +116,10 @@
     background-image: url("../img/rogovaya-back-desktop.png");
     background-position: 91.5% 9px;
     background-size: 285px 285px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+    }
 
     &::before {
       left: 0;
@@ -159,11 +167,14 @@
 
       background-image: url("../img/smolov-back-desktop.png");
       border-radius: 20px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+      }
     }
   }
 
-  .companions__item,
-  .companions__item:last-child {
+  .companions__item {
     width: 285px;
     margin-bottom: 50px;
   }
@@ -191,7 +202,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: min-content min-content;
     column-gap: 60px;
 
     background-position: 130px 316px;
@@ -200,11 +211,16 @@
   .companions__header {
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 35px;
 
     background-image: url("../img/smolov-back-desktop.png");
     background-repeat: no-repeat;
     background-position: 100% top;
     background-size: 143px 143px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.png");
+    }
   }
 
   .companions__text {
@@ -218,20 +234,17 @@
     justify-content: space-between;
 
     padding: 8px 0 0 0;
-    margin-bottom: auto;
+    margin-bottom: 0;
 
     &::before {
       opacity: 0;
     }
   }
 
-  .companions__item,
-  .companions__item:last-child {
-    margin-bottom: 0;
-  }
-
   .companions__show-all {
+    align-self: end;
     width: 280px;
     margin-left: 71px;
+    margin-bottom: 50px;
   }
 }

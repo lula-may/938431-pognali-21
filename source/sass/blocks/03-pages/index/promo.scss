@@ -24,6 +24,11 @@ $plan-shift: 80px;
   background-repeat: no-repeat;
   background-position: 62.5% 100%, center center;
   background-size: 192px 255px, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/traveller-illustration-mobile@2x.png"),
+      url("../img/globe-mobile@2x.png");
+  }
 }
 
 .promo__slogan {
@@ -120,7 +125,13 @@ $plan-shift: 80px;
     background-repeat: no-repeat;
     background-position: 72% 23px, center 100%;
     background-size: 372px 451px, 1479px 612px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png"),
+        url("../img/globe-tablet@2x.jpg");
+    }
   }
+
 
   .promo__quote {
     width: 264px;
@@ -157,6 +168,10 @@ $plan-shift: 80px;
     background-size: 1440px 750px;
     border-radius: 0 0 60px 60px;
     overflow: hidden;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/globe-desktop@2x.png");
+    }
   }
 
   .promo__container {
@@ -173,6 +188,10 @@ $plan-shift: 80px;
     background-repeat: no-repeat;
     background-position: 544px 100%;
     background-size: 431px 640px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png");
+    }
   }
 
   .promo__header {

@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 320px 424px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.jpg");
+  }
 }
 
 .contacts__container {
@@ -54,6 +58,17 @@
 .contacts__map {
   height: 322px;
   width: 100%;
+
+  background-image: url("../img/map-marker.svg"),
+    url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: 55% 35%, 50% 50%;
+  background-size: 41px 41px, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-marker.svg"),
+      url("../img/map@2x.png");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -83,6 +98,16 @@
 
   .contacts__map {
     height: 583px;
+
+    background-image: url("../img/map-marker.svg"),
+      url("../img/map-tablet.png");
+    background-position: 50% 45%, 50% 50%;
+    background-size: 56px 56px, cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-marker.svg"),
+        url("../img/map-tablet@2x.png");
+    }
   }
 }
 
@@ -120,5 +145,14 @@
 
   .contacts__map {
     height: 516px;
+
+    background-image: url("../img/map-marker.svg"),
+      url("../img/map-desktop.png");
+    background-position: 46% 45%, 50% 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-marker.svg"),
+        url("../img/map-desktop@2x.png");
+    }
   }
 }
