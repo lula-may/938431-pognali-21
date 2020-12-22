@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column-reverse;
 
-  background-image: url("../img/map.jpg");
+  background-image: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 320px 424px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/map@2x.jpg");
+    background-image: url("../img/map@2x.png");
   }
 }
 
