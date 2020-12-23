@@ -12,7 +12,6 @@
 
   background-color: $bg-card;
   border-radius: 10px;
-  overflow: hidden;
 
   &:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -26,6 +25,7 @@
   width: 100%;
 
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 
   &:hover .user-card__image {
     transform: scale(1.1);
@@ -116,15 +116,13 @@
   width: 25px;
   height: auto;
   margin-right: 7px;
-  opacity: 0.3;
-
-  font-size: 0;
 
   svg {
+    opacity: 0.3;
     max-height: 23px;
   }
 
-  &--active {
+  &--active svg {
     opacity: 1;
   }
 }
@@ -135,6 +133,10 @@
     padding-bottom: 27px;
 
     border-radius: 20px;
+  }
+
+  .user-card__image-wrapper {
+    border-radius: 20px 20px 0 0;
   }
 
   .user-card__link {
