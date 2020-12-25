@@ -19,7 +19,6 @@
   height: 25px;
 
   background-color: transparent;
-  outline: none;
 
   &::before,
   &::after {
@@ -33,7 +32,6 @@
     border-radius: 1.5px;
   }
 
-  &:focus,
   &:active {
     opacity: 0.3;
   }
