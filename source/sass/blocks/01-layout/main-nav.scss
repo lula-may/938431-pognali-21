@@ -255,6 +255,7 @@
   .main-nav__site-list {
     position: relative;
     width: 560px;
+    margin-top: 5px;
     margin-bottom: 0;
     margin-right: auto;
     padding-left: 105px;
@@ -263,7 +264,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: calc(50% - 1px);
+      top: calc(50% - 2px);
 
       width: 60px;
       height: 2px;
