@@ -1,6 +1,6 @@
 .user-profile {
   padding-top: 44px;
-  padding-bottom: 54px;
+  padding-bottom: 64px;
 }
 
 .user-profile__container {
@@ -133,7 +133,7 @@
 
 @media (min-width: $tablet-width) {
   .user-profile {
-    padding: 126px 0 82px;
+    padding: 126px 0 88px;
   }
 
   .user-profile__container {
@@ -197,7 +197,7 @@
   }
 
   .user-profile__hashtags {
-    padding: 33px 39px 17px;
+    padding: 33px 39px 16px;
 
     font-size: $tablet-smaller-font-size;
     line-height: 1.1;
@@ -206,7 +206,7 @@
 
 @media (min-width: $desktop-width) {
   .user-profile {
-    padding: 60px 0;
+    padding: 60px 0 71px;
   }
 
   .user-profile__container {
