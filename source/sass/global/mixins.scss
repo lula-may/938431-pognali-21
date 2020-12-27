@@ -134,12 +134,12 @@
 }
 
 @mixin form-container() {
-  padding-left: 7.81%;
-  padding-right: 7.81%;
+  padding-left: 7.8%;
+  padding-right: 7.8%;
 
   @media (min-width: $tablet-width) {
-    padding-left: 9.77%;
-    padding-right: 9.77%;
+    padding-left: 9.7%;
+    padding-right: 9.7%;
   }
 
   @media (min-width: $desktop-width) {

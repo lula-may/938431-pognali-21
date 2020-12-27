@@ -236,17 +236,36 @@
 
         <section class="add-trip">
           <div class="add-trip__container">
-            <h2 class="add-trip__heading">Добавить план</h2>
+            <header class="add-trip__header">
+              <h2 class="add-trip__title">Добавить план:</h2>
+              <div class="add-trip__step-marks">
+                <ul class="step-marks">
+                  <li class="step-marks__item step-marks__item--active" id="mark-1">Даты</li>
+                  <li class="step-marks__item" id="mark-2">Маршрут</li>
+                  <li class="step-marks__item" id="mark-3">Развлечения</li>
+                </ul>
+              </div>
+            </header>
 
             <section class="step" id="step-1">
-              <h3 class="step__heading">
-                <span>Шаг 1.</span>
-                <span>Даты пребывания</span>
-              </h3>
-              <p class="step__desc">
-                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
-                и ее предполагаемую длительность.
-              </p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 1.</span>
+                  <span>Даты пребывания</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item step-marks__item--active" id="mark-1-1">Даты</li>
+                    <li class="step-marks__item" id="mark-1-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-1-3">Развлечения</li>
+                  </ul>
+                </div>
+
+                <p class="step__desc">
+                  Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку,
+                  и ее предполагаемую длительность.
+                </p>
+              </header>
 
               <div class="step__content dates-select">
                 <div class="dates-select__companions number-field">
@@ -481,11 +500,22 @@
             </section>
 
             <section class="step" id="step-2">
-              <h3 class="step__heading">
-                <span>Шаг 2.</span>
-                <span>Маршрут</span>
-              </h3>
-              <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 2.</span>
+                  <span>Маршрут</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item step-marks__item--active" id="mark-2-1">Даты</li>
+                    <li class="step-marks__item" id="mark-2-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-2-3">Развлечения</li>
+                  </ul>
+                </div>
+
+                <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              </header>
+
               <div class="step__content route">
                 <ul class="route__list">
                   <li class="route__item">
@@ -683,11 +713,20 @@
             </section>
 
             <section class="step" id="step-3">
-              <h3 class="step__heading">
-                <span>Шаг 3.</span>
-                <span>Развлечения</span>
-              </h3>
-              <p class="step__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 3.</span>
+                  <span>Развлечения</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item step-marks__item--active" id="mark-3-1">Даты</li>
+                    <li class="step-marks__item" id="mark-3-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-3-3">Развлечения</li>
+                  </ul>
+                </div>
+                <p class="step__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              </header>
 
               <div class="step__content activity">
                 <ul class="activity__list">
