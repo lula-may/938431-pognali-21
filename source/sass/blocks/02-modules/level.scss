@@ -58,13 +58,35 @@
 }
 
 .level--form {
+  justify-content: flex-start;
+
+  background-image: url("../img/level-form-80.svg");
+
   .level__count {
+    padding: 13px 6px 4px 5px;
     font-size: 38px;
     color: $text-clr-dark;
+
+    border-bottom: 1px solid rgba($text-clr-basic, 0.3);
   }
 
   .level__text {
-    font-size: $mobile-font-size;
+    padding-top: 5px;
+    font-size: $mobile-button-font-size;
     color: $text-clr-basic;
+  }
+
+  @media (min-width: $desktop-width) {
+    .level__count {
+      padding: 17px 5px 0;
+
+      color: $text-clr-light;
+
+      border-bottom: 2px solid rgba($text-clr-light, 0.3);
+    }
+
+    .level__text {
+      color: $text-clr-light;
+    }
   }
 }

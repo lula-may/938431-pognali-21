@@ -2,6 +2,7 @@
   @include list-reset();
 
   display: flex;
+  justify-content: center;
   align-items: stretch;
 }
 
@@ -12,22 +13,50 @@
 }
 
 .transport__item {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 31px;
   height: 31px;
   margin-right: 1px;
+
+  color: $bg-icon;
 
   background-color: $bg-card;
   border-radius: 50%;
 }
 
+.transport__item svg {
+  width: 17px;
+  height: 17px;
+
+  color: inherit;
+}
+
+input:checked + .transport__item {
+  color: $text-clr-medium;
+}
+
 input:hover + .transport__item {
+  color: $bg-icon-hover;
+
   box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+}
+
+input:checked:hover + .transport__item {
+  color: rgba($text-clr-medium, 0.7);
 }
 
 input:active + .transport__item {
   background-color: $bg-inner-filter;
   box-shadow: none;
+
+  color: $bg-icon-active;
+}
+
+input:checked:active + .transport__item {
+  color: rgba($text-clr-medium, 0.3);
 }
 
 @media (min-width: $tablet-width) {
@@ -47,10 +76,20 @@ input:active + .transport__item {
   .transport__item {
     width: 43px;
     height: 43px;
+    margin: 0;
+
+    svg {
+      width: 23px;
+      height: auto;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .transport {
+    padding-left: 3px;
+  }
+
   .transport--companion {
     flex-direction: row;
 

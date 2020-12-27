@@ -118,8 +118,10 @@
   margin-right: 7px;
 
   svg {
-    opacity: 0.3;
     max-height: 23px;
+
+    color: $text-clr-medium;
+    opacity: 0.3;
   }
 
   &--active svg {
