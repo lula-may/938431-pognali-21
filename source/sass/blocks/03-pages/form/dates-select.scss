@@ -3,7 +3,7 @@
 
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 20px;
+  row-gap: 19px;
 
   margin-bottom: 22px;
 }
@@ -14,7 +14,7 @@
 
 @media (min-width: $tablet-width) {
   .dates-select {
-    row-gap: 25px;
+    row-gap: 23px;
 
     margin-bottom: 47px;
   }
@@ -23,10 +23,11 @@
     grid-row: 2;
 
     margin-bottom: 0;
+    margin-top: 1px;
   }
 
   .dates-select__duration {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
   }
 }
 
@@ -49,11 +50,13 @@
   .dates-select__duration {
     grid-column: 1;
     grid-row: 2;
+    margin-bottom: 32px;
   }
 
   .dates-select__children {
     grid-column: 2;
     grid-row: 1;
+    justify-self: end;
   }
 
   .dates-select__calendar {

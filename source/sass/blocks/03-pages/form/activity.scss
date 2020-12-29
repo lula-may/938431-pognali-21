@@ -49,7 +49,7 @@
 
   font: inherit;
 
-  @include border-styles();
+  @include textarea-border-styles();
 
   &::placeholder {
     color: rgba($text-clr-basic, 0.3);

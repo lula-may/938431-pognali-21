@@ -270,8 +270,8 @@
               <div class="step__content dates-select">
                 <div class="dates-select__companions number-field">
                   <label class="number-field__label" for="companions-count">Ищу попутчиков:</label>
-                  <span class="number-field__units">чел.</span>
-                  <div class="number-field__wrapper">
+                  <span class="number-field__units number-field__units--people">чел.</span>
+                  <div class="number-field__wrapper" tabindex="0">
                     <input class="number-field__input" type="text" id="companions-count" name="companions-count" value="2" pattern="[0-9]*">
                     <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
                     <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
@@ -281,7 +281,7 @@
                 <div class="dates-select__duration number-field">
                   <label class="number-field__label" for="days-count">Длительность:</label>
                   <span class="number-field__units">дн.</span>
-                  <div class="number-field__wrapper">
+                  <div class="number-field__wrapper" tabindex="0">
                     <input class="number-field__input" type="text" id="days-count" name="days-count" value="3" pattern="[0-9]*" required>
                     <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
                     <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
@@ -809,5 +809,6 @@
 
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/number-fields.js"></script>
   </body>
 </html>
