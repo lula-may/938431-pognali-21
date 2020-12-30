@@ -1,11 +1,9 @@
 .dates-select {
-  @include outline(teal);
-
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 19px;
 
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .dates-select__children {
@@ -16,7 +14,7 @@
   .dates-select {
     row-gap: 23px;
 
-    margin-bottom: 47px;
+    margin-bottom: 48px;
   }
 
   .dates-select__children {
@@ -37,7 +35,7 @@
     grid-template-rows: repeat(3, min-content);
     row-gap: 0;
 
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
   .dates-select__companions {

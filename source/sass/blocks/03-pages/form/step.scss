@@ -1,5 +1,5 @@
 .step {
-  padding: 22px 9% 17px;
+  padding: 22px 9% 10px;
   margin-bottom: 10px;
 
   background-color: $bg-card;
@@ -35,10 +35,6 @@
 
 .step__desc {
   @include offset-reset();
-}
-
-.step__content {
-  @include outline(teal);
 }
 
 .step__footer {
@@ -118,7 +114,9 @@
 
   .step__next,
   .step__submit {
+    width: 286px;
     margin-bottom: 0;
+    margin-left: 1px;
 
     text-transform: none;
   }
@@ -174,5 +172,9 @@
   .step__desc {
     padding-right: 190px;
     padding-left: 1px;
+  }
+
+  .step__next {
+    margin-left: 2px;
   }
 }

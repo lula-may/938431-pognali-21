@@ -31,7 +31,7 @@
   @media (min-width: $tablet-width) {
     padding: 14px 0 16px;
 
-    font-size: 20px;
+    font-size: $tablet-smaller-font-size;
     line-height: 1;
   }
 }
@@ -46,7 +46,28 @@
   text-align: left;
 
   border-radius: 10px;
+}
 
+.button--form {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 5px 0 5px 2px;
+
+  font-size: 17px;
+  line-height: 1.765;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 25px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.button--index,
+.button--form {
   &::after {
     content: "";
     position: absolute;
@@ -66,19 +87,36 @@
   &:active::after {
     opacity: 0.3;
   }
+}
 
-  @media (min-width: $tablet-width) {
-    padding: 27px 32px 29px;
-
+@media (min-width: $tablet-width) {
+  .button--form,
+  .button--index {
     font-size: $mobile-heading-size;
 
     border-radius: 20px;
 
     &::after {
       top: 34px;
-      right: 24px;
-
       border-width: 7px 11px;
+    }
+  }
+
+  .button--index {
+    padding: 27px 32px 29px;
+
+    &::after {
+      right: 24px;
+    }
+  }
+
+  .button--form {
+    padding: 24px 33px 25px;
+    text-align: left;
+
+    &::after {
+      right: 28px;
+      display: block;
     }
   }
 }
