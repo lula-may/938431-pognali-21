@@ -4,6 +4,187 @@
   align-items: stretch;
 }
 
+.country-field__select {
+  position: relative;
+  flex-grow: 1;
+  margin-right: -1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: -3px;
+    z-index: 2;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: $text-clr-medium;
+  }
+
+  &--empty::after {
+    right: 49px;
+    border: 1px solid $bg-inner-light;
+    background-color: $bg-card;
+  }
+}
+
+.country-field__select:hover .country-field__country {
+  border-color: $border-textarea-hover;
+}
+
+.country-field__add {
+  position: relative;
+
+  @include button-reset();
+  padding-left: 11px;
+
+  text-align: left;
+
+  background-color: $bg-main-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 49px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    border: 1px solid $bg-inner-light;
+    background-color: $bg-main-light;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 14px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    opacity: 0.2;
+  }
+
+  &:hover {
+    background-color: $bg-inner-lighter;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.country-field__country,
+.country-field__add {
+  display: block;
+  width: 100%;
+  height: 42px;
+
+  font: inherit;
+  font-size: $tablet-font-size / 2;
+  line-height: 1.286;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $text-clr-medium;
+  letter-spacing: 0.1em;
+
+  border-radius: 4px;
+}
+
+.country-field__country {
+  padding-left: 9px;
+
+  border: 1px solid $bg-inner-light;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.country-field__toggle {
+  position: absolute;
+  right: 2px;
+  top: 3px;
+
+  @include button-reset();
+  width: 55px;
+  height: 36px;
+
+  background-color: transparent;
+  background-image: url("../img/arrow-down.svg"),
+    linear-gradient(to right, transparent 0, $bg-card 35%);
+  background-repeat: no-repeat;
+  background-position: 30px 15px, 0 0;
+  background-size: 12px 8px, auto;
+}
+
+.country-field__flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+
+  border: 1px solid $bg-inner-light;
+  border-radius: 4px;
+}
+
+.country-field__delete {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+
+  width: 21px;
+  height: 21px;
+
+  @include button-reset();
+  background-color: $bg-main-light;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 10px;
+    height: 1px;
+
+    background-color: $text-clr-darker;
+    opacity: 0.1;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.3;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.05;
+  }
+}
+
 .country-field__dropdown {
   display: none;
   position: absolute;
@@ -15,7 +196,6 @@
 
   background-color: $bg-card;
 }
-
 
 .country-field--open {
   .country-field__country {
@@ -33,70 +213,25 @@
   }
 }
 
-.country-field__select {
-  position: relative;
-  flex-grow: 1;
-}
-
-.country-field__country {
-  display: block;
-  width: 100%;
-  height: 42px;
-
-  font: inherit;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: $text-clr-medium;
-
-  border: 1px solid $bg-inner-light;
-
-  &:hover {
-    border-color: $border-textarea-hover;
-    outline: none;
-  }
-
-  &::placeholder {
-    color: inherit;
-  }
-
-  &--add {
-    @include button-reset();
-    background-color: $bg-main-light;
-
-    &:hover {
-      background-color: $bg-inner-lighter;
-    }
-  }
-}
-
-.country-field__select-toggle {
-  position: absolute;
-  right: 14px;
-  top: 10px;
-}
-
-.country-field__flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 53px;
-}
-
-.country-field__delete {
-  position: absolute;
-  right: 0;
-}
-
 @media (min-width: $tablet-width) {
   .country-field__select {
     flex-grow: 0;
-    width: 68.59%;
+    width: calc(100% - 140px);
+    padding-right: 28px;
     margin-right: auto;
+
+    &::after {
+      top: 26px;
+      right: -6px;
+
+      width: 14px;
+      height: 14px;
+    }
   }
 
-  .country-field__country {
+  .country-field__country,
+  .country-field__add {
+    padding-left: 25px;
     height: 70px;
 
     font-size: 20px;
@@ -104,12 +239,62 @@
     letter-spacing: 0.1em;
   }
 
+  .country-field__add {
+    width: calc(100% - 168px);
+    margin-right: auto;
+
+    &::before {
+      top: 26px;
+      right: -34px;
+
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      top: 24px;
+      right: 23px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .country-field__toggle {
+    top: 15px;
+    right: 30px;
+
+    background-position: 14px 15px, 0 0;
+    background-size: 16px 12px, auto;
+  }
+
   .country-field__flag {
-    width: 140px;
+    width: 70px;
+    margin-left: 24px;
+    margin-right: 45px;
+
+    border: none;
 
     img {
       width: 70px;
       height: 47px;
+    }
+  }
+
+  .country-field__delete {
+    top: 23px;
+    right: 0;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      left: 0;
+      width: 25px;
+      height: 2px;
     }
   }
 
@@ -121,11 +306,27 @@
 
 @media (min-width: $desktop-width) {
   .country-field__select {
+    width: 776px;
+    padding-right: 46px;
+  }
+
+  .country-field__add {
     width: 730px;
+
+    &::before {
+      right: -51px;
+    }
   }
 
   .country-field__flag {
-    width: 222px;
+    margin-right: 112px;
+  }
+
+  .country-field__toggle {
+    right: 48px;
+
+    background-position: 11px 13px, 0 0;
+    background-size: 21px 14px, auto;
   }
 
   .country-field__dropdown {

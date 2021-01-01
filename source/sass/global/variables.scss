@@ -61,6 +61,7 @@ $border-clr-field: #d6d9e6;
 $border-clr-hover: #959bb2;
 $border-textarea-hover: #aeb4cb;
 $border-textarea-invalid: #f47e7e;
+$border-form-fields-clr: #e1e3e9;
 
 // BREAKPOINTS
 $tablet-width: 768px;
@@ -75,6 +76,6 @@ $level-ring-length: 56 * 3.1415;
 $section-shift: 30px;
 
 // BORDERS
-$private-rates-border: 1px solid #e1e3e9;
+$private-rates-border: 1px solid $border-form-fields-clr;
 $business-rates-border: 1px solid rgba(0, 0, 0, 0.05);
 $copyright-border: 1px solid #f2f2f2;

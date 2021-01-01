@@ -494,13 +494,13 @@
                 </h3>
                 <div class="step__marks">
                   <ul class="step-marks">
-                    <li class="step-marks__item step-marks__item--active" id="mark-2-1">Даты</li>
-                    <li class="step-marks__item" id="mark-2-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-2-1">Даты</li>
+                    <li class="step-marks__item step-marks__item--active" id="mark-2-2">Маршрут</li>
                     <li class="step-marks__item" id="mark-2-3">Развлечения</li>
                   </ul>
                 </div>
 
-                <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                <p class="step__desc">Укажите страны, которые вы хотели бы посетить.&nbsp;<br/>Это может быть одна или сразу несколько.</p>
               </header>
 
               <div class="step__content route">
@@ -509,13 +509,18 @@
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-1">Страна: </label>
                       <div class="country-field__select">
-                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <input class="country-field__country" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
                       <div class="country-field__flag">
-                        <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                        <picture>
+                          <source type="image/webp" media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
+                          <source type="image/webp" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
+                          <source media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.png 1x, img/bosnia-and-herz-flag-tablet@2x.png 2x">
+                          <img src="img/bosnia-and-herz-flag.png" srcset="img/bosnia-and-herz-flag@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                        </picture>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
                     </div>
@@ -524,26 +529,31 @@
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-2">Страна: </label>
                       <div class="country-field__select">
-                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <input class="country-field__country" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
                       <div class="country-field__flag">
-                        <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                        <picture>
+                          <source type="image/webp" media="(min-width: 768px)" src="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
+                          <source type="image/webp" src="img/czech-flag.webp 1x, img/czech-flag@2x.webp 2x">
+                          <source media="(min-width: 768px)" src="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                          <img src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" width="35" height="24" alt="флаг Чехии">
+                        </picture>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
                     </div>
                   </li>
                   <li class="route__item">
                     <!-- Для открытия выпадающего списка используется класс "country-field--open"  -->
-                    <div class="country-field country-field--open">
+                    <div class="country-field country-field">
                       <label class="visually-hidden" for="selected-country-3">Страна: </label>
-                      <div class="country-field__select">
+                      <div class="country-field__select country-field__select--empty">
                         <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <button class="country-field__toggle country-field__toggle--close" type="button" aria-label="Выбрать страну"></button>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
                       <div class="country-field__dropdown dropdown">
@@ -682,18 +692,16 @@
                   </li>
                   <li class="route__item">
                     <div class="country-field">
-                      <div class="country-field__select">
-                        <button class="country-field__country country-field__country--add" type="button">
-                          Добавить страну
-                        </button>
-                        </div>
+                      <button class="country-field__add" type="button">
+                        Добавить страну
+                      </button>
                     </div>
                   </li>
                 </ul>
               </div>
 
               <footer class="step__footer">
-                <a class="step__next button" href="#step-3">Следующий шаг</a>
+                <a class="step__next button button--form" href="#step-3">Следующий шаг</a>
                 <a class="step__back" href="#step-1">На шаг назад</a>
               </footer>
 
