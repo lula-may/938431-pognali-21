@@ -514,7 +514,7 @@
                       </div>
                       <div class="country-field__flag">
                         <picture>
-                          <source type="image/webp" media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
+                          <source type="image/webp" media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.webp 1x, img/bosnia-and-herz-flag-tablet@2x.webp 2x">
                           <source type="image/webp" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
                           <source media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.png 1x, img/bosnia-and-herz-flag-tablet@2x.png 2x">
                           <img src="img/bosnia-and-herz-flag.png" srcset="img/bosnia-and-herz-flag@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины">
@@ -534,9 +534,9 @@
                       </div>
                       <div class="country-field__flag">
                         <picture>
-                          <source type="image/webp" media="(min-width: 768px)" src="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
-                          <source type="image/webp" src="img/czech-flag.webp 1x, img/czech-flag@2x.webp 2x">
-                          <source media="(min-width: 768px)" src="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                          <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
+                          <source type="image/webp" srcset="img/czech-flag.webp 1x, img/czech-flag@2x.webp 2x">
+                          <source media="(min-width: 768px)" srcset="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
                           <img src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" width="35" height="24" alt="флаг Чехии">
                         </picture>
                       </div>
@@ -547,17 +547,17 @@
                   </li>
                   <li class="route__item">
                     <!-- Для открытия выпадающего списка используется класс "country-field--open"  -->
-                    <div class="country-field country-field">
+                    <div class="country-field">
                       <label class="visually-hidden" for="selected-country-3">Страна: </label>
                       <div class="country-field__select country-field__select--empty">
                         <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                        <button class="country-field__toggle country-field__toggle--close" type="button" aria-label="Выбрать страну"></button>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
                       <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
-                      <div class="country-field__dropdown dropdown">
-                        <div class="dropdown__alphabetic-sort alphabetic-sort">
+                      <div class="country-field__dropdown">
+                        <div class="alphabetic-sort">
                           <div class="alphabetic-sort__wrapper">
                             <ul class="alphabetic-sort__alphabet">
                               <li class="alphabetic-sort__letter">
@@ -621,19 +621,19 @@
                                 <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ч</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ш</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">э</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">ю</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">я</button>
                               </li>
                             </ul>
                           </div>
@@ -744,7 +744,7 @@
               </div>
 
               <footer class="step__footer">
-                <button class="step__submit button" type="submit">Отправить</button>
+                <button class="step__submit button button--form" type="submit">Отправить</button>
                 <a class="step__back" href="#step-2">На шаг назад</a>
               </footer>
 
@@ -805,5 +805,6 @@
     </footer>
     <script src="js/main-nav.js"></script>
     <script src="js/number-fields.js"></script>
+    <script src="js/country-field.js"></script>
   </body>
 </html>

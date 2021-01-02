@@ -6,8 +6,9 @@
   background-color: inherit;
 
   &--bordered {
-    padding: 20px 8.64%;
+    padding: 18px 8.64% 20px;
     border: 1px solid $bg-inner-light;
+    border-radius: 0 0 4px 4px;
   }
 }
 
@@ -45,6 +46,10 @@
   }
 }
 
+.countries-list__item {
+  margin-bottom: 4px;
+}
+
 .countries-list__name {
   font-weight: normal;
   color: $text-clr-basic;
@@ -65,10 +70,15 @@ input:active + .countries-list__name {
     line-height: 20px;
 
     &--bordered {
-      padding: 27px 20px 20px 25px;
+      padding: 34px 20px 20px 25px;
       border: none;
       border-left: 1px solid $bg-inner-light;
+      border-radius: 0;
     }
+  }
+
+  .countries-list__item {
+    margin-bottom: 10px;
   }
 }
 

@@ -129,16 +129,49 @@
   background-repeat: no-repeat;
   background-position: 30px 15px, 0 0;
   background-size: 12px 8px, auto;
+  outline: none;
 }
 
-.country-field__flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 53px;
+.country-field__toggle--close,
+.country-field__delete {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+  }
 
-  border: 1px solid $bg-inner-light;
-  border-radius: 4px;
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.country-field__toggle--close {
+  background-image: none;
+
+  &::before,
+  &::after {
+    top: 17px;
+    right: 16px;
+
+    background-color: $bg-card;
+    opacity: 0.3;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.1;
+  }
 }
 
 .country-field__delete {
@@ -155,23 +188,11 @@
 
   &::before,
   &::after {
-    content: "";
-    position: absolute;
     top: 10px;
     left: 5px;
-    width: 10px;
-    height: 1px;
 
     background-color: $text-clr-darker;
     opacity: 0.1;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
   }
 
   &:hover::before,
@@ -185,6 +206,16 @@
   }
 }
 
+.country-field__flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+
+  border: 1px solid $bg-inner-light;
+  border-radius: 4px;
+}
+
 .country-field__dropdown {
   display: none;
   position: absolute;
@@ -195,13 +226,27 @@
   width: 100%;
 
   background-color: $bg-card;
+  box-shadow: 0 2px 16px rgba(212, 217, 235, 0.25);
+  border-radius: 0 0 4px 4px;
 }
 
 .country-field--open {
+  .country-field__select {
+    margin-top: 1px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   .country-field__country {
+    padding-left: 17px;
     color: $bg-card;
+    letter-spacing: 0.02em;
+
     background-color: $text-clr-medium;
     border: none;
+    border-radius: 4px 4px 0 0;
   }
 
   .country-field__delete {
@@ -266,6 +311,32 @@
 
     background-position: 14px 15px, 0 0;
     background-size: 16px 12px, auto;
+
+    &--close {
+      top: 26px;
+      right: 51px;
+    }
+  }
+
+  .country-field__toggle--close,
+  .country-field__delete {
+    width: 24px;
+    height: 24px;
+
+    &::before,
+    &::after {
+      top: 10px;
+      left: 0;
+      width: 25px;
+      height: 2px;
+    }
+  }
+
+  .country-field__delete {
+    top: 23px;
+    right: 0;
+
+    background-color: transparent;
   }
 
   .country-field__flag {
@@ -281,26 +352,31 @@
     }
   }
 
-  .country-field__delete {
-    top: 23px;
-    right: 0;
-
-    width: 24px;
-    height: 24px;
-
-    background-color: transparent;
-
-    &::before,
-    &::after {
-      left: 0;
-      width: 25px;
-      height: 2px;
-    }
-  }
-
   .country-field__dropdown {
     top: 70px;
     width: 107.48%;
+    max-width: 730px;
+
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+  }
+
+  .country-field--open {
+    .country-field__select {
+      margin-top: 0;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    .country-field__country {
+      padding-left: 25px;
+      letter-spacing: 0.1em;
+    }
+
+    .country-field__delete {
+      display: block;
+    }
   }
 }
 
@@ -327,9 +403,26 @@
 
     background-position: 11px 13px, 0 0;
     background-size: 21px 14px, auto;
+
+    &--close {
+      top: 24px;
+      right: 72px;
+    }
   }
 
   .country-field__dropdown {
+    top: 71px;
     width: 730px;
+  }
+
+  .country-field--open {
+    .country-field__select {
+      margin-top: 1px;
+    }
+
+    .country-field__country {
+      padding-top: 0;
+      padding-bottom: 2px;
+    }
   }
 }
