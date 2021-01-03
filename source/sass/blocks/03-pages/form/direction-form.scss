@@ -1,3 +1,13 @@
 .direction-form {
   background-color: $bg-main-light;
 }
+
+.direction-form--invalid {
+  textarea:invalid {
+    border-color: $border-textarea-invalid;
+  }
+
+  textarea:invalid + .activity__error-message {
+    display: block;
+  }
+}

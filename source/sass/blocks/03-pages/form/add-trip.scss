@@ -1,7 +1,7 @@
 .add-trip {
   position: relative;
   padding-top: 28px;
-  padding-bottom: 63px;
+  padding-bottom: 73px;
   margin-top: -30px;
 
   color: $text-clr-medium;
@@ -11,7 +11,6 @@
 }
 
 .add-trip__container {
-  @include outline();
   @include form-container();
 }
 
@@ -39,7 +38,7 @@
 @media (min-width: $tablet-width) {
   .add-trip {
     padding-top: 50px;
-    padding-bottom: 118px;
+    padding-bottom: 124px;
   }
 
   .add-trip__header {
@@ -58,7 +57,7 @@
 @media (min-width: $desktop-width) {
   .add-trip {
     padding-top: 52px;
-    padding-bottom: 125px;
+    padding-bottom: 133px;
     margin-top: -60px;
 
     border-radius: 55px 55px 0 0;
