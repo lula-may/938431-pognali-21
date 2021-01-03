@@ -35,3 +35,9 @@ input:checked + .continent-filter__name {
     line-height: 20px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .continent-filter__item {
+    margin-right: 33px;
+  }
+}
