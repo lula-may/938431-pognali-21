@@ -4,8 +4,10 @@
 }
 
 .continent-filter__item {
-  line-height: 18px;
-  font-size: 16px;
+  margin-bottom: 9px;
+
+  font-size: $mobile-font-size;
+  line-height: 1.125;
   font-weight: bold;
 }
 

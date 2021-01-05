@@ -73,12 +73,17 @@
 
   .alphabetic-sort__alphabet {
     width: 77%;
-    max-width: 361px;
     height: 346px;
 
+    &--form {
+      max-width: 361px;
+    }
+
     &--catalog {
-      width: 55.63%;
-      height: 346px;
+      width: 57%;
+      height: 395px;
+      column-gap: 24px;
+      row-gap: 20px;
     }
   }
 
