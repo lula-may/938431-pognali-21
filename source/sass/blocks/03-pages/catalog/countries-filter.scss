@@ -1,6 +1,6 @@
 .countries-filter {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 
   @include container();
   padding-top: 40px;
@@ -181,11 +181,15 @@
 
 @media (min-width: $tablet-width) {
   .countries-filter {
-    padding: 120px 9.36% 59px;
+    padding: 120px 9.36% 49px;
     margin-bottom: 43px;
+
+    border-radius: 0 0 55px 55px;
 
     &--expanded {
       padding-bottom: 40px;
+
+      border-radius: 0;
     }
   }
 
@@ -273,12 +277,6 @@
     background-color: $bg-main-light;
   }
 
-  .countries-filter--expanded {
-    .countries-filter__label--close {
-      display: none;
-    }
-  }
-
   .countries-filter__header {
     padding: 118px 0 50px;
 
@@ -335,6 +333,7 @@
   .countries-filter__alphabetic-sort {
     width: 1248px;
     margin-left: 36px;
+    margin-bottom: 96px;
   }
 
   .countries-filter__button {

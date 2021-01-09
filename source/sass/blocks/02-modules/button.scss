@@ -1,8 +1,14 @@
 .button {
-  @include button-theme();
+  @include button-reset();
+  outline: none;
   font-weight: bold;
+}
 
-  border: none;
+.button--login,
+.button--index,
+.button--form,
+.button--catalog {
+  @include button-theme();
 
   &:hover,
   &:focus {
@@ -14,31 +20,28 @@
   }
 }
 
-.button--login {
-  display: block;
+.button--login,
+.button--form,
+.button--catalog,
+.button--light {
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 4px;
 
-  font-size: 17px;
-  line-height: 1.176;
+  font-size: $mobile-inner-button-font-size;
   text-transform: uppercase;
   text-align: center;
 
   border-radius: 25px;
+}
 
-  @media (min-width: $tablet-width) {
-    padding: 14px 0 16px;
+.button--login {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 4px;
 
-    font-size: $tablet-smaller-font-size;
-    line-height: 1;
-  }
+  line-height: 1.176;
 }
 
 .button--index {
-  position: relative;
-
   padding: 22px 23px;
 
   font-size: $mobile-button-font-size;
@@ -49,25 +52,42 @@
 }
 
 .button--form {
-  position: relative;
-  display: block;
-  width: 100%;
   padding: 5px 0;
 
-  font-size: 17px;
   line-height: 1.765;
-  text-transform: uppercase;
-  text-align: center;
-
-  border-radius: 25px;
 
   &::after {
     display: none;
   }
 }
 
+.button--catalog,
+.button--light {
+  padding: 13px 0 11px;
+
+  color: $text-clr-dark;
+  line-height: 1;
+}
+
+.button--light {
+  background-color: $bg-card;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    color: rgba($text-clr-dark, 0.2);
+    background-color: $border-companion-form;
+    box-shadow: none;
+  }
+}
+
 .button--index,
 .button--form {
+  position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -88,7 +108,45 @@
   }
 }
 
+.button--stroke {
+  padding: 18px 20px 20px;
+
+  border: 3px solid $bg-main-dark;
+  background-color: transparent;
+
+  &::after {
+    top: 22px;
+    right: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-clr-light;
+
+    background-color: $bg-main-dark;
+
+    &::after {
+      border-left-color: $text-clr-light;
+    }
+  }
+
+  &:active {
+    color: rgba($text-clr-light, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .button--login {
+    padding: 14px 0 16px;
+
+    font-size: $tablet-smaller-font-size;
+    line-height: 1;
+  }
+
   .button--form,
   .button--index {
     font-size: $mobile-heading-size;
@@ -119,54 +177,11 @@
       display: block;
     }
   }
-}
 
-.button--catalog {
-  line-height: 1;
-  color: $text-clr-dark;
-  text-transform: uppercase;
-}
+  .button--catalog,
+  .button--light {
+    padding: 16px 0 14px;
 
-.button--light {
-  line-height: 1;
-  background-color: $bg-card;
-}
-
-.button--stroke {
-  padding: 18px 20px 20px;
-
-  border: 3px solid $bg-main-dark;
-  background-color: transparent;
-
-  &::after {
-    top: 22px;
-    right: 11px;
-  }
-
-  &:hover {
-    color: $text-clr-light;
-
-    background-color: $bg-main-dark;
-
-    &::after {
-      border-left-color: $text-clr-light;
-    }
-  }
-
-  &:active {
-    color: rgba($text-clr-light, 0.3);
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 25px 34px;
-
-    &::after {
-      top: 31px;
-      right: 22px;
-    }
+    font-size: $tablet-smaller-font-size;
   }
 }

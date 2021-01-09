@@ -38,6 +38,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__filter {
+    width: 100%;
+  }
+
   .catalog__list {
     width: 100%;
     margin-bottom: 7px;
@@ -66,7 +70,7 @@
     grid-template-columns: 951px 285px;
     grid-template-rows: min-content  129px 100px;
 
-    column-gap: 85px;
+    column-gap: 84px;
   }
 
   .catalog__filter {

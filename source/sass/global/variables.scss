@@ -1,6 +1,7 @@
 // TIPOGRAPHY
 $basic-font: "Blogger Sans", "Arial", sans-serif;
 $mobile-font-size: 16px;
+$mobile-inner-button-font-size: 17px;
 $mobile-button-font-size: 18px;
 $mobile-bolder-size: 21px;
 $mobile-heading-size: 24px;
@@ -45,6 +46,8 @@ $bg-icon: #d9d9d9;
 $bg-icon-hover: #b2b2b2;
 $bg-icon-active: #ced3e2;
 $bg-error: #ffefef;
+$bg-checkbox-hover: #f8f9fb;
+$bg-checkbox-active: #f2f4f9;
 
 // COLORS: TEXT
 $text-clr-light: $bg-card;
@@ -63,6 +66,7 @@ $border-clr-hover: #959bb2;
 $border-textarea-hover: #aeb4cb;
 $border-textarea-invalid: #f47e7e;
 $border-form-fields-clr: #e1e3e9;
+$border-companion-form: #f3c72b;
 
 // BREAKPOINTS
 $tablet-width: 768px;

@@ -139,7 +139,7 @@
 
       <!-- Класс "countries-filter--expanded" показывает блок выбора стран
       В отсутствие этого класса блок скрыт  -->
-      <section class="countries-filter countries-filter--expanded">
+      <section class="countries-filter">
         <header class="countries-filter__header">
           <div class="countries-filter__container">
             <h2 class="countries-filter__title">Фильтрация по странам:</h2>
@@ -879,122 +879,134 @@
 
         <div class="catalog__container">
           <section class="catalog__filter companions-filter">
-            <h2 class="companions-filter__heading">Выберите идеального попутчика</h2>
+            <h2 class="companions-filter__heading">Подберите идеального попутчика</h2>
 
             <form class="companions-filter__form companion-form" id="companion-form" method="get" action="https://echo.htmlacademy.ru">
               <ul class="companion-form__list">
 
                 <li class="companion-form__item field-group">
-                  <header class="field-group__header">
-                    <h3 class="field-group__name">Хобби:</h3>
-                    <button class="field-group__toggle" type="button">
-                      <span class="visually-hidden">Свернуть / Развернуть</span>
-                    </button>
-                  </header>
+                  <button class="field-group__header" type="button">
+                    <h3 class="field-group__name">Хобби<span>:</span></h3>
+                    <svg class="field-group__icon" width="10" height="6">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg>
+                  </button>
                   <ul class="field-group__list">
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="hobby-1" name="hobby" value="gim">
+                      <input class="field-group__checkbox" type="checkbox" id="hobby-1" name="hobby" value="gim">
                       <label class="field-group__label" for="hobby-1">Спортзал</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="hobby-2" name="hobby" value="hookah">
+                      <input class="field-group__checkbox" type="checkbox" id="hobby-2" name="hobby" value="hookah">
                       <label class="field-group__label" for="hobby-2">Кальян</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="hobby-3" name="hobby" value="sofa">
+                      <input class="field-group__checkbox" type="checkbox" id="hobby-3" name="hobby" value="sofa">
                       <label class="field-group__label" for="hobby-3">Диван</label>
                     </li>
                   </ul>
                 </li>
 
                 <li class="companion-form__item field-group">
-                  <header class="field-group__header">
-                    <h3 class="field-group__name">Музыка:</h3>
-                    <button class="field-group__toggle" type="button">
-                      <span class="visually-hidden">Свернуть / Развернуть</span>
-                    </button>
-                  </header>
+                  <button class="field-group__header" type="button" aria-label="Свернуть / Развернуть">
+                    <h3 class="field-group__name">Музыка<span>:</span></h3>
+                    <svg class="field-group__icon" width="10" height="6">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg>
+                  </button>
                   <ul class="field-group__list">
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="music-1" name="music" value="hard-rock">
+                      <input class="field-group__checkbox" type="checkbox" id="music-1" name="music" value="hard-rock" checked>
                       <label class="field-group__label" for="music-1">Тяжелый рок</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="music-2" name="music" value="russian-rap">
+                      <input class="field-group__checkbox" type="checkbox" id="music-2" name="music" value="russian-rap" checked>
                       <label class="field-group__label" for="music-2">Русский рэп</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="music-3" name="music" value="eurodance">
+                      <input class="field-group__checkbox" type="checkbox" id="music-3" name="music" value="eurodance">
                       <label class="field-group__label" for="music-3">Евроденс</label>
                     </li>
                   </ul>
                 </li>
 
                 <li class="companion-form__item field-group">
-                  <header class="field-group__header">
-                    <h3 class="field-group__name">Еда:</h3>
-                    <button class="field-group__toggle" type="button">
-                      <span class="visually-hidden">Свернуть / Развернуть</span>
-                    </button>
-                  </header>
+                  <button class="field-group__header" type="button">
+                    <h3 class="field-group__name">Еда<span>:</span></h3>
+                    <svg class="field-group__icon" width="10" height="6">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg>
+                  </button>
                   <ul class="field-group__list">
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="meals-1" name="meals" value="meat">
+                      <input class="field-group__checkbox" type="checkbox" id="meals-1" name="meals" value="meat">
                       <label class="field-group__label" for="meals-1">Мясоед</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="meals-2" name="meals" value="healthy-diet">
+                      <input class="field-group__checkbox" type="checkbox" id="meals-2" name="meals" value="healthy-diet">
                       <label class="field-group__label" for="meals-2">Сидит на ПП</label>
                     </li>
                     <li class="field-group__item">
-                      <input class="visually-hidden" type="checkbox" id="meals-3" name="meals" value="vegan">
+                      <input class="field-group__checkbox" type="checkbox" id="meals-3" name="meals" value="vegan">
                       <label class="field-group__label" for="meals-3">Веган сыроед</label>
                     </li>
                   </ul>
                 </li>
 
                 <li class="companion-form__item field-group">
-                  <header class="field-group__header">
-                    <h3 class="field-group__name">Транспорт:</h3>
-                    <button class="field-group__toggle" type="button">
-                      <span class="visually-hidden">Свернуть / Развернуть</span>
-                    </button>
-                  </header>
-                  <ul class="field-group__transport transport">
+                  <button class="field-group__header" type="button">
+                    <h3 class="field-group__name">Транспорт<span>:</span></h3>
+                    <svg class="field-group__icon" width="10" height="6">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg>
+                  </button>
+                  <ul class="field-group__transport transport transport--catalog">
                     <li>
                       <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
-                      <label class="transport__item transport__item--plane" for="plane">
-                        <span class="visually-hidden">Самолет</span>
+                      <label class="transport__item transport__item--plane tooltip" for="plane">
+                        <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
+                          <use xlink:href="img/sprite.svg#plane"></use>
+                        </svg>
+                        <span class="tooltip__label">Авиаперелет</span>
                       </label>
                     </li>
                     <li>
                       <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
-                      <label class="transport__item transport__item--car" for="car">
-                        <span class="visually-hidden">Автомобиль</span>
+                      <label class="transport__item transport__item--car tooltip" for="car">
+                        <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                          <use xlink:href="img/sprite.svg#bus"></use>
+                        </svg>
+                        <span class="tooltip__label">Автотранспорт</span>
                       </label>
                     </li>
                     <li>
                       <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
-                      <label class="transport__item transport__item--bike" for="bike">
-                        <span class="visually-hidden">Велосипед</span>
+                      <label class="transport__item transport__item--bicycle tooltip" for="bike">
+                        <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                          <use xlink:href="img/sprite.svg#bicycle"></use>
+                        </svg>
+                        <span class="tooltip__label">Велосипед</span>
                       </label>
                     </li>
                     <li>
                       <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
-                      <label class="transport__item transport__item--walk" for="walk">
-                        <span class="visually-hidden">Пешком</span>
+                      <label class="transport__item transport__item--walk tooltip" for="walk">
+                        <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                          <use xlink:href="img/sprite.svg#run"></use>
+                        </svg>
+                        <span class="tooltip__label">Пешком</span>
                       </label>
                     </li>
                   </ul>
                 </li>
 
                 <li class="companion-form__item field-group">
-                  <header class="field-group__header">
-                    <h3 class="field-group__name">Левел:</h3>
-                    <button class="field-group__toggle" type="button">
-                      <span class="visually-hidden">Свернуть / Развернуть</span>
-                    </button>
-                  </header>
+                  <button class="field-group__header" type="button">
+                    <h3 class="field-group__name">Левел<span>:</span></h3>
+                    <svg class="field-group__icon" width="10" height="6">
+                      <use xlink:href="img/sprite.svg#triangle"></use>
+                    </svg>
+                  </button>
 
                   <div class="field-group__level level-choose">
                     <p class="visually-hidden">
@@ -1003,15 +1015,15 @@
                     </p>
 
                     <div class="level-choose__output">
-                      <input class="level-choose__value level-choose__value--min" type="number" id="level-min" name="level-min" value="30" readonly>
-                      <input class="level-choose__value level-choose__value--max" type="number" id="level-max" name="level-max" value="100" readonly>
+                      <input class="level-choose__value level-choose__value--min" type="text" id="level-min" name="level-min" value="30" pattern="[0-9]*">
+                      <input class="level-choose__value level-choose__value--max" type="text" id="level-max" name="level-max" value="100" pattern="[0-9]*">
                     </div>
 
                     <div class="level-choose__slider slider">
-                      <button class="slider__handle slider__handle--min">
+                      <button class="slider__handle slider__handle--min" type="button">
                         <span class="visually-hidden">Выбрать минимальный уровень</span>
                       </button>
-                      <button class="slider__handle slider__handle--max">
+                      <button class="slider__handle slider__handle--max" type="button">
                         <span class="visually-hidden">Выбрать максимальный уровень</span>
                       </button>
                       <div class="slider__bar"></div>
@@ -1021,7 +1033,7 @@
                 </li>
 
               </ul>
-              <button class="companion-form__submit button button--catalog button--light" type="submit">Показать</button>
+              <button class="companion-form__submit button button--light" type="submit">Показать</button>
             </form>
           </section>
 
@@ -1357,6 +1369,6 @@
 
     </footer>
     <script src="js/main-nav.js"></script>
-    <script src="js/countries-filter.js"></script>
+    <script src="js/catalog.js"></script>
   </body>
 </html>

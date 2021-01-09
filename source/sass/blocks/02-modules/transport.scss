@@ -2,8 +2,23 @@
   @include list-reset();
 
   display: flex;
-  justify-content: center;
   align-items: stretch;
+}
+
+.transport--form {
+  justify-content: center;
+
+  .transport__item {
+    margin-right: 1px;
+  }
+}
+
+.transport--catalog {
+  justify-content: flex-start;
+
+  .transport__item {
+    margin-right: 2px;
+  }
 }
 
 .transport--companion {
@@ -19,7 +34,6 @@
 
   width: 31px;
   height: 31px;
-  margin-right: 1px;
 
   color: $bg-icon;
 
@@ -38,13 +52,15 @@ input:checked + .transport__item {
   color: $text-clr-medium;
 }
 
-input:hover + .transport__item {
+input:hover + .transport__item,
+input:focus + .transport__item {
   color: $bg-icon-hover;
 
   box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
 }
 
-input:checked:hover + .transport__item {
+input:checked:hover + .transport__item,
+input:checked:focus + .transport__item {
   color: rgba($text-clr-medium, 0.7);
 }
 
@@ -98,6 +114,12 @@ input:checked:active + .transport__item {
 
       margin-right: 14px;
       margin-bottom: 0;
+    }
+  }
+
+  .transport--catalog {
+    .transport__item {
+      margin-right: 1px;
     }
   }
 }

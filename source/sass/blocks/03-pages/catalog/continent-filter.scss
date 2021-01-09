@@ -20,7 +20,12 @@ input + .continent-filter__name {
   opacity: 0.3;
 }
 
-input:checked + .continent-filter__name {
+input:hover + .continent-filter__name {
+  opacity: 0.6;
+}
+
+input:checked + .continent-filter__name,
+input:active + .continent-filter__name {
   opacity: 1;
 }
 
