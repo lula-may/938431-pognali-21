@@ -5,25 +5,9 @@
   align-items: stretch;
 }
 
-.transport--form {
-  justify-content: center;
-
+.transport--catalog {
   .transport__item {
     margin-right: 1px;
-  }
-}
-
-.transport--catalog {
-  justify-content: flex-start;
-
-  .transport__item {
-    margin-right: 2px;
-  }
-}
-
-.transport--companion {
-  .transport__item {
-    background-color: $bg-main-light;
   }
 }
 
@@ -31,9 +15,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
 
   color: $bg-icon;
 
@@ -43,7 +26,7 @@
 
 .transport__item svg {
   width: 17px;
-  height: 17px;
+  height: auto;
 
   color: inherit;
 }
@@ -76,16 +59,22 @@ input:checked:active + .transport__item {
 }
 
 @media (min-width: $tablet-width) {
-  .transport--companion {
-    flex-direction: column;
+  // .transport--companion {
+  //   flex-direction: column;
 
+  //   .transport__item {
+  //     width: 26px;
+  //     height: 22px;
+  //     margin-bottom: 10px;
+
+  //     background-color: tomato;
+  //     border-radius: 0;
+  //   }
+  // }
+
+  .transport--catalog {
     .transport__item {
-      width: 26px;
-      height: 22px;
-      margin-bottom: 10px;
-
-      background-color: tomato;
-      border-radius: 0;
+      margin-right: 2px;
     }
   }
 
@@ -96,16 +85,15 @@ input:checked:active + .transport__item {
 
     svg {
       width: 23px;
-      height: auto;
     }
+  }
+
+  .transport__item--wider svg {
+    width: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .transport {
-    padding-left: 3px;
-  }
-
   .transport--companion {
     flex-direction: row;
 

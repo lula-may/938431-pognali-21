@@ -948,7 +948,7 @@
                     </li>
                     <li class="field-group__item">
                       <input class="field-group__checkbox" type="checkbox" id="meals-3" name="meals" value="vegan">
-                      <label class="field-group__label" for="meals-3">Веган сыроед</label>
+                      <label class="field-group__label" for="meals-3">Веган-сыроед</label>
                     </li>
                   </ul>
                 </li>
@@ -960,44 +960,46 @@
                       <use xlink:href="img/sprite.svg#triangle"></use>
                     </svg>
                   </button>
-                  <ul class="field-group__transport transport transport--catalog">
-                    <li>
-                      <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
-                      <label class="transport__item transport__item--plane tooltip" for="plane">
-                        <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
-                          <use xlink:href="img/sprite.svg#plane"></use>
-                        </svg>
-                        <span class="tooltip__label">Авиаперелет</span>
-                      </label>
-                    </li>
-                    <li>
-                      <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
-                      <label class="transport__item transport__item--car tooltip" for="car">
-                        <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
-                          <use xlink:href="img/sprite.svg#bus"></use>
-                        </svg>
-                        <span class="tooltip__label">Автотранспорт</span>
-                      </label>
-                    </li>
-                    <li>
-                      <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
-                      <label class="transport__item transport__item--bicycle tooltip" for="bike">
-                        <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
-                          <use xlink:href="img/sprite.svg#bicycle"></use>
-                        </svg>
-                        <span class="tooltip__label">Велосипед</span>
-                      </label>
-                    </li>
-                    <li>
-                      <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
-                      <label class="transport__item transport__item--walk tooltip" for="walk">
-                        <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
-                          <use xlink:href="img/sprite.svg#run"></use>
-                        </svg>
-                        <span class="tooltip__label">Пешком</span>
-                      </label>
-                    </li>
-                  </ul>
+                  <div class="field-group__transport">
+                    <ul class="transport transport--catalog">
+                      <li>
+                        <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
+                        <label class="transport__item transport__item--wider tooltip" for="plane">
+                          <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
+                            <use xlink:href="img/sprite.svg#plane"></use>
+                          </svg>
+                          <span class="tooltip__label">Авиаперелет</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
+                        <label class="transport__item transport__item--wider tooltip" for="car">
+                          <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                            <use xlink:href="img/sprite.svg#bus"></use>
+                          </svg>
+                          <span class="tooltip__label">Автотранспорт</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
+                        <label class="transport__item transport__item--bicycle tooltip" for="bike">
+                          <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                            <use xlink:href="img/sprite.svg#bicycle"></use>
+                          </svg>
+                          <span class="tooltip__label">Велосипед</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
+                        <label class="transport__item transport__item--walk tooltip" for="walk">
+                          <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                            <use xlink:href="img/sprite.svg#run"></use>
+                          </svg>
+                          <span class="tooltip__label">Пешком</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
 
                 <li class="companion-form__item field-group">
@@ -1042,7 +1044,8 @@
 
               <article class="companion-card">
                 <a class="companion-card__link" href="#">
-                  <h3 class="companion-card__name">Таня Фирсова</h3>
+                  <h3 class="companion-card__name"><span>Таня</span> <span>Фирсова</span></h3>
+                  <div class="companion-card__indicator indicator indicator--no"></div>
                 </a>
 
                 <p class="companion-card__likes likes">
@@ -1052,8 +1055,15 @@
                   <span class="likes__count">1,5 M</span>
                 </p>
 
-                <a class="companion-card__image" href="#">
-                  <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+                <a class="companion-card__image-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop.webp 1x, img/firsova-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-catalog-tablet.webp 1x, img/firsova-catalog-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/firsova-catalog-mobile.webp 1x, img/firsova-catalog-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440x)" srcset="img/firsova-desktop.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/firsova-catalog-tablet.jpg 1x, img/firsova-catalog-tablet@2x.jpg 2x">
+                    <img class="companion-card__image" src="img/firsova-catalog-mobile.jpg" srcset="img/firsova-catalog-mobile@2x.jpg 2x" width="70" height="70" alt="Фото попутчика">
+                  </picture>
                 </a>
 
                 <p class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -1062,15 +1072,30 @@
                   <h4 class="companion-card__subheading">Хочет посетить:</h4>
                   <ul class="companion-card__countries-to-visit countries-to-visit">
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/sri-lanka-flag-tablet.webp 1x, img/sri-lanka-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/sri-lanka-flag-mobile.webp 1x, img/sri-lanka-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/sri-lanka-flag-tablet.png 1x, img/sri-lanka-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/sri-lanka-flag-mobile.png" srcset="img/sri-lanka-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Шри-Ланки">
+                      </picture>
                       <span class="countries-to-visit__name">Шри-Ланка</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Тайланда">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-flag-tablet.webp 1x, img/thailand-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/thailand-flag-mobile.webp 1x, img/thailand-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/thailand-flag-tablet.png 1x, img/thailand-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/thailand-flag-mobile.png" srcset="img/thailand-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Тайланда">
+                      </picture>
                       <span class="countries-to-visit__name">Тайланд</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшеловых островов">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/seychelles-flag.webp 1x, img/seychelles-flag@2x.webp 2x">
+                        <source type="image/webp" srcset="img/seychelles-flag-mobile.webp 1x, img/seychelles-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/seychelles-flagt.png 1x, img/seychelles-flag@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/seychelles-flag-mobile.png" srcset="img/seychelles-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Сейшеловых островов">
+                      </picture>
                       <span class="countries-to-visit__name">Сейшелы</span>
                     </li>
                   </ul>
@@ -1078,31 +1103,46 @@
 
                 <div class="companion-card__transport">
                   <h4 class="companion-card__subheading">Транспорт:</h4>
-                  <ul class="companion-card__transport-list transport transport--companion">
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Самолет</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Автомобиль</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Пешком</span>
+                  <ul class="companion-card__transport-list transport-list">
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="21" height="23" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="companion-card__level-block">
-                  <h4 class="companion-card__subheading">Левел:</h4>
-                  <div class="companion-card__level level">
+                  <h4 class="companion-card__subheading companion-card__subheading--level">Левел:</h4>
+                  <div class="companion-card__level level level--companion">
                     <b class="level__count">99</b>
                     <span class="level__text">level</span>
+                    <svg class="level__ring level__ring--99" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
                   </div>
                 </div>
 
-                <a class="companion-card__open-modal button button--catalog" href="#">Позвать!</a>
+                <a class="companion-card__button button button--catalog" href="#">Позвать!</a>
               </article>
             </li>
 
@@ -1110,7 +1150,8 @@
 
               <article class="companion-card">
                 <a class="companion-card__link" href="#">
-                  <h3 class="companion-card__name">Петя Демин</h3>
+                  <h3 class="companion-card__name"><span>Петя</span> <span>Демин</span></h3>
+                  <div class="companion-card__indicator indicator indicator--no"></div>
                 </a>
                 <p class="companion-card__likes likes">
                   <button class="likes__toggle" type="button" aria-pressed="false">
@@ -1119,8 +1160,15 @@
                   <span class="likes__count">1500</span>
                 </p>
 
-                <a class="companion-card__image" href="#">
-                  <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+                <a class="companion-card__image-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop.webp 1x, img/demin-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-catalog-tablet.webp 1x, img/demin-catalog-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/demin-catalog-mobile.webp 1x, img/demin-catalog-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440x)" srcset="img/demin-desktop.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/demin-catalog-tablet.jpg 1x, img/demin-catalog-tablet@2x.jpg 2x">
+                    <img class="companion-card__image" src="img/demin-catalog-mobile.jpg" srcset="img/demin-catalog-mobile@2x.jpg 2x" width="70" height="70" alt="Фото попутчика">
+                  </picture>
                 </a>
 
                 <p class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
@@ -1129,11 +1177,21 @@
                   <h4 class="companion-card__subheading">Хочет посетить:</h4>
                   <ul class="companion-card__countries-to-visit countries-to-visit">
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/belgium-flag.webp 1x, img/belgium-flag@2x.webp 2x">
+                        <source type="image/webp" srcset="img/belgium-flag-mobile.webp 1x, img/belgium-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/belgium-flag.png 1x, img/belgium-flag@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/belgium-flag-mobile.png" srcset="img/belgium-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Бельгии">
+                      </picture>
                       <span class="countries-to-visit__name">Бельгия</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/czech-flag-mobile.webp 1x, img/czech-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/czech-flag-mobile.png" srcset="img/czech-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Чехии">
+                      </picture>
                       <span class="countries-to-visit__name">Чехия</span>
                     </li>
                   </ul>
@@ -1141,31 +1199,46 @@
 
                 <div class="companion-card__transport">
                   <h4 class="companion-card__subheading">Транспорт:</h4>
-                  <ul class="companion-card__transport-list transport transport--companion">
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Самолет</span>
-                    </li>
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Автомобиль</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Пешком</span>
+                  <ul class="companion-card__transport-list transport-list">
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="21" height="23" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                      </li>
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                      </li>
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="companion-card__level-block">
-                  <h4 class="companion-card__subheading">Левел:</h4>
-                  <div class="companion-card__level level">
+                  <h4 class="companion-card__subheading companion-card__subheading--level">Левел:</h4>
+                  <div class="companion-card__level level level--companion">
                     <b class="level__count">80</b>
                     <span class="level__text">level</span>
+                    <svg class="level__ring level__ring--80" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
                   </div>
                 </div>
 
-                <a class="companion-card__open-modal button button--catalog" href="#">Позвать!</a>
+                <a class="companion-card__button button button--catalog" href="#">Позвать!</a>
                 </article>
             </li>
 
@@ -1173,7 +1246,8 @@
 
               <article class="companion-card">
                 <a class="companion-card__link" href="#">
-                  <h3 class="companion-card__name">Марк Смолов</h3>
+                  <h3 class="companion-card__name"><span>Марк</span> <span>Смолов</span></h3>
+                  <div class="companion-card__indicator indicator indicator--no"></div>
                 </a>
                 <p class="companion-card__likes likes">
                   <button class="likes__toggle" type="button" aria-pressed="false">
@@ -1182,8 +1256,15 @@
                   <span class="likes__count">170</span>
                 </p>
 
-                <a class="companion-card__image" href="#">
-                  <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+                <a class="companion-card__image-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop.webp 1x, img/smolov-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-catalog-tablet.webp 1x, img/smolov-catalog-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/smolov-catalog-mobile.webp 1x, img/smolov-catalog-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440x)" srcset="img/smolov-desktop.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/smolov-catalog-tablet.jpg 1x, img/smolov-catalog-tablet@2x.jpg 2x">
+                    <img class="companion-card__image" src="img/smolov-catalog-mobile.jpg" srcset="img/smolov-catalog-mobile@2x.jpg 2x" width="70" height="70" alt="Фото попутчика">
+                  </picture>
                 </a>
 
                 <p class="companion-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -1192,47 +1273,77 @@
                   <h4 class="companion-card__subheading">Хочет посетить:</h4>
                   <ul class="companion-card__countries-to-visit countries-to-visit">
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/usa-flag-tablet.webp 1x, img/usa-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/usa-flag-mobile.webp 1x, img/usa-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/usa-flag-tablet.png 1x, img/usa-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/usa-flag-mobile.png" srcset="img/usa-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг США">
+                      </picture>
                       <span class="countries-to-visit__name">США</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралия">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/australia-flag-tablet.webp 1x, img/australia-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/australia-flag-mobile.webp 1x, img/australia-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/australia-flag-tablet.png 1x, img/australia-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/australia-flag-mobile.png" srcset="img/australia-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Австралия">
+                      </picture>
                       <span class="countries-to-visit__name">Австралия</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканской республики">
-                      <span class="countries-to-visit__name">Доминикана</span>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/dominica-flag-tablet.webp 1x, img/dominica-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/dominica-flag-mobile.webp 1x, img/dominica-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/dominica-flag-tablet.png 1x, img/dominica-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/dominica-flag-mobile.png" srcset="img/dominica-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Доминиканской республики">
+                      </picture>
+                      <span class="countries-to-visit__name">Доминика</span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="companion-card__transport">
                   <h4 class="companion-card__subheading">Транспорт:</h4>
-                  <ul class="companion-card__transport-list transport transport--companion">
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Самолет</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Автомобиль</span>
-                    </li>
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Пешком</span>
+                  <ul class="companion-card__transport-list transport-list">
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="21" height="23" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                      </li>
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="companion-card__level-block">
-                  <h4 class="companion-card__subheading">Левел:</h4>
-                  <div class="companion-card__level level">
+                  <h4 class="companion-card__subheading  companion-card__subheading--level">Левел:</h4>
+                  <div class="companion-card__level level level--companion">
                     <b class="level__count">25</b>
                     <span class="level__text">level</span>
+                    <svg class="level__ring level__ring--25" width="45" height="45" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
                   </div>
                 </div>
 
-                <a class="companion-card__open-modal button button--catalog" href="#">Позвать!</a>
+                <a class="companion-card__button button button--catalog" href="#">Позвать!</a>
               </article>
             </li>
 
@@ -1240,7 +1351,8 @@
 
               <article class="companion-card">
                 <a class="companion-card__link" href="#">
-                  <h3 class="companion-card__name">Лариса Роговая</h3>
+                  <h3 class="companion-card__name"><span>Лариса</span> <span>Роговая</span></h3>
+                  <div class="companion-card__indicator indicator indicator--yes"></div>
                 </a>
 
                 <p class="companion-card__likes likes">
@@ -1250,8 +1362,15 @@
                   <span class="likes__count">23</span>
                 </p>
 
-                <a class="companion-card__image" href="#">
-                  <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото попутчика">
+                <a class="companion-card__image-link" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-catalog-tablet.webp 1x, img/rogovaya-catalog-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/rogovaya-catalog-mobile.webp 1x, img/rogovaya-catalog-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440x)" srcset="img/rogovaya-desktop.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/rogovaya-catalog-tablet.jpg 1x, img/rogovaya-catalog-tablet@2x.jpg 2x">
+                    <img class="companion-card__image" src="img/rogovaya-catalog-mobile.jpg" srcset="img/rogovaya-catalog-mobile@2x.jpg 2x" width="70" height="70" alt="Фото попутчика">
+                  </picture>
                 </a>
 
                 <p class="companion-card__hashtags">#образование #карьера #учеба #линкедин</p>
@@ -1260,11 +1379,21 @@
                   <h4 class="companion-card__subheading">Хочет посетить:</h4>
                   <ul class="companion-card__countries-to-visit countries-to-visit">
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/uk-flag-tablet.webp 1x, img/uk-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/uk-flag-mobile.webp 1x, img/uk-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/uk-flag-tablet.png 1x, img/uk-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/uk-flag-mobile.png" srcset="img/uk-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Великобритании">
+                      </picture>
                       <span class="countries-to-visit__name">Великобритания</span>
                     </li>
                     <li class="countries-to-visit__item">
-                      <img class="countries-to-visit__image" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/germany-flag-tablet.webp 1x, img/germany-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/germany-flag-mobile.webp 1x, img/germany-flag-mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/germany-flag-tablet.png 1x, img/germany-flag-tablet@2x.png 2x">
+                        <img class="countries-to-visit__image" src="img/germany-flag-mobile.png" srcset="img/germany-flag-mobile@2x.png 2x" width="26" height="18" alt="Флаг Германии">
+                      </picture>
                       <span class="countries-to-visit__name">Германия</span>
                     </li>
                   </ul>
@@ -1272,31 +1401,46 @@
 
                 <div class="companion-card__transport">
                   <h4 class="companion-card__subheading">Транспорт:</h4>
-                  <ul class="companion-card__transport-list transport transport--companion">
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Самолет</span>
-                    </li>
-                    <li class="transport__item transport__item--active">
-                      <span class="visually-hidden">Автомобиль</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Велосипед</span>
-                    </li>
-                    <li class="transport__item">
-                      <span class="visually-hidden">Пешком</span>
+                  <ul class="companion-card__transport-list transport-list">
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="21" height="23" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                      </li>
+                    <li class="transport-list__item transport-list__item--active tooltip">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                      </li>
+                    <li class="transport-list__item tooltip">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
                     </li>
                   </ul>
                 </div>
 
                 <div class="companion-card__level-block">
-                  <h4 class="companion-card__subheading">Левел:</h4>
-                  <div class="companion-card__level level">
+                  <h4 class="companion-card__subheading companion-card__subheading--level">Левел:</h4>
+                  <div class="companion-card__level level level--companion">
                     <b class="level__count">50</b>
                     <span class="level__text">level</span>
+                    <svg class="level__ring level__ring--50" width="45" height="45" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    </svg>
                   </div>
                 </div>
 
-                <a class="companion-card__open-modal button button--catalog" href="#">Позвать!</a>
+                <a class="companion-card__button button button--catalog" href="#">Позвать!</a>
               </article>
             </li>
           </ul>

@@ -160,44 +160,46 @@
 
             <div class="user-profile__form-field user-profile__form-field--transport">
               <h3 class="user-profile__label user-profile__label--transport">Транспорт</h3>
-              <ul class="user-profile__transport transport transport--form">
-                <li>
-                  <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
-                  <label class="transport__item transport__item--plane tooltip" for="plane">
-                    <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
-                      <use xlink:href="img/sprite.svg#plane"></use>
-                    </svg>
-                    <span class="tooltip__label">Авиаперелет</span>
-                  </label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
-                  <label class="transport__item transport__item--car tooltip" for="car">
-                    <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
-                      <use xlink:href="img/sprite.svg#bus"></use>
-                    </svg>
-                    <span class="tooltip__label">Автотранспорт</span>
-                  </label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
-                  <label class="transport__item transport__item--bicycle tooltip" for="bike">
-                    <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
-                      <use xlink:href="img/sprite.svg#bicycle"></use>
-                    </svg>
-                    <span class="tooltip__label">Велосипед</span>
-                  </label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
-                  <label class="transport__item transport__item--walk tooltip" for="walk">
-                    <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
-                      <use xlink:href="img/sprite.svg#run"></use>
-                    </svg>
-                    <span class="tooltip__label">Пешком</span>
-                  </label>
-                </li>
-              </ul>
+              <div class="user-profile__transport">
+                <ul class="transport">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
+                    <label class="transport__item transport__item--wider tooltip" for="plane">
+                      <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
+                    <label class="transport__item transport__item--wider tooltip" for="car">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
+                    <label class="transport__item tooltip" for="bike">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
+                    <label class="transport__item tooltip" for="walk">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

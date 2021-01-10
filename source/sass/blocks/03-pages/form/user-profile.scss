@@ -131,6 +131,11 @@
   background-color: transparent;
 }
 
+.user-profile__transport {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: $tablet-width) {
   .user-profile {
     padding: 126px 0 88px;
@@ -289,5 +294,9 @@
 
   .user-profile__hashtags {
     padding-bottom: 15px;
+  }
+
+  .user-profile__transport {
+    padding-left: 3px;
   }
 }

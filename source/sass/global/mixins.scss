@@ -11,8 +11,8 @@
 
 @mixin button-reset {
   display: block;
+  padding: 0;
 
-  @include offset-reset();
   font-family: inherit;
   border: none;
 }

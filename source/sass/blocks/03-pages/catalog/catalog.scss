@@ -1,5 +1,4 @@
 .catalog__container {
-  @include outline();
   @include container();
   display: flex;
   flex-direction: column;
@@ -7,13 +6,12 @@
 }
 
 .catalog__list {
-  @include outline(teal);
   @include list-reset();
   margin-bottom: 10px;
 }
 
 .catalog__item {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .catalog__show-more {
@@ -82,6 +80,10 @@
   .catalog__list {
     grid-column: 1;
     grid-row: 1;
+  }
+
+  .catalog__item {
+    margin-bottom: 31px;
   }
 
   .catalog__show-more {
