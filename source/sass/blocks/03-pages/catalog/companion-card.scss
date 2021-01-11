@@ -138,7 +138,7 @@
 
   &::after {
     left: calc(100% + 10px);
-    right: -800px;
+    right: -1100px;
   }
 }
 
@@ -322,6 +322,7 @@
     align-items: center;
 
     margin-left: 0;
+    margin-top: 0;
 
     border-radius: 20px 0 0 20px;
 
