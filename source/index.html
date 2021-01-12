@@ -490,14 +490,14 @@
           <p class="feedback__text feedback__text--login">Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
 
-          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-            <label class="visually-hidden" for="feedback-email">Ваш email</label>
-            <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="E-mail" required>
+          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru" novalidate>
+            <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="Введите e-mail" required>
+            <label class="feedback__label" for="feedback-email">E-mail</label>
             <button class="feedback__submit button button--index" type="submit">Регистрация</button>
           </form>
 
           <p class="feedback__text feedback__text--question">
-            Остались вопросы? <br/>
+            Остались вопросы?&ensp;<br/>
             Мы с радостью на них ответим!
           </p>
 
@@ -596,5 +596,7 @@
     </footer>
     <script src="js/main-nav.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/feedback.js"></script>
   </body>
 </html>
