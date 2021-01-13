@@ -51,13 +51,13 @@
     border-radius: 0 4px 4px 0;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     z-index: 1;
     border-color: $border-clr-hover;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     z-index: 1;
     border-color: $text-clr-dark;
   }
