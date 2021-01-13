@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding-bottom: 22px;
+  padding-bottom: 15px;
 
   color: $text-clr-basic;
   text-decoration: none;
@@ -116,6 +116,7 @@
   width: 25px;
   height: auto;
   margin-right: 7px;
+  margin-bottom: 7px;
 
   svg {
     max-height: 23px;
@@ -132,7 +133,7 @@
 @media (min-width: $tablet-width) {
   .user-card {
     height: 100%;
-    padding-bottom: 27px;
+    padding-bottom: 19px;
 
     border-radius: 20px;
   }
@@ -189,6 +190,6 @@
 
 @media (min-width: $desktop-width) {
   .user-card {
-    padding-bottom: 26px;
+    padding-bottom: 18px;
   }
 }
