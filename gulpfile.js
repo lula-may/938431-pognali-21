@@ -56,17 +56,25 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-      // csso()
-    ]))
-    // .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
 
 exports.styles = styles;
+
+const minCss = () => {
+  return gulp.src("build/css/style.css")
+  .pipe(postcss([
+    autoprefixer(),
+    csso()
+  ]))
+  .pipe(rename("style.min.css"))
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/css"))
+};
+
+exports.minCss = minCss;
 
 // JS
 
@@ -155,7 +163,10 @@ const build = gulp.series(
     images,
     createWebp
   ),
-  sprite
+  gulp.parallel(
+    sprite,
+    minCss
+  )
 );
 
 exports.build = build;
