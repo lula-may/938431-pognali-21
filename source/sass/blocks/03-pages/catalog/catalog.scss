@@ -1,3 +1,9 @@
+.catalog {
+  padding-top: 41px;
+
+  background-color: $bg-main-light;
+}
+
 .catalog__container {
   @include container();
   display: flex;
@@ -59,6 +65,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
+    padding-top: 98px;
     margin-bottom: 46px;
   }
 
@@ -94,6 +101,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
+    padding-top: 0;
     margin-bottom: 137px;
   }
 
