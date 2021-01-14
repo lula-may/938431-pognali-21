@@ -8,57 +8,123 @@
   </head>
   <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
     Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
-  <body class="page__body page__body--no-js">
+  <body class="page__body">
     <header class="main-header">
       <!-- Для отображения раскрытого меню используется класс "main-nav--open"
         при отсутствии этого класса меню свернуто -->
-      <nav class="main-header__main-nav main-nav">
+      <nav class="main-header__main-nav main-nav main-nav--close">
         <div class="main-nav__header">
           <a class="main-nav__logo logo" href="index.html">
-            <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white.webp 1x, img/logo-mobile-white@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__image logo__image--close" src="img/logo-mobile-white.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+              <img class="logo__image logo__image--open" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Удалить</span>
+            <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
 
         <div class="main-nav__content">
-          <ul class="main-nav__site-list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html#about">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--current">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-
-          <div class="main-nav__user-list user-list">
-            <a class="user-list__login button" href="#">Авторизация</a>
+          <div class="main-nav__site-list">
+            <ul class="site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html#about">
+                  <span data-hover="О сервисе">О сервисе</span>
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current">
+                  <span data-hover="Направления">Направления</span>
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">
+                  <span data-hover="Попутчики">Попутчики</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <ul class="main-nav__contacts-list contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__link contacts-list__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__link contacts-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
+          <div class="main-nav__user-list user-list">
+            <a class="user-list__login button button--login" href="#">Авторизация</a>
+          </div>
+          <div class="main-nav__contacts-list">
+            <ul class="contacts-list contacts-list--header">
+              <li class="contacts-list__item">
+                <a class="contacts-list__link" href="tel:+78005558628" aria-label="телефон: 8 800 555-86-28">
+                  <div class="contacts-list__button contacts-list__button--phone">
+                    <svg class="contacts-list__icon" width="16" height="18">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-list__wrapper">
+                    <div class="contacts-list__icon-container">
+                      <svg class="contacts-list__icon" width="17" height="15">
+                        <use xlink:href="img/sprite.svg#telephone"></use>
+                      </svg>
+                    </div>
+                    <span class="contacts-list__label">8 800 555-86-28</span>
+                  </div>
+                </a>
+              </li>
+              <li class="contacts-list__item">
+                <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта: mail@htmlacademy.ru">
+                  <div class="contacts-list__button contacts-list__button--email">
+                    <svg class="contacts-list__icon" width="16" height="12">
+                      <use xlink:href="img/sprite.svg#small-envelope"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-list__wrapper">
+                    <div class="contacts-list__icon-container">
+                      <svg class="contacts-list__icon" width="19" height="13">
+                        <use xlink:href="img/sprite.svg#mail-envelope"></use>
+                      </svg>
+                    </div>
+                    <span class="contacts-list__label contacts-list__label--email">mail@htmlacademy.ru</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <ul class="main-nav__social-list social-list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
-            </li>
-          </ul>
+          <div class="main-nav__social-list">
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--header" href="#" aria-label="Мы в фейсбук">
+                  <svg class="social-list__icon social-list__icon--fb" width="11" height="21">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--header" href="#" aria-label="Мы в ВКонтакте">
+                  <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--header" href="#" aria-label="Мы в Инстаграм">
+                  <svg class="social-list__icon social-list__icon--insta" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -70,7 +136,7 @@
         </div>
       </section>
 
-      <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
+      <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" novalidate>
         <section class="direction-form__user-profile user-profile">
           <div class="user-profile__container">
             <h2 class="visually-hidden">Обо мне</h2>
@@ -78,59 +144,77 @@
               <b class="level__count">80</b>
               <span class="level__text">level</span>
             </div>
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"  srcset="img/demin-form-desktop.webp 1x, img/demin-form-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/demin-form-mobile.webp 1x, img/demin-form-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/demin-form-desktop.jpg 1x, img/demin-form-desktop@2x.jpg 2x">
+              <img class="user-profile__image" src="img/demin-form-mobile.jpg" srcset="img/demin-form-mobile@2x.jpg 2x" width="100" height="100" alt="Ваше фото">
+            </picture>
 
-            <img class="user-profile__image" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Ваше фото">
-
-            <button class="user-profile__change-photo" type="button">Сменить фото</button>
+            <button class="user-profile__change-photo" type="button"><span>Сменить </span>фото</button>
 
             <p class="user-profile__form-field user-profile__form-field--hashtags">
-              <label class="user-profile__label" for="hashtags-field">Тэги</label>
+              <label class="user-profile__label user-profile__label--hashtags" for="hashtags-field">Тэги</label>
               <textarea class="user-profile__hashtags" id="hashtags-field" name="user-hashtags">#бургер #бар #футбол #концерт #крафт</textarea>
             </p>
 
             <div class="user-profile__form-field user-profile__form-field--transport">
-              <h3 class="user-profile__label">Транспорт</h3>
-              <ul class="user-profile__transport transport">
-                <li>
-                  <label class="transport__item transport__item--plane" for="plane">
-                    <span class="visually-hidden">Самолет</span>
-                  </label>
-                  <input type="checkbox" id="plane" name="transport" value="plane" checked>
-                </li>
-                <li>
-                  <label class="transport__item transport__item--car" for="car">
-                    <span class="visually-hidden">Автомобиль</span>
-                  </label>
-                  <input type="checkbox" id="car" name="transport" value="car" checked>
-                </li>
-                <li>
-                  <label class="transport__item transport__item--bike" for="bike">
-                    <span class="visually-hidden">Велосипед</span>
-                  </label>
-                  <input type="checkbox" id="bike" name="transport" value="bike">
-                </li>
-                <li>
-                  <label class="transport__item transport__item--walk" for="walk">
-                    <span class="visually-hidden">Пешком</span>
-                  </label>
-                  <input type="checkbox" id="walk" name="transport" value="walk" checked>
-                </li>
-              </ul>
+              <h3 class="user-profile__label user-profile__label--transport">Транспорт</h3>
+              <div class="user-profile__transport">
+                <ul class="transport">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
+                    <label class="transport__item transport__item--wider tooltip" for="plane">
+                      <svg role="img" width="17" height="17px" aria-label="Авиаперелет" focusable="false">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="tooltip__label">Авиаперелет</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="car" name="transport" value="car" checked>
+                    <label class="transport__item transport__item--wider tooltip" for="car">
+                      <svg role="img" width="18" height="21" aria-label="Автотранспорт" focusable="false">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="tooltip__label">Автотранспорт</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
+                    <label class="transport__item tooltip" for="bike">
+                      <svg role="img" width="25" height="24" aria-label="Велосипед" focusable="false">
+                        <use xlink:href="img/sprite.svg#bicycle"></use>
+                      </svg>
+                      <span class="tooltip__label">Велосипед</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" id="walk" name="transport" value="walk" checked>
+                    <label class="transport__item tooltip" for="walk">
+                      <svg role="img" width="21" height="24" aria-label="Пешком" focusable="false">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="tooltip__label">Пешком</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="trip-plans">
           <div class="trip-plans__container">
-            <h2 class="trip-plans__heading">Мои планы</h2>
+            <h2 class="trip-plans__heading">Мои планы:</h2>
 
             <ul class="trip-plans__list">
               <li class="trip-plans__item">
                 <h3 class="trip-plans__name">Франция, Италия</h3>
                 <div class="trip-plans__item-content">
-                  <p class="trip-plans__info"><span class="trip-plans__companions">3</span> попутчика</p>
-                  <p class="trip-plans__info">
-                    2<time class="trip-plans__date trip-plans__date--first" datetime="2019-03-26"> мар </time>-
+                  <p class="trip-plans__info trip-plans__info--companions"><span class="trip-plans__companions">3</span> попутчика</p>
+                  <p class="trip-plans__info trip-plans__info--dates">
+                    <time class="trip-plans__date trip-plans__date--first" datetime="2019-03-26"> 26 мар </time>
                     <time class="trip-plans__date trip-plans__date--last" datetime="2019-03-29"> 29 мар</time>
                   </p>
                   <a class="trip-plans__change" href="#">Изменить</a>
@@ -140,9 +224,9 @@
               <li class="trip-plans__item">
                 <h3 class="trip-plans__name">Таиланд, Индонезия</h3>
                 <div class="trip-plans__item-content">
-                  <p class="trip-plans__info"><span class="trip-plans__companions">1</span> попутчик</p>
-                  <p class="trip-plans__info">
-                    <time class="trip-plans__date trip-plans__date--first" datetime="2019-07-01">1 июл </time>-
+                  <p class="trip-plans__info trip-plans__info--companions"><span class="trip-plans__companions">1</span> попутчик</p>
+                  <p class="trip-plans__info trip-plans__info--dates">
+                    <time class="trip-plans__date trip-plans__date--first" datetime="2019-07-01">1 июл </time>
                     <time class="trip-plans__date trip-plans__date--last" datetime="2019-07-15"> 15 июл</time>
                   </p>
                   <a class="trip-plans__change" href="#">Изменить</a>
@@ -154,23 +238,42 @@
 
         <section class="add-trip">
           <div class="add-trip__container">
-            <h2 class="add-trip__heading">Добавить план</h2>
+            <header class="add-trip__header">
+              <h2 class="add-trip__title">Добавить план:</h2>
+              <div class="add-trip__step-marks">
+                <ul class="step-marks">
+                  <li class="step-marks__item step-marks__item--active" id="mark-1">Даты</li>
+                  <li class="step-marks__item" id="mark-2">Маршрут</li>
+                  <li class="step-marks__item" id="mark-3">Развлечения</li>
+                </ul>
+              </div>
+            </header>
 
             <section class="step" id="step-1">
-              <h3 class="step__heading">
-                <span>Шаг 1.</span>
-                <span>Даты пребывания</span>
-              </h3>
-              <p class="step__desc">
-                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку
-                и ее предполагаемую длительность.
-              </p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 1.</span>
+                  <span>Даты пребывания</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item step-marks__item--active" id="mark-1-1">Даты</li>
+                    <li class="step-marks__item" id="mark-1-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-1-3">Развлечения</li>
+                  </ul>
+                </div>
+
+                <p class="step__desc">
+                  Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку,
+                  и ее предполагаемую длительность.
+                </p>
+              </header>
 
               <div class="step__content dates-select">
                 <div class="dates-select__companions number-field">
                   <label class="number-field__label" for="companions-count">Ищу попутчиков:</label>
-                  <span class="number-field__units">чел.</span>
-                  <div class="number-field__wrapper">
+                  <span class="number-field__units number-field__units--people">чел.</span>
+                  <div class="number-field__wrapper" tabindex="0">
                     <input class="number-field__input" type="text" id="companions-count" name="companions-count" value="2" pattern="[0-9]*">
                     <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
                     <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
@@ -180,7 +283,7 @@
                 <div class="dates-select__duration number-field">
                   <label class="number-field__label" for="days-count">Длительность:</label>
                   <span class="number-field__units">дн.</span>
-                  <div class="number-field__wrapper">
+                  <div class="number-field__wrapper" tabindex="0">
                     <input class="number-field__input" type="text" id="days-count" name="days-count" value="3" pattern="[0-9]*" required>
                     <button class="number-field__control number-field__control--minus" type="button" aria-label="Уменьшить"></button>
                     <button class="number-field__control number-field__control--plus" type="button" aria-label="Увеличить"></button>
@@ -198,225 +301,228 @@
                     <button class="calendar__button calendar__button--back" type="button" aria-label="Назад"></button>
                     <button class="calendar__button calendar__button--forward" type="button" aria-label="Вперед"></button>
                   </header>
-                  <!--TODO: Это потом попробую переделать списком на гридах -->
-                  <table class="calendar__sheet">
-                    <tr class="calendar__row">
-                      <th class="calendar__day-of-week">п</th>
-                      <th class="calendar__day-of-week">в</th>
-                      <th class="calendar__day-of-week">с</th>
-                      <th class="calendar__day-of-week">ч</th>
-                      <th class="calendar__day-of-week">п</th>
-                      <th class="calendar__day-of-week calendar__day-of-week--weekend">с</th>
-                      <th class="calendar__day-of-week calendar__day-of-week--weekend">в</th>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+
+                  <ul class="calendar__sheet">
+                      <li class="calendar__day-of-week">П<span>н</span></li>
+                      <li class="calendar__day-of-week">В<span>т</span></li>
+                      <li class="calendar__day-of-week">С<span>р</span></li>
+                      <li class="calendar__day-of-week">Ч<span>т</span></li>
+                      <li class="calendar__day-of-week">П<span>т</span></li>
+                      <li class="calendar__day-of-week calendar__day-of-week--weekend">С<span>б</span></li>
+                      <li class="calendar__day-of-week calendar__day-of-week--weekend">В<span>с</span></li>
+
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-23" value="2019-02-23" disabled>
                         <label class="calendar__label" for="2019-02-23">23</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-24" value="2019-02-24" disabled>
                         <label class="calendar__label" for="2019-02-24">24</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-25" value="2019-02-25" disabled>
                         <label class="calendar__label" for="2019-02-25">25</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-26" value="2019-02-26" disabled>
                         <label class="calendar__label" for="2019-02-26">26</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-27" value="2019-02-27" disabled>
                         <label class="calendar__label" for="2019-02-27">27</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-02-28" value="2019-02-28" disabled>
                         <label class="calendar__label" for="2019-02-28">28</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-01" value="2019-03-01" disabled>
-                        <label class="calendar__label" for="2019-03-01">1</label>
-                      </td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+                        <label class="calendar__label" for="2019-03-01">1<span>&nbsp;мар</span></label>
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-02" value="2019-03-02" disabled>
                         <label class="calendar__label" for="2019-03-02">2</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-03" value="2019-03-03" disabled>
                         <label class="calendar__label" for="2019-03-03">3</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-04" value="2019-03-04" disabled>
                         <label class="calendar__label" for="2019-03-04">4</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-05" value="2019-03-05" disabled>
                         <label class="calendar__label" for="2019-03-05">5</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-06" value="2019-03-06" disabled>
                         <label class="calendar__label" for="2019-03-06">6</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-07" value="2019-03-07" disabled>
                         <label class="calendar__label" for="2019-03-07">7</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-08" value="2019-03-08" disabled>
                         <label class="calendar__label" for="2019-03-08">8</label>
-                      </td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-09" value="2019-03-09" disabled>
                         <label class="calendar__label" for="2019-03-09">9</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-10" value="2019-03-10" disabled>
                         <label class="calendar__label" for="2019-03-10">10</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-11" value="2019-03-11" disabled>
                         <label class="calendar__label" for="2019-03-11">11</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-12" value="2019-03-12" disabled>
                         <label class="calendar__label" for="2019-03-12">12</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-13" value="2019-03-13" disabled>
                         <label class="calendar__label" for="2019-03-13">13</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-14" value="2019-03-14" disabled>
                         <label class="calendar__label" for="2019-03-14">14</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-15" value="2019-03-15" disabled>
                         <label class="calendar__label" for="2019-03-15">15</label>
-                      </td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-16" value="2019-03-16" disabled>
                         <label class="calendar__label" for="2019-03-16">16</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-17" value="2019-03-17" disabled>
                         <label class="calendar__label" for="2019-03-17">17</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-18" value="2019-03-18" disabled>
                         <label class="calendar__label" for="2019-03-18">18</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-19" value="2019-03-19" disabled>
                         <label class="calendar__label" for="2019-03-19">19</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-20" value="2019-03-20" disabled>
                         <label class="calendar__label" for="2019-03-20">20</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-21" value="2019-03-21" disabled>
                         <label class="calendar__label" for="2019-03-21">21</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-22" value="2019-03-22" disabled>
                         <label class="calendar__label" for="2019-03-22">22</label>
-                      </td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-23" value="2019-03-23" disabled>
                         <label class="calendar__label" for="2019-03-23">23</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-24" value="2019-03-24" disabled>
                         <label class="calendar__label" for="2019-03-24">24</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-25" value="2019-03-25" disabled>
                         <label class="calendar__label" for="2019-03-25">25</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day calendar__day--first">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-26" value="2019-03-26" checked>
                         <label class="calendar__label" for="2019-03-26">26</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-27" value="2019-03-27" checked>
                         <label class="calendar__label" for="2019-03-27">27</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day calendar__day--last">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-28" value="2019-03-28" checked>
                         <label class="calendar__label" for="2019-03-28">28</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-29" value="2019-03-29">
                         <label class="calendar__label" for="2019-03-29">29</label>
-                      </td>
-                    </tr>
-                    <tr class="calendar__row">
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-30" value="2019-03-30">
                         <label class="calendar__label" for="2019-03-30">30</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-03-31" value="2019-03-31">
                         <label class="calendar__label" for="2019-03-31">31</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-04-01" value="2019-04-01">
-                        <label class="calendar__label" for="2019-04-01">1</label>
-                      </td>
-                      <td class="calendar__day">
+                        <label class="calendar__label" for="2019-04-01">1<span>&nbsp;апр</span></label>
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-04-02" value="2019-04-02">
                         <label class="calendar__label" for="2019-04-02">2</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-04-03" value="2019-04-03">
                         <label class="calendar__label" for="2019-04-03">3</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-04-04" value="2019-04-04">
                         <label class="calendar__label" for="2019-04-04">4</label>
-                      </td>
-                      <td class="calendar__day">
+                      </li>
+                      <li class="calendar__day">
                         <input class="visually-hidden" type="checkbox" name="dates" id="2019-04-05" value="2019-04-05">
                         <label class="calendar__label" for="2019-04-05">5</label>
-                      </td>
-                    </tr>
-                  </table>
+                      </li>
+                    </ul>
                 </div>
               </div>
 
               <footer class="step__footer">
-                <a class="step__next button" href="#step-2">Следующий шаг</a>
+                <a class="step__next button button--form" href="#step-2">Следующий шаг</a>
               </footer>
             </section>
 
             <section class="step" id="step-2">
-              <h3 class="step__heading">
-                <span>Шаг 2.</span>
-                <span>Маршрут</span>
-              </h3>
-              <p class="step__desc">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 2.</span>
+                  <span>Маршрут</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item" id="mark-2-1">Даты</li>
+                    <li class="step-marks__item step-marks__item--active" id="mark-2-2">Маршрут</li>
+                    <li class="step-marks__item" id="mark-2-3">Развлечения</li>
+                  </ul>
+                </div>
+
+                <p class="step__desc">Укажите страны, которые вы хотели бы посетить.&nbsp;<br/>Это может быть одна или сразу несколько.</p>
+              </header>
+
               <div class="step__content route">
                 <ul class="route__list">
                   <li class="route__item">
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-1">Страна: </label>
                       <div class="country-field__select">
-                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <input class="country-field__country" type="text" id="selected-country-1" name="selected-countries" value="Босния и Герцеговина" readonly>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
                       <div class="country-field__flag">
-                        <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                        <picture>
+                          <source type="image/webp" media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.webp 1x, img/bosnia-and-herz-flag-tablet@2x.webp 2x">
+                          <source type="image/webp" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
+                          <source media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.png 1x, img/bosnia-and-herz-flag-tablet@2x.png 2x">
+                          <img src="img/bosnia-and-herz-flag.png" srcset="img/bosnia-and-herz-flag@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                        </picture>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
                     </div>
@@ -425,32 +531,37 @@
                     <div class="country-field">
                       <label class="visually-hidden" for="selected-country-2">Страна: </label>
                       <div class="country-field__select">
-                        <input class="country-field__country country-field__country--selected" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <input class="country-field__country" type="text" id="selected-country-2" name="selected-countries" value="Чехия" readonly>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
                       <div class="country-field__flag">
-                        <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                        <picture>
+                          <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
+                          <source type="image/webp" srcset="img/czech-flag.webp 1x, img/czech-flag@2x.webp 2x">
+                          <source media="(min-width: 768px)" srcset="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                          <img src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" width="35" height="24" alt="флаг Чехии">
+                        </picture>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
                     </div>
                   </li>
                   <li class="route__item">
                     <!-- Для открытия выпадающего списка используется класс "country-field--open"  -->
-                    <div class="country-field country-field--open">
+                    <div class="country-field">
                       <label class="visually-hidden" for="selected-country-3">Страна: </label>
-                      <div class="country-field__select">
+                      <div class="country-field__select country-field__select--empty">
                         <input class="country-field__country" type="text" id="selected-country-3" name="selected-countries" placeholder="Выберите страну" readonly>
-                        <button class="country-field__select-toggle" type="button" aria-label="Выбрать страну"></button>
+                        <button class="country-field__toggle" type="button" aria-label="Выбрать страну"></button>
                       </div>
-                      <button class="country-field__delete">
+                      <button class="country-field__delete" type="button">
                         <span class="visually-hidden">Удалить</span>
                       </button>
-                      <div class="country-field__dropdown dropdown">
-                        <div class="dropdown__alphabetic-sort alphabetic-sort">
+                      <div class="country-field__dropdown">
+                        <div class="alphabetic-sort">
                           <div class="alphabetic-sort__wrapper">
-                            <ul class="alphabetic-sort__alphabet">
+                            <ul class="alphabetic-sort__alphabet alphabetic-sort__alphabet--form">
                               <li class="alphabetic-sort__letter">
                                 <button class="alphabetic-sort__button" type="button" id="letter-1" aria-pressed="true">а</button>
                               </li>
@@ -512,19 +623,19 @@
                                 <button class="alphabetic-sort__button" type="button" id="letter-20" aria-pressed="false">х</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ц</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-21" aria-pressed="false">ч</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ч</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-22" aria-pressed="false">ш</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">ш</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-23" aria-pressed="false">э</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">э</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-24" aria-pressed="false">ю</button>
                               </li>
                               <li class="alphabetic-sort__letter">
-                                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">ю</button>
+                                <button class="alphabetic-sort__button" type="button" id="letter-25" aria-pressed="false">я</button>
                               </li>
                             </ul>
                           </div>
@@ -583,52 +694,74 @@
                   </li>
                   <li class="route__item">
                     <div class="country-field">
-                      <div class="country-field__select">
-                        <button class="country-field__country country-field__country--add" type="button">
-                          Добавить страну
-                        </button>
-                        </div>
+                      <button class="country-field__add" type="button">
+                        Добавить страну
+                      </button>
                     </div>
                   </li>
                 </ul>
               </div>
 
               <footer class="step__footer">
-                <a class="step__next button" href="#step-3">Следующий шаг</a>
+                <a class="step__next button button--form" href="#step-3">Следующий шаг</a>
                 <a class="step__back" href="#step-1">На шаг назад</a>
               </footer>
 
             </section>
 
             <section class="step" id="step-3">
-              <h3 class="step__heading">
-                <span>Шаг 3.</span>
-                <span>Развлечения</span>
-              </h3>
-              <p class="step__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <header class="step__header">
+                <h3 class="step__title">
+                  <span>Шаг 3.</span>
+                  <span>Развлечения</span>
+                </h3>
+                <div class="step__marks">
+                  <ul class="step-marks">
+                    <li class="step-marks__item" id="mark-3-1">Даты</li>
+                    <li class="step-marks__item" id="mark-3-2">Маршрут</li>
+                    <li class="step-marks__item step-marks__item--active" id="mark-3-3">Развлечения</li>
+                  </ul>
+                </div>
+                <p class="step__desc">Наконец, расскажите о своих планах времяпровождения.&emsp;<br/>Можно писать в свободной форме и ставить тэги.</p>
+              </header>
 
               <div class="step__content activity">
                 <ul class="activity__list">
                   <li class="activity__item">
                     <header class="activity__header">
                       <h4 class="activity__country">Босния и Герцеговина</h4>
-                      <img class="activity__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.webp 1x, img/bosnia-and-herz-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/bosnia-and-herz-flag.webp 1x, img/bosnia-and-herz-flag@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/bosnia-and-herz-flag-tablet.png 1x, img/bosnia-and-herz-flag-tablet@2x.png 2x">
+                        <img class="activity__image" src="img/bosnia-and-herz-flag.png" srcset="img/bosnia-and-herz-flag@2x.png 2x" width="35" height="24" alt="флаг Боснии и Герцеговины">
+                      </picture>
                     </header>
-                    <textarea class="activity__text" name="activity-1" id="activity-1" cols="30" rows="10" placeholder="План действий" required></textarea>
+                    <div class="activity__text-wrapper">
+                      <textarea class="activity__text" name="activity-1" id="activity-1" cols="30" rows="10" placeholder="План действий" required></textarea>
+                      <p class="activity__error-message">Это поле должно быть заполнено</p>
+                    </div>
                   </li>
                   <li class="activity__item">
                     <header class="activity__header">
                       <h4 class="activity__country">Чехия</h4>
-                      <img class="activity__image" src="https://via.placeholder.com/35x24" width="35" height="24" alt="флаг Чехии">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-flag-tablet.webp 1x, img/czech-flag-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/czech-flag.webp 1x, img/czech-flag@2x.webp 2x">
+                        <source media="(min-width: 768px)" srcset="img/czech-flag-tablet.png 1x, img/czech-flag-tablet@2x.png 2x">
+                        <img class="activity__image" src="img/czech-flag.png" srcset="img/czech-flag@2x.png 2x" width="35" height="24" alt="флаг Чехии">
+                      </picture>
                     </header>
-                    <textarea class="activity__text" name="activity-2" id="activity-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                    </textarea>
+                    <div class="activity__text-wrapper">
+                      <textarea class="activity__text" name="activity-2" id="activity-2" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <p class="activity__error-message">Это поле должно быть заполнено</p>
+                    </div>
                   </li>
                 </ul>
               </div>
 
               <footer class="step__footer">
-                <button class="step__submit button" type="submit">Отправить</button>
+                <button class="step__submit button button--form" type="submit">Отправить</button>
                 <a class="step__back" href="#step-2">На шаг назад</a>
               </footer>
 
@@ -642,28 +775,55 @@
 
       <div class="main-footer__container">
         <a class="main-footer__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип Погнали">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.webp 1x, img/logo-desktop-dark@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-dark.webp 1x, img/logo-tablet-dark@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-dark.webp 1x, img/logo-mobile-dark@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.png 1x, img/logo-desktop-dark@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x, img/logo-tablet-dark@2x.png 2x">
+            <img class="logo__image" src="img/logo-mobile-dark.png" srcset="img/logo-mobile-dark@2x.png 2x" width="100" height="15" alt="Логотип Погнали">
+          </picture>
         </a>
 
-        <ul class="main-footer__list social-list social-list--footer">
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в фейсбук"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте"></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" aria-label="Мы в Инстаграм"></a>
-          </li>
-        </ul>
+        <div class="main-footer__social">
+          <ul class="social-list social-list--footer">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в фейсбук">
+                <svg class="social-list__icon social-list__icon--fb" width="14" height="28">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в ВКонтакте">
+                <svg class="social-list__icon social-list__icon--vk" width="31" height="16">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#" aria-label="Мы в Инстаграм">
+                <svg class="social-list__icon social-list__icon--insta" width="24" height="24">
+                  <use xlink:href="img/sprite.svg#insta"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <p class="main-footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTMLAcademy">
+        <p class="main-footer__copyright">
+          <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__text">Разработано</span>
+            <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="33" alt="Логотип HTMLAcademy">
           </a>
         </p>
-        </div>
+      </div>
+
     </footer>
+    <script src="js/main-nav.js"></script>
+    <script src="js/number-fields.js"></script>
+    <script src="js/country-field.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/activity.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Сервис для поиска попутчиков "Погнали"</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
@@ -301,9 +301,12 @@
                   <div class="user-card__indicator indicator indicator--no"></div>
                   <h3 class="user-card__name">Таня Фирсова</h3>
                 </a>
-                <div class="user-card__level level level--main level--99">
+                <div class="user-card__level level level--main">
                   <b class="level__count">99</b>
                   <span class="level__text">level</span>
+                  <svg class="level__ring level__ring--99" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  </svg>
                 </div>
 
                 <ul class="user-card__countries-list flags-list">
@@ -374,9 +377,12 @@
                   <div class="user-card__indicator indicator indicator--yes"></div>
                   <h3 class="user-card__name">Петя Демин</h3>
                 </a>
-                <div class="user-card__level level level--main level--80">
+                <div class="user-card__level level level--main">
                   <b class="level__count">80</b>
                   <span class="level__text">level</span>
+                  <svg class="level__ring level__ring--80" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="28" cx="50%" cy="50%" stroke="#FF8D30" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  </svg>
                 </div>
 
                 <ul class="user-card__countries-list flags-list">
@@ -490,15 +496,14 @@
           <p class="feedback__text feedback__text--login">Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
 
-          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-            <label class="visually-hidden" for="feedback-email">Ваш email</label>
-            <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="E-mail" required>
+          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru" novalidate>
+            <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="Введите e-mail" required>
+            <label class="feedback__label" for="feedback-email">E-mail</label>
             <button class="feedback__submit button button--index" type="submit">Регистрация</button>
           </form>
 
           <p class="feedback__text feedback__text--question">
-            Остались вопросы? <br/>
-            Мы с радостью на них ответим!
+            Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!
           </p>
 
           <ul class="feedback__contacts contacts-list contacts-list--feedback">
@@ -538,7 +543,7 @@
         <div class="contacts__container">
           <div class="contacts__wrapper">
             <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
-            <a class="contacts__navigate button button--index button--stroke" href="https://goo.gl/maps/NU5NKi9H9gxkuwxi6">Проложить маршрут</a>
+            <a class="contacts__navigate button button--stroke" href="https://goo.gl/maps/NU5NKi9H9gxkuwxi6">Проложить маршрут</a>
           </div>
         </div>
       </section>
@@ -594,7 +599,9 @@
       </div>
 
     </footer>
-    <script src="js/main-nav.min.js"></script>
-    <script src="js/modal.min.js"></script>
+    <script src="js/main-nav.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/feedback.js"></script>
   </body>
 </html>

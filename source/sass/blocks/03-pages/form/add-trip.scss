@@ -1,48 +1,77 @@
 .add-trip {
-  padding-top: 30px;
-  padding-bottom: 63px;
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 73px;
+  margin-top: -30px;
 
   color: $text-clr-medium;
 
   background-color: $bg-inner-medium;
+  border-radius: 30px 30px 0 0;
 }
 
 .add-trip__container {
-  @include outline();
   @include form-container();
 }
 
-.add-trip__heading {
-  @include offset-reset();
-  margin-bottom: 29px;
+.add-trip__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
 
-  font-size: 24px;
-  line-height: 24px;
+.add-trip__title {
+  @include offset-reset();
+
+  font-size: $mobile-heading-size;
+  line-height: 1;
   font-weight: bold;
+}
+
+.add-trip__step-marks {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+  margin-right: 18px;
 }
 
 @media (min-width: $tablet-width) {
   .add-trip {
-    padding-top: 53px;
-    padding-bottom: 118px;
+    padding-top: 50px;
+    padding-bottom: 124px;
   }
 
-  .add-trip__heading {
-    margin-bottom: 56px;
+  .add-trip__header {
+    margin-bottom: 59px;
+  }
 
-    font-size: 36px;
-    line-height: 36px;
+  .add-trip__title {
+    font-size: $mobile-button-font-size * 2;
+  }
+
+  .add-trip__step-marks {
+    margin-right: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-trip {
-    padding-top: 70px;
-    padding-bottom: 125px;
+    padding-top: 52px;
+    padding-bottom: 133px;
+    margin-top: -60px;
+
+    border-radius: 55px 55px 0 0;
   }
 
-  .add-trip__heading {
+  .add-trip__header {
+    margin-bottom: 57px;
+  }
+
+  .add-trip__title {
     margin-left: 69px;
-    margin-bottom: 54px;
+  }
+
+  .add-trip__step-marks {
+    display: none;
   }
 }

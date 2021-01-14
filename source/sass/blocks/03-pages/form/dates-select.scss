@@ -1,11 +1,9 @@
 .dates-select {
-  @include outline(teal);
-
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 20px;
-
-  margin-bottom: 22px;
+  row-gap: 19px;
+  margin-bottom: 23px;
+  padding-top: 20px;
 }
 
 .dates-select__children {
@@ -14,19 +12,20 @@
 
 @media (min-width: $tablet-width) {
   .dates-select {
-    row-gap: 25px;
-
-    margin-bottom: 47px;
+    row-gap: 23px;
+    padding-top: 23px;
+    margin-bottom: 49px;
   }
 
   .dates-select__children {
     grid-row: 2;
 
     margin-bottom: 0;
+    margin-top: 1px;
   }
 
   .dates-select__duration {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
   }
 }
 
@@ -36,7 +35,8 @@
     grid-template-rows: repeat(3, min-content);
     row-gap: 0;
 
-    margin-bottom: 57px;
+    padding-top: 30px;
+    margin-bottom: 58px;
   }
 
   .dates-select__companions {
@@ -49,11 +49,13 @@
   .dates-select__duration {
     grid-column: 1;
     grid-row: 2;
+    margin-bottom: 32px;
   }
 
   .dates-select__children {
     grid-column: 2;
     grid-row: 1;
+    justify-self: end;
   }
 
   .dates-select__calendar {

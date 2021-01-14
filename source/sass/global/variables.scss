@@ -1,6 +1,7 @@
 // TIPOGRAPHY
 $basic-font: "Blogger Sans", "Arial", sans-serif;
 $mobile-font-size: 16px;
+$mobile-inner-button-font-size: 17px;
 $mobile-button-font-size: 18px;
 $mobile-bolder-size: 21px;
 $mobile-heading-size: 24px;
@@ -41,6 +42,15 @@ $bg-close-button: #d6daed;
 $bg-toggle: #cccccc;
 $bg-decor-block: #141b3b;
 $bg-tooltip: #101d41;
+$bg-icon: #d9d9d9;
+$bg-icon-hover: #b2b2b2;
+$bg-icon-active: #ced3e2;
+$bg-error: #ffefef;
+$bg-checkbox-hover: #f8f9fb;
+$bg-checkbox-active: #f2f4f9;
+$bg-like: #f9eaea;
+$bg-like-hover: #f9d8d8;
+$bg-heart: #f02323;
 
 // COLORS: TEXT
 $text-clr-light: $bg-card;
@@ -58,6 +68,8 @@ $border-clr-field: #d6d9e6;
 $border-clr-hover: #959bb2;
 $border-textarea-hover: #aeb4cb;
 $border-textarea-invalid: #f47e7e;
+$border-form-fields-clr: #e1e3e9;
+$border-companion-form: #f3c72b;
 
 // BREAKPOINTS
 $tablet-width: 768px;
@@ -72,6 +84,6 @@ $level-ring-length: 56 * 3.1415;
 $section-shift: 30px;
 
 // BORDERS
-$private-rates-border: 1px solid #e1e3e9;
+$private-rates-border: 1px solid $border-form-fields-clr;
 $business-rates-border: 1px solid rgba(0, 0, 0, 0.05);
 $copyright-border: 1px solid #f2f2f2;

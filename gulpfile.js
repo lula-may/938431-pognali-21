@@ -18,7 +18,7 @@ const sync = require("browser-sync").create();
 
 const clean = () => {
   return del("build");
-}
+};
 
 exports.clean = clean;
 
@@ -28,12 +28,13 @@ const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/img/**/*.{jpg,png,svg}",
+    "source/js/**/*.js"
   ],
   {
     base: "source"
   })
   .pipe(gulp.dest("build"));
-}
+};
 
 exports.copy = copy;
 
@@ -44,7 +45,7 @@ const html = () => {
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
     .pipe(sync.stream());
-}
+};
 
 exports.html = html;
 
@@ -55,29 +56,37 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
+
+const minCss = () => {
+  return gulp.src("build/css/style.css")
+  .pipe(postcss([
+    autoprefixer(),
+    csso()
+  ]))
+  .pipe(rename("style.min.css"))
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/css"))
+};
+
+exports.minCss = minCss;
 
 // JS
 
 const js = () => {
-  return gulp.src("source/js/**/*.js")
+  return gulp.src("build/js/**/*.js")
     .pipe(terser())
     .pipe(rename({
       suffix: ".min"
     }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
-}
+};
 
 exports.js = js;
 
@@ -94,7 +103,7 @@ const images = () => {
         ]})
     ]))
     .pipe(gulp.dest("build/img"));
-}
+};
 
 exports.images = images;
 
@@ -104,7 +113,7 @@ const createWebp = () => {
   return gulp.src("build/img/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
-}
+};
 
 exports.createWebp = createWebp;
 
@@ -115,7 +124,7 @@ const sprite = () => {
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
-}
+};
 
 exports.sprite = sprite;
 
@@ -130,7 +139,7 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -140,7 +149,7 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/**/*.js", gulp.series("js"));
-}
+};
 
 // Build
 
@@ -154,7 +163,10 @@ const build = gulp.series(
     images,
     createWebp
   ),
-  sprite
+  gulp.parallel(
+    sprite,
+    minCss
+  )
 );
 
 exports.build = build;
@@ -167,7 +179,6 @@ exports.default = gulp.series(
   gulp.parallel(
     html,
     styles,
-    js,
     sprite,
     createWebp
   ),

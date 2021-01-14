@@ -1,5 +1,6 @@
 .alphabetic-sort {
   background-color: inherit;
+  border-radius: 0 0 4px 4px;
 }
 
 .alphabetic-sort__alphabet {
@@ -13,14 +14,26 @@
 }
 
 .alphabetic-sort__letter {
+  position: relative;
+  z-index: 0;
   display: flex;
+  margin-right: -1px;
+  margin-bottom: -1px;
+
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    z-index: 1;
+  }
 }
 
 .alphabetic-sort__button {
   @include button-reset();
 
   flex-grow: 1;
-  height: 41px;
+  height: 100%;
 
   font-size: 14px;
   line-height: 18px;
@@ -33,12 +46,10 @@
   border: 1px solid $bg-inner-light;
 
   &[aria-pressed="true"] {
-    @include theme($text-clr-medium, $text-clr-light);
-    border-color: $text-clr-medium;
+    background-color: $bg-main-light;
   }
 
   &:not([aria-pressed="true"]):hover {
-    outline: none;
     border-color: $border-clr-hover;
   }
 
@@ -61,17 +72,29 @@
   }
 
   .alphabetic-sort__alphabet {
-    width: 71%;
+    width: 77%;
+    height: 346px;
+
+    &--form {
+      max-width: 361px;
+    }
 
     &--catalog {
-      width: 55.63%;
-      height: 346px;
+      width: 57%;
+      height: 395px;
+      column-gap: 24px;
+      row-gap: 20px;
     }
   }
 
   .alphabetic-sort__button {
     font-size: 20px;
     line-height: 20px;
+
+    &[aria-pressed="true"] {
+      @include theme($text-clr-medium, $text-clr-light);
+      border-color: $text-clr-medium;
+    }
   }
 }
 
@@ -82,5 +105,25 @@
 
   .alphabetic-sort__wrapper {
     width: 489px;
+    padding-bottom: 35px;
+  }
+
+  .alphabetic-sort__alphabet {
+    width: 730px;
+    height: 408px;
+
+    column-gap: 15px;
+    row-gap: 14px;
+  }
+
+  .alphabetic-sort__button {
+    width: 60px;
+    height: 70px;
+
+    border-radius: 4px;
+
+    &[aria-pressed="true"] {
+      border-color: $bg-inner-light;
+    }
   }
 }

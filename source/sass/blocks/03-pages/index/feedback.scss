@@ -68,7 +68,8 @@
 }
 
 .feedback__input {
-  position: relative;
+  grid-column: 1;
+  grid-row: 1;
 
   @include offset-reset();
   height: 62px;
@@ -81,8 +82,7 @@
   outline: none;
 
   &::placeholder {
-    color: inherit;
-    opacity: 0.3;
+    opacity: 0;
   }
 
   &:hover {
@@ -90,23 +90,56 @@
     border: 4px solid $bg-main-light;
   }
 
-  &:hover::placeholder {
+  &:hover ~ .feedback__label {
     opacity: 0.5;
   }
 
-  &:focus-within {
+  &:focus {
     color: $text-clr-light;
     background-color: transparent;
   }
+
+  &:focus ~ .feedback__label,
+  &:valid ~ .feedback__label,
+  &:invalid:not(:placeholder-shown) ~ .feedback__label {
+    opacity: 0;
+  }
 }
 
-.feedback__input--error {
-  color: $error-color;
+.feedback__label {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  padding-left: 25px;
+
+  color: $text-clr-basic;
+  opacity: 0.3;
+}
+
+.feedback__form--invalid {
+  .feedback__input {
+    color: $error-color;
+
+    background-color: $bg-card;
+  }
+
+  .feedback__input:valid {
+    color: $text-clr-basic;
+  }
+
+  .feedback__input::placeholder {
+    color: $error-color;
+    opacity: 1;
+    content: "Введите e-mail";
+  }
+
+  .feedback__label,
+  &:hover .feedback__label {
+    opacity: 0;
+  }
 }
 
 .feedback__submit {
-  position: relative;
-  z-index: 2;
   border-radius: 10px;
   margin-left: -20px;
 
@@ -171,6 +204,10 @@
     height: 80px;
     padding-left: 35px;
     border-radius: 20px 0 0 20px;
+  }
+
+  .feedback__label {
+    padding-left: 35px;
   }
 
   .feedback__submit {

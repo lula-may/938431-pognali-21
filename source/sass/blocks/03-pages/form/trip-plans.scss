@@ -1,20 +1,23 @@
 .trip-plans {
-  padding-top: 28px;
-  padding-bottom: 59px;
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 50px;
+  margin-top: -30px;
   color: $text-clr-medium;
 
   background-color: $bg-inner-lighter;
+
+  border-radius: 30px 30px 0 0;
 }
 
 .trip-plans__container {
-  @include outline();
   @include form-container();
 }
 
 .trip-plans__heading {
   @include offset-reset();
 
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   font-size: 24px;
   line-height: 24px;
@@ -22,27 +25,32 @@
 }
 
 .trip-plans__list {
-  @include outline(teal);
   @include list-reset();
+
+  counter-reset: plan-counter;
 }
 
 .trip-plans__item {
-  padding: 23px 9.26%;
+  padding: 23px 8.9% 24px;
   margin-bottom: 10px;
 
   background-color: $bg-card;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  border-radius: 10px;
 }
 
 .trip-plans__name {
   @include offset-reset();
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 16px;
   font-weight: bold;
+
+  counter-increment: plan-counter;
+
+  &::before {
+    content: counter(plan-counter) ". ";
+  }
 }
 
 .trip-plans__item-content {
@@ -56,6 +64,34 @@
   @include offset-reset();
 
   letter-spacing: 0.06em;
+
+  &--companions {
+    margin-bottom: 5px;
+  }
+
+  &--dates {
+    margin-bottom: 24px;
+  }
+}
+
+.trip-plans__date {
+  position: relative;
+
+  &--first {
+    padding-right: 14px;
+    margin-right: 6px;
+  }
+
+  &--first::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    top: 9px;
+    right: 0;
+
+    background-color: $text-clr-medium;
+  }
 }
 
 .trip-plans__change {
@@ -75,45 +111,98 @@
 
 @media (min-width: $tablet-width) {
   .trip-plans {
-    padding-top: 57px;
-    padding-bottom: 118px;
+    padding-top: 54px;
+    padding-bottom: 95px;
   }
 
   .trip-plans__heading {
-    margin-bottom: 48px;
+    margin-bottom: 51px;
 
     font-size: 36px;
     line-height: 36px;
   }
 
   .trip-plans__item {
-    padding: 40px 0 14px;
+    padding: 38px 0 16px;
     margin-bottom: 11px;
   }
 
 
   .trip-plans__name {
+    position: relative;
+
+    padding: 0 33px 0 40px;
+    padding-bottom: 35px;
+    margin-bottom: 18px;
+
     font-size: 24px;
     line-height: 24px;
+
+    border-bottom: 1px solid $bg-inner-light;
+
+    &::before {
+      position: absolute;
+      right: 33px;
+      top: 3px;
+
+      font-size: $tablet-smaller-font-size;
+      line-height: 1;
+      font-weight: 500;
+    }
   }
 
   .trip-plans__item-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 32% 34% 34%;
+    margin: 0 40px;
 
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
   }
 
+  .trip-plans__info {
+    &--companions {
+      margin-bottom: 0;
+      justify-self: start;
+
+      letter-spacing: 0.1em;
+    }
+
+    &--dates {
+      margin-bottom: 0;
+
+      justify-self: end;
+    }
+  }
+
   .trip-plans__date {
     letter-spacing: 0.06em;
+
+    &--first {
+      padding-right: 20px;
+      margin-right: 8px;
+    }
+
+    &--first::after {
+      top: 13px;
+      width: 18px;
+    }
+  }
+
+  .trip-plans__change {
+    justify-self: end;
+    letter-spacing: 0.1em;
   }
 }
 
 @media (min-width: $desktop-width) {
   .trip-plans {
-    padding-top: 54px;
-    padding-bottom: 121px;
+    padding-top: 51px;
+    padding-bottom: 110px;
+    margin-top: -60px;
+
+    border-radius: 55px 55px 0 0;
   }
 
   .trip-plans__container {
@@ -121,14 +210,38 @@
   }
 
   .trip-plans__heading {
-    margin-bottom: 49px;
+    padding-left: 7px;
+    margin-bottom: 52px;
   }
 
   .trip-plans__item {
     display: flex;
     justify-content: space-between;
 
-    padding: 36px 42px;
+    padding: 35px 40px 38px 43px;
     margin-bottom: 15px;
+  }
+
+  .trip-plans__name {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    &::before {
+      position: static;
+      margin-right: 31px;
+    }
+  }
+
+  .trip-plans__item-content {
+    grid-template-columns: 177px 177px auto;
+    width: 590px;
+    padding-top: 3px;
+    margin: 0;
+  }
+
+  .trip-plans__info--dates {
+    justify-self: start;
   }
 }

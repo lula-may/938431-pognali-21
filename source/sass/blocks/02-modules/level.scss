@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5px;
 
   line-height: 1;
 
@@ -16,22 +15,6 @@
 
   &:hover {
     cursor: default;
-  }
-
-  &--99 {
-    background-image: url("../img/level-99.svg");
-  }
-
-  &--80 {
-    background-image: url("../img/level-80.svg");
-  }
-
-  &--50 {
-    background-image: url("../img/level-50.svg");
-  }
-
-  &--25 {
-    background-image: url("../img/level-25.svg");
   }
 }
 
@@ -52,19 +35,117 @@
 }
 
 .level--main {
+  padding-top: 5px;
+
   color: $text-clr-light;
 
   background-color: $bg-level;
+
+  .level__ring {
+    transform: rotate(-85deg);
+  }
 }
 
 .level--form {
+  justify-content: flex-start;
+
+  background-image: url("../img/level-form-80.svg");
+
   .level__count {
+    padding: 13px 6px 4px 5px;
     font-size: 38px;
     color: $text-clr-dark;
+
+    border-bottom: 1px solid rgba($text-clr-basic, 0.3);
   }
 
   .level__text {
-    font-size: $mobile-font-size;
+    padding-top: 5px;
+    font-size: $mobile-button-font-size;
     color: $text-clr-basic;
+  }
+}
+
+.level--companion {
+  color: $text-clr-medium;
+
+  .level__ring {
+    transform: rotate(-90deg);
+  }
+}
+
+.level__ring {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  &--99 {
+    stroke-dasharray: 0.96 * $level-ring-length;
+  }
+
+  &--80 {
+    stroke-dasharray: 0.8 * $level-ring-length;
+  }
+
+  &--50 {
+    stroke-dasharray: 0.5 * $level-ring-length;
+  }
+
+  &--25 {
+    stroke-dasharray: 0.25 * $level-ring-length 0.75 * $level-ring-length;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .level--companion {
+    .level__count {
+      border: none;
+    }
+
+    .level__text {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level--companion {
+    .level__count {
+      padding-top: 3px;
+      padding-bottom: 2px;
+
+      border-bottom: 1px solid rgba($text-clr-darker, 0.1);
+    }
+
+    .level__text {
+      padding-top: 1px;
+
+      color: rgba($text-clr-darker, 0.4);
+    }
+
+    .level__ring circle {
+      stroke-width: 3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level--form {
+    .level__count {
+      padding: 17px 5px 0;
+
+      color: $text-clr-light;
+
+      border-bottom: 2px solid rgba($text-clr-light, 0.3);
+    }
+
+    .level__text {
+      color: $text-clr-light;
+    }
   }
 }

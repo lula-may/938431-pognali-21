@@ -5,48 +5,91 @@
   align-items: stretch;
 }
 
-.transport--companion {
+.transport--catalog {
   .transport__item {
-    background-color: $bg-main-light;
+    margin-right: 1px;
   }
 }
 
 .transport__item {
-  display: block;
-  width: 31px;
-  height: 31px;
-  margin-right: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+
+  color: $bg-icon;
 
   background-color: $bg-card;
   border-radius: 50%;
 }
 
-input:hover + .transport__item {
+.transport__item svg {
+  width: 17px;
+  height: auto;
+
+  color: inherit;
+}
+
+input:checked + .transport__item {
+  color: $text-clr-medium;
+}
+
+input:hover + .transport__item,
+input:focus + .transport__item {
+  color: $bg-icon-hover;
+
   box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+}
+
+input:checked:hover + .transport__item,
+input:checked:focus + .transport__item {
+  color: rgba($text-clr-medium, 0.7);
 }
 
 input:active + .transport__item {
   background-color: $bg-inner-filter;
   box-shadow: none;
+
+  color: $bg-icon-active;
+}
+
+input:checked:active + .transport__item {
+  color: rgba($text-clr-medium, 0.3);
 }
 
 @media (min-width: $tablet-width) {
-  .transport--companion {
-    flex-direction: column;
+  // .transport--companion {
+  //   flex-direction: column;
 
+  //   .transport__item {
+  //     width: 26px;
+  //     height: 22px;
+  //     margin-bottom: 10px;
+
+  //     background-color: tomato;
+  //     border-radius: 0;
+  //   }
+  // }
+
+  .transport--catalog {
     .transport__item {
-      width: 26px;
-      height: 22px;
-      margin-bottom: 10px;
-
-      background-color: tomato;
-      border-radius: 0;
+      margin-right: 2px;
     }
   }
 
   .transport__item {
     width: 43px;
     height: 43px;
+    margin: 0;
+
+    svg {
+      width: 23px;
+    }
+  }
+
+  .transport__item--wider svg {
+    width: 24px;
   }
 }
 
@@ -59,6 +102,12 @@ input:active + .transport__item {
 
       margin-right: 14px;
       margin-bottom: 0;
+    }
+  }
+
+  .transport--catalog {
+    .transport__item {
+      margin-right: 1px;
     }
   }
 }

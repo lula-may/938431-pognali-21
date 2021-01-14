@@ -1,0 +1,81 @@
+.step-marks {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 47px;
+}
+
+.step-marks__item {
+  display: block;
+  width: 5px;
+  height: 5px;
+
+  font-size: 0;
+
+  border-radius: 50%;
+  background-color: $text-clr-medium;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .step-marks {
+    width: 76px;
+  }
+
+  .step-marks__item {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .step-marks {
+    flex-direction: column;
+    width: 230px;
+  }
+
+  .step-marks__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 41px;
+    margin-bottom: 20px;
+
+    font-size: $tablet-smaller-font-size;
+    line-height: 1.2;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    color: rgba($text-clr-darker, 0.6);
+    text-transform: uppercase;
+
+    background-color: transparent;
+    opacity: 1;
+
+    &--active {
+      color: $text-clr-darker;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+      background-color: $text-clr-medium;
+      opacity: 0.3;
+    }
+
+    &--active::before {
+      opacity: 1;
+    }
+  }
+}

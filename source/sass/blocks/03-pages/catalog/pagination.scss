@@ -1,9 +1,8 @@
 .pagination {
   width: 100%;
-  height: 51px;
-  padding-top: 19px;
 
   background-color: $bg-card;
+  border-radius: 20px;
 }
 
 .pagination__page-list {
@@ -11,20 +10,54 @@
 }
 
 .pagination__buttons {
-  @include offset-reset();
-  width: 53.33%;
-  margin: 0 auto;
+  position: relative;
 
+  @include offset-reset();
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 53.33%;
+  height: 51px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 1px;
+
+    background-color: $bg-main-light;
+  }
 }
 
 .pagination__button {
+  @include button-reset();
   width: 33px;
   height: 18px;
 
-  background-color: tomato;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--back {
+    background-image: url("../img/page-arrow-back.svg");
+    background-position: 0 1px;
+  }
+
+  &--forward {
+    background-image: url("../img/page-arrow-forward.svg");
+    background-position: 100% 1px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -75,9 +108,24 @@
     width: 53px;
     height: 20px;
     margin: 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   .pagination__button {
     width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding-left: 30px;
+    padding-right: 42px;
+  }
+
+  .pagination__buttons {
+    width: 55px;
   }
 }

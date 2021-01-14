@@ -4,8 +4,10 @@
 }
 
 .continent-filter__item {
-  line-height: 18px;
-  font-size: 16px;
+  margin-bottom: 9px;
+
+  font-size: $mobile-font-size;
+  line-height: 1.125;
   font-weight: bold;
 }
 
@@ -18,7 +20,12 @@ input + .continent-filter__name {
   opacity: 0.3;
 }
 
-input:checked + .continent-filter__name {
+input:hover + .continent-filter__name {
+  opacity: 0.6;
+}
+
+input:checked + .continent-filter__name,
+input:active + .continent-filter__name {
   opacity: 1;
 }
 
@@ -33,5 +40,11 @@ input:checked + .continent-filter__name {
 
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .continent-filter__item {
+    margin-right: 33px;
   }
 }
