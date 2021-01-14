@@ -1,8 +1,8 @@
 (function () {
   const CLASS_MODIFIER = `--expanded`;
   const countryFilterElement = document.querySelector(`.countries-filter`);
-
-  const setToggleListener = (element, toggle, elementClass, onToggle) => {
+  const noop = () => {};
+  const setToggleListener = (element, toggle, elementClass, onToggle = noop) => {
     const toggledClass = `${elementClass}${CLASS_MODIFIER}`;
     toggle.addEventListener(`click`, () => {
       element.classList.toggle(toggledClass);
