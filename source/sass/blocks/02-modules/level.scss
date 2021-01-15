@@ -47,20 +47,18 @@
 }
 
 .level--form {
-  justify-content: flex-start;
-
   background-image: url("../img/level-form-80.svg");
 
   .level__count {
-    padding: 13px 6px 4px 5px;
-    font-size: 38px;
+    padding-bottom: 4px;
+    font-size: $tablet-smaller-font-size * 1.9;
     color: $text-clr-dark;
 
     border-bottom: 1px solid rgba($text-clr-basic, 0.3);
   }
 
   .level__text {
-    padding-top: 5px;
+    padding-top: 6px;
     font-size: $mobile-button-font-size;
     color: $text-clr-basic;
   }
@@ -132,12 +130,24 @@
       stroke-width: 3;
     }
   }
+
+  .level--form {
+    .level__count {
+      padding-top: 3px;
+      padding-bottom: 2px;
+    }
+
+    .level__text {
+      padding-top: 5px;
+    }
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .level--form {
     .level__count {
-      padding: 17px 5px 0;
+      padding: 8px 5px 0 3px;
 
       color: $text-clr-light;
 
@@ -145,6 +155,9 @@
     }
 
     .level__text {
+      padding-right: 1px;
+      padding-bottom: 1px;
+
       color: $text-clr-light;
     }
   }
