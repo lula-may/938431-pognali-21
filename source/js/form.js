@@ -1,10 +1,10 @@
 (function () {
-  const INVALID_POSTFIX = '--invalid';
+  const INVALID_POSTFIX = `--invalid`;
 
   const setSubmitHandler = (form, elements, formClass) => {
     const invalidClass = `${formClass}${INVALID_POSTFIX}`;
 
-    form.addEventListener('submit', (evt) => {
+    form.addEventListener(`submit`, (evt) => {
       evt.preventDefault();
       return (form.reportValidity())
         ? form.submit()
@@ -12,7 +12,7 @@
     });
 
     elements.forEach((element) => {
-      element.addEventListener('focus', () => {
+      element.addEventListener(`focus`, () => {
         form.classList.remove(invalidClass);
       });
     });

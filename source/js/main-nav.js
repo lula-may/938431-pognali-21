@@ -1,16 +1,16 @@
-const mainNav = document.querySelector('.main-nav');
-const mainNavToggle = mainNav.querySelector('.main-nav__toggle');
+const mainNav = document.querySelector(`.main-nav`);
+const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
 
-mainNavToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('main-nav--open');
-  mainNav.classList.toggle('main-nav--close');
+mainNavToggle.addEventListener(`click`, () => {
+  mainNav.classList.toggle(`main-nav--open`);
+  mainNav.classList.toggle(`main-nav--close`);
 })
 
-mainNavToggle.addEventListener('keydown', (evt) => {
-  if (evt.key !== 'Enter') {
+mainNavToggle.addEventListener(`keydown`, (evt) => {
+  if (evt.key !== `Enter`) {
     return;
   }
   evt.preventDefault();
-  mainNav.classList.toggle('main-nav--open');
-  mainNav.classList.toggle('main-nav--close');
+  mainNav.classList.toggle(`main-nav--open`);
+  mainNav.classList.toggle(`main-nav--close`);
 })
