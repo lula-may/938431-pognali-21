@@ -8,7 +8,7 @@
     toggle.addEventListener(`click`, () => {
       element.classList.toggle(toggledClass);
       onToggle();
-    })
+    });
   };
 
   // Устанавливаем обработчики клика на все выпадающие списки формы подбора попутчика

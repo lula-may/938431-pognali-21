@@ -45,7 +45,7 @@ const resetFilter = () => {
     countries.forEach((country) => country.element.classList.remove(`countries-list__item--no-show`));
     Array.from(filterCheckboxElements).forEach((element) => element.checked = false);
     isFilterApplied = false;
-}
+};
 
 if (toggleButtonElement) {
   window.catalog.setToggleListener(countriesFilterElement, toggleButtonElement, `countries-filter`, resetFilter);
@@ -54,7 +54,7 @@ if (toggleButtonElement) {
 if (closeButtonElement) {
   closeButtonElement.addEventListener(`click`, () => {
     countriesFilterElement.classList.remove(`countries-filter--expanded`);
-  })
+  });
 }
 
 

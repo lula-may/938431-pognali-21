@@ -6,7 +6,7 @@ const setControlsListeners = (element) => {
   const plusControlElement = element.querySelector(`.number-field__control--plus`);
 
   minusControlElement.addEventListener(`click`, () => {
-    (inputElement.value) > 0 ? inputElement.value-- : 0
+    (inputElement.value) > 0 ? inputElement.value-- : 0;
   })
 
   plusControlElement.addEventListener(`click`, () => {
