@@ -59,19 +59,6 @@ input:checked:active + .transport__item {
 }
 
 @media (min-width: $tablet-width) {
-  // .transport--companion {
-  //   flex-direction: column;
-
-  //   .transport__item {
-  //     width: 26px;
-  //     height: 22px;
-  //     margin-bottom: 10px;
-
-  //     background-color: tomato;
-  //     border-radius: 0;
-  //   }
-  // }
-
   .transport--catalog {
     .transport__item {
       margin-right: 2px;
