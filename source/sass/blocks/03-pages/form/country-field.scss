@@ -151,7 +151,9 @@
 }
 
 .country-field__toggle--close {
-  background-image: none;
+  background-image: linear-gradient(to right, transparent 0, $text-clr-medium 35%);
+  background-position: 0 0;
+  background-size: auto;
 
   &::before,
   &::after {
@@ -163,7 +165,9 @@
   }
 
   &:hover::before,
-  &:hover::after {
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
     opacity: 1;
   }
 
