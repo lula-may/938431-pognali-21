@@ -29,9 +29,45 @@ img {
 }
 
 .page__body--no-js {
+  .countries-filter__label {
+    display: none;
+  }
+
+  .countries-filter__continent-filter {
+    display: flex;
+  }
+
+  .countries-filter__dropdown {
+    position: static;
+    display: block;
+  }
+
+  .countries-filter__button {
+    display: none;
+  }
+
+  .field-group__list,
+  .field-group__transport,
+  .field-group__level {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field-group__icon {
+    display: none;
+  }
+
   @media (max-width: $tablet-width-only) {
     .main-header {
       @include theme($bg-card, $text-clr-header);
+    }
+
+    .logo__image--open {
+      display: block;
+    }
+
+    .logo__image--close {
+      display: none;
     }
 
     .main-nav__toggle {
@@ -59,6 +95,12 @@ img {
     .main-nav__site-list,
     .main-nav__contacts-list {
       margin-bottom: 130px;
+    }
+
+    .field-group__list,
+    .field-group__transport,
+    .field-group__level {
+      flex-direction: row;
     }
   }
 }

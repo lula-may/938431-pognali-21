@@ -11,7 +11,7 @@
 
   <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
     Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
-  <body class="page__body">
+  <body class="page__body page__body--no-js">
     <header class="main-header main-header--index">
       <!-- Для отображения раскрытого меню используется класс "main-nav--open"
        для скрытия меню - класс "main-nav--close"  -->
@@ -498,7 +498,7 @@
           <p class="feedback__text feedback__text--login">Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__link" href="#">авторизуйтесь</a>.</p>
 
-          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru" novalidate>
+          <form class="feedback__form" id="feedback-form" method="post" action="https://echo.htmlacademy.ru">
             <input class="feedback__input" type="email" id="feedback-email" name="user-card-email" placeholder="Введите e-mail" required>
             <label class="feedback__label" for="feedback-email">E-mail</label>
             <button class="feedback__submit button button--index" type="submit">Регистрация</button>

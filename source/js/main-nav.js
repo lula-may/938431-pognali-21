@@ -1,3 +1,5 @@
+document.querySelector(`body`).classList.remove(`page__body--no-js`);
+
 const mainNav = document.querySelector(`.main-nav`);
 const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
 
