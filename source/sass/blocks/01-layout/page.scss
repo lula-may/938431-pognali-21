@@ -121,6 +121,20 @@ img {
     margin: 0;
   }
 
+  .logo__image--open {
+    display: block;
+  }
+
+  .logo__image--close {
+    display: none;
+  }
+
+  .main-nav__toggle::before,
+  .main-nav__toggle::after {
+    background-color: $bg-toggle;
+  }
+
+
   @media (min-width: $tablet-width) {
     padding-top: 132px;
   }
