@@ -25,7 +25,8 @@ input:hover + .continent-filter__name {
 }
 
 input:checked + .continent-filter__name,
-input:active + .continent-filter__name {
+input:active + .continent-filter__name,
+input:focus + .continent-filter__name {
   opacity: 1;
 }
 
