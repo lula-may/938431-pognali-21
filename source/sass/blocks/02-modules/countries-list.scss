@@ -74,8 +74,8 @@ input:active + .countries-list__name {
 @media (min-width: $tablet-width) {
   .countries-list {
     padding: 2px 20px 20px 100px;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $tablet-smaller-font-size;
+    line-height: 1;
 
     &--catalog {
       padding-left: 90px;
@@ -83,7 +83,7 @@ input:active + .countries-list__name {
   }
 
   .countries-list--bordered {
-    padding: 34px 20px 20px 25px;
+    padding: 35px 20px 20px 26px;
     border: none;
     border-left: 1px solid $bg-inner-light;
     border-radius: 0;
@@ -111,6 +111,16 @@ input:active + .countries-list__name {
       display: block;
     }
 
+    .countries-list__letter-list:nth-child(3n) .countries-list__sublist,
+    .countries-list__letter-list:nth-child(4n) .countries-list__sublist {
+      padding-left: 8px;
+    }
+
+    .countries-list__letter-list:nth-child(4n) .countries-list__letter,
+    .countries-list__letter-list:nth-child(5n) .countries-list__letter {
+      padding-left: 4px;
+    }
+
     .countries-list__letter {
       display: block;
 
@@ -118,8 +128,8 @@ input:active + .countries-list__name {
       margin-bottom: 36px;
       padding-left: 1px;
 
-      font-size: 60px;
-      line-height: 60px;
+      font-size: $tablet-smaller-font-size * 3;
+      line-height: 1;
       font-weight: bold;
       color: $text-clr-header;
       text-transform: uppercase;
