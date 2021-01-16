@@ -120,6 +120,7 @@
   .contacts__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     @include center-position();
     padding-left: 223px;
@@ -140,6 +141,7 @@
 
   .contacts__navigate {
     width: 324px;
+    flex-shrink: 0;
     margin-top: 5px;
   }
 

@@ -11,6 +11,10 @@
 .countries-to-visit__item {
   display: flex;
   margin-bottom: 10px;
+
+  picture {
+    flex-shrink: 0;
+  }
 }
 
 .countries-to-visit__image {

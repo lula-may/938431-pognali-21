@@ -72,6 +72,7 @@ const minCss = () => {
   .pipe(rename("style.min.css"))
   .pipe(sourcemap.write("."))
   .pipe(gulp.dest("build/css"))
+  .pipe(sync.stream());
 };
 
 exports.minCss = minCss;
@@ -146,7 +147,7 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles", "minCss"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/**/*.js", gulp.series("js"));
 };

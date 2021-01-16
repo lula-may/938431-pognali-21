@@ -202,7 +202,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content 1fr;
     column-gap: 60px;
 
     background-position: 130px 316px;
@@ -211,7 +211,7 @@
   .companions__header {
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: 35px;
+    margin-bottom: 86px;
 
     background-image: url("../img/smolov-back-desktop.png");
     background-repeat: no-repeat;
@@ -244,9 +244,8 @@
   }
 
   .companions__show-all {
-    align-self: end;
+    align-self: start;
     width: 280px;
     margin-left: 71px;
-    margin-bottom: 50px;
   }
 }
