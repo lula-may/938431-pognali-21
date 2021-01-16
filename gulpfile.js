@@ -28,7 +28,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/img/**/*.{jpg,png,svg}",
-    "source/js/**/*.js"
+    // "source/js/**/*.js"
   ],
   {
     base: "source"
@@ -79,7 +79,7 @@ exports.minCss = minCss;
 // JS
 
 const js = () => {
-  return gulp.src("build/js/**/*.js")
+  return gulp.src("source/js/**/*.js")
     .pipe(terser())
     .pipe(rename({
       suffix: ".min"
@@ -180,9 +180,11 @@ exports.default = gulp.series(
     html,
     styles,
     sprite,
+    js,
     createWebp
   ),
-    gulp.series(
-      server, watcher
-    )
+  minCss,
+  gulp.series(
+    server, watcher
+  )
 );
