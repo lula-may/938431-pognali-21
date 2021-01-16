@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления | "Погнали"</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
   </head>
   <!-- Для работы меню с выключенным JavaScript используется класс "page__body--no-js"
     Для состояния, когда страницу проскролили используется класс "page__body--scroll"  -->
-  <body class="page__body">
+  <body class="page__body page__body--no-js">
     <header class="main-header">
       <!-- Для отображения раскрытого меню используется класс "main-nav--open"
         при отсутствии этого класса меню свернуто -->
@@ -136,7 +138,7 @@
         </div>
       </section>
 
-      <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" novalidate>
+      <form class="direction-form" id="direction-form" method="post" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
         <section class="direction-form__user-profile user-profile">
           <div class="user-profile__container">
             <h2 class="visually-hidden">Обо мне</h2>
@@ -820,10 +822,11 @@
       </div>
 
     </footer>
-    <script src="js/main-nav.js"></script>
-    <script src="js/number-fields.js"></script>
-    <script src="js/country-field.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/activity.js"></script>
+    <script src="js/main-nav.min.js"></script>
+    <script src="js/smoth-scroll.min.js"></script>
+    <script src="js/number-fields.min.js"></script>
+    <script src="js/country-field.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/activity.min.js"></script>
   </body>
 </html>

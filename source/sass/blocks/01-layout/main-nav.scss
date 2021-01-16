@@ -49,7 +49,6 @@
   align-items: center;
 
   width: 100%;
-  padding-bottom: 39px;
 }
 
 .main-nav__site-list {
@@ -69,7 +68,7 @@
     @include theme($bg-card, $text-clr-header);
 
     .main-nav__header {
-      padding: 25px 0 28px;
+      padding: 25px 0 23px;
     }
 
     .logo__image {
@@ -89,7 +88,7 @@
       z-index: 10;
 
       width: 100%;
-      padding: 37px 7.8% 39px;
+      padding: 42px 7.8% 39px;
     }
 
     .main-nav__toggle::before,
@@ -110,7 +109,7 @@
 
   .main-nav--close {
     .main-nav__header {
-      padding-top: 16px;
+      padding: 16px 0 32px;
     }
 
     .logo__image {
@@ -153,7 +152,7 @@
   }
 
   .main-nav__toggle {
-    margin: 0;
+    margin-bottom: 2px;
   }
 
   .main-nav__content {
@@ -161,7 +160,7 @@
   }
 
   .main-nav__user-list {
-    $login-top-shift: 94px;
+    $login-top-shift: 92px;
     position: absolute;
     top: -$login-top-shift;
     margin: 0;
@@ -169,19 +168,21 @@
 }
 
 @media (max-width: $tablet-width-only) and (min-width: $tablet-width) {
-  .main-nav--open {
-    $login-right-shift: 5.2%;
-
+  .main-nav {
     .main-nav__header {
       padding-top: 46px;
-      padding-bottom: 46px;
+      padding-bottom: 44px;
     }
+  }
+
+  .main-nav--open {
+    $login-right-shift: 5.2%;
 
     .main-nav__content {
       position: absolute;
       top: 100%;
 
-      padding: 47px 12.6% 90px;
+      padding: 49px 12.6% 90px;
     }
 
     .main-nav__site-list {
@@ -198,11 +199,6 @@
   }
 
   .main-nav--close {
-    .main-nav__header {
-      padding-top: 46px;
-      padding-bottom: 46px;
-    }
-
     .main-nav__content {
       position: relative;
       display: block;

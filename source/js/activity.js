@@ -1,4 +1,7 @@
-const form = document.querySelector('#direction-form');
-const textareaElements = form.querySelectorAll('.activity__text');
+const form = document.querySelector(`#direction-form`);
+const textareaElements = form.querySelectorAll(`.activity__text`);
 
-window.form.setSubmitHandler(form, textareaElements, 'direction-form');
+if (form) {
+  form.setAttribute(`novalidate`, true);
+  window.form.setSubmitHandler(form, textareaElements, `direction-form`);
+}

@@ -48,6 +48,10 @@
   @include bolder-text();
 }
 
+.about__dash {
+  font-family: "Arial", "Verdana", sans-serif;
+}
+
 @media (max-width: $mobile-width-only) {
   .about__show-more {
     display: none;

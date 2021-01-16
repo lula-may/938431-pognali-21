@@ -1,6 +1,6 @@
 // Скрипт реализует показ/скрытие модального окна по клику или нажатию Enter
 
-const openModalButton = document.querySelector('.modal__open');
+const openModalButton = document.querySelector('.open-modal');
 const modal = document.querySelector('.modal');
 const closeModalButton = modal.querySelector('.modal__close');
 
