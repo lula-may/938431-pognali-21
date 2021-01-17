@@ -28,7 +28,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/img/**/*.{jpg,png,svg}",
-    // "source/js/**/*.js"
+    "source/js/**/*.js"
   ],
   {
     base: "source"
@@ -65,19 +65,26 @@ exports.styles = styles;
 
 const minCss = () => {
   return gulp.src("build/css/style.css")
-  .pipe(postcss([
-    autoprefixer(),
-    csso()
-  ]))
-  .pipe(rename("style.min.css"))
-  .pipe(sourcemap.write("."))
-  .pipe(gulp.dest("build/css"))
-  .pipe(sync.stream());
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
 };
 
 exports.minCss = minCss;
 
 // JS
+const copyJs = () => {
+  return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
+
+exports.copyJs = copyJs;
 
 const js = () => {
   return gulp.src("source/js/**/*.js")
@@ -149,7 +156,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles", "minCss"));
   gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/js/**/*.js", gulp.series("js"));
+  gulp.watch("source/js/**/*.js", gulp.series("copyJs", "js"));
 };
 
 // Build
@@ -178,11 +185,11 @@ exports.default = gulp.series(
   clean,
   copy,
   gulp.parallel(
-    html,
-    styles,
-    sprite,
-    js,
-    createWebp
+  html,
+  styles,
+  sprite,
+  js,
+  createWebp
   ),
   minCss,
   gulp.series(
