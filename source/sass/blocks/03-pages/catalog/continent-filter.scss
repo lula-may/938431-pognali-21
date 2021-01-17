@@ -25,9 +25,13 @@ input:hover + .continent-filter__name {
 }
 
 input:checked + .continent-filter__name,
-input:active + .continent-filter__name,
-input:focus + .continent-filter__name {
+input:active + .continent-filter__name {
   opacity: 1;
+}
+
+input:focus + .continent-filter__name {
+  outline: 2px solid $text-clr-darker;
+  outline-offset: 5px;
 }
 
 @media (min-width: $tablet-width) {

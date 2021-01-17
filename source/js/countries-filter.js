@@ -59,7 +59,7 @@ if (closeButtonElement) {
 
 
 continentFilter.addEventListener(`change`, (evt) => {
-  evt.preventDefault();
+  console.log(evt.target.tagName);
   filterCountries(getActiveContinents(), countries);
   isFilterApplied = true;
 });
